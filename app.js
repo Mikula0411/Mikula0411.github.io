@@ -27,11 +27,14 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Updated to match index.html
+  // Matches 'results-grid' ID in your index.html
+  const el = $("results-grid"); 
   if (!el) return;
+
   el.innerHTML = "";
   
-  const countEl = $("results-count"); // Updated to match index.html
+  // Matches 'results-count' ID in your index.html
+  const countEl = $("results-count");
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
@@ -39,20 +42,27 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // Uses 'university_id' from your JSON files
+    // FIX: Use 'university_id' to match your JSON data keys
     const uni = universitiesById.get(String(r.university_id)); 
+    
     const card = document.createElement("div");
-    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
+    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm";
 
-    card.innerHTML = `
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${r.title}</h3>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
-        <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
-                ${SUBJECT_LABELS[activeSubject]}
-            </span>
-        </div>
-    `;
+    const h3 = document.createElement("h3");
+    h3.className = "text-lg font-bold mb-2";
+    h3.textContent = r.title;
+
+    const p = document.createElement("p");
+    p.className = "text-slate-500 text-sm mb-4";
+    p.textContent = uni ? uni.name : `University ID: ${r.university_id}`;
+
+    const meta = document.createElement("div");
+    meta.className = "text-xs font-bold uppercase text-indigo-600";
+    meta.textContent = SUBJECT_LABELS[activeSubject] || "General";
+
+    card.appendChild(h3);
+    card.appendChild(p);
+    card.appendChild(meta);
     frag.appendChild(card);
   }
 
@@ -60,11 +70,13 @@ function render(results) {
 }
 
 function search() {
-  const input = $("search-input"); // Updated to match index.html
-  const q = normalize(input ? input.value : "");
+  // Matches 'search-input' ID in your index.html
+  const input = $("search-input");
+  const q = input ? normalize(input.value) : "";
+  
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 200); // Original limit
+    : currentCourses.slice(0, 50);
 
   render(results);
 }
@@ -75,46 +87,34 @@ async function setSubject(subjectKey) {
   search();
 }
 
-window.toggleTheme = () => {
-    document.documentElement.classList.toggle('dark');
-};
-
 async function init() {
-  // Load university names
+  // Load universities first
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
-  
-  if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // Search input listener
+  // Setup search input listener
   const searchInput = $("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", search);
   }
 
-  // Inject chips into empty container
-  const filters = $("category-filters");
-  if (filters) {
-    filters.innerHTML = ""; // Clear existing
-    Object.keys(SUBJECT_LABELS).forEach(key => {
-        const btn = document.createElement("button");
-        btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
-        btn.textContent = SUBJECT_LABELS[key];
-        btn.onclick = () => {
-            document.querySelectorAll('.chip').forEach(c => {
-                c.classList.remove('bg-indigo-600', 'text-white');
-                c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-            });
-            btn.classList.add('bg-indigo-600', 'text-white');
-            btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-            setSubject(key);
-        };
-        filters.appendChild(btn);
+  // Handle category chips if they exist in HTML
+  document.querySelectorAll(".chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll(".chip").forEach(btn => btn.classList.remove("is-active"));
+      chip.classList.add("is-active");
+      setSubject(chip.dataset.subject);
     });
-  }
+  });
 
+  // Initial data load
   await setSubject("compsci");
 }
+
+// Simple Theme Toggle for the moon button
+window.toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+};
 
 init().catch(err => {
   console.error(err);
