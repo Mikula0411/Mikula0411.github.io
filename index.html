@@ -8,9 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="transition-colors duration-300 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12 transition-colors duration-300">
 
-    <header class="border-b sticky top-0 z-40 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+    <header class="border-b sticky top-0 z-40 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="bg-indigo-600 p-2 rounded-lg text-white">
@@ -30,35 +30,34 @@
         <div class="space-y-8">
             <div class="text-center space-y-4 mb-12">
                 <h2 class="text-4xl font-extrabold tracking-tight">Search the UK Database</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-lg">Instant access to university data and requirements.</p>
             </div>
 
             <div class="p-4 rounded-3xl border bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
                 <div class="relative mb-4 flex gap-2">
                     <div class="relative flex-1">
                         <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5"></i>
-                        <input type="text" id="q" placeholder="Search courses..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500 bg-slate-50 dark:bg-slate-800 dark:text-white border-transparent">
+                        <input type="text" id="search-input" placeholder="Search courses..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500 bg-slate-50 dark:bg-slate-800 dark:text-white border-transparent">
                     </div>
-                    <button id="btn" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all">Search</button>
                 </div>
                 
-                <div id="category-filters" class="flex gap-2 overflow-x-auto pb-1">
-                    <button class="chip is-active" data-subject="compsci">Computer Science</button>
-                    <button class="chip" data-subject="engineering">Engineering</button>
-                    <button class="chip" data-subject="business">Business</button>
-                </div>
-
-                <select id="subject" class="hidden">
-                    <option value="compsci">compsci</option>
-                    <option value="engineering">engineering</option>
-                    <option value="business">business</option>
-                </select>
+                <div id="category-filters" class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+                    </div>
             </div>
 
-            <p id="count" class="text-sm font-medium text-slate-400">Loading courses...</p>
-
-            <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <p id="results-count" class="text-sm font-medium text-slate-400 px-2">Loading courses...</p>
+            <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </main>
+
+    <footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <p class="text-slate-500 font-bold text-sm">Uni Finder 2026</p>
+            <div class="flex gap-8 text-slate-400 font-bold text-[10px] uppercase">
+                <span id="stat-institutions">0 Institutions</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
     <script>lucide.createIcons();</script>
