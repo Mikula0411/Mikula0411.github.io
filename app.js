@@ -27,11 +27,11 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Matches index.html ID
+  const el = $("results-grid"); // Updated to match index.html
   if (!el) return;
   el.innerHTML = "";
   
-  const countEl = $("results-count"); // Matches index.html ID
+  const countEl = $("results-count"); // Updated to match index.html
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
@@ -39,7 +39,7 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // Matches 'university_id' in your JSON files
+    // Uses 'university_id' from your JSON files
     const uni = universitiesById.get(String(r.university_id)); 
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
@@ -60,11 +60,11 @@ function render(results) {
 }
 
 function search() {
-  const input = $("search-input"); // Matches index.html ID
+  const input = $("search-input"); // Updated to match index.html
   const q = normalize(input ? input.value : "");
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 200); // Default limit before you requested pages
+    : currentCourses.slice(0, 200); // Default limit before pagination request
 
   render(results);
 }
@@ -75,28 +75,29 @@ async function setSubject(subjectKey) {
   search();
 }
 
-// Simple Theme Toggle
+// Simple Theme Toggle for the moon icon in index.html
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
 async function init() {
-  // Load universities first to map names to IDs
+  // Load university names from data/universities.json
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
-  // Update footer stat
+  // Update institutional count in footer if element exists
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // Search input listener (Real-time search)
+  // Search input listener for real-time results
   const searchInput = $("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", search);
   }
 
-  // Inject chips into the empty category-filters container in HTML
+  // Manually build category chips since the index.html container is empty
   const filters = $("category-filters");
   if (filters) {
+    filters.innerHTML = ""; 
     Object.keys(SUBJECT_LABELS).forEach(key => {
         const btn = document.createElement("button");
         btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
