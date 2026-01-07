@@ -36,3 +36,74 @@ body {
     background-color: #4f46e5; /* indigo-600 */
     color: white;
 }
+
+/* Container for the course results */
+#results {
+    display: grid;
+    gap: 1.5rem;
+    /* Responsive columns: 1 on mobile, 2 on tablet, 3 on desktop */
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    #results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+    #results { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Individual Course Card Styling */
+.card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    border: 1px solid #e2e8f0; /* slate-200 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.dark .card {
+    background-color: #0f172a; /* slate-900 */
+    border-color: #1e293b; /* slate-800 */
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Typography within the cards */
+.card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: inherit;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: #64748b; /* slate-500 */
+    margin-bottom: 1rem;
+}
+
+.dark .card p {
+    color: #94a3b8; /* slate-400 */
+}
+
+/* Metadata tag (Subject Group) */
+.card-meta {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: #eef2ff; /* indigo-50 */
+    color: #4f46e5; /* indigo-600 */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dark .card-meta {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #818cf8; /* indigo-400 */
+}
