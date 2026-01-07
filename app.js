@@ -14,7 +14,10 @@ const SUBJECT_LABELS = {
 
 let universitiesById = new Map();
 let currentCourses = [];
+let filteredCourses = [];
 let activeSubject = "compsci";
+let currentPage = 1;
+const resultsPerPage = 50;
 
 async function loadJSON(path) {
   const res = await fetch(path);
@@ -26,70 +29,71 @@ function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
-let currentPage = 1;
-const resultsPerPage = 50;
-let filteredResults = []; // Store current search results globally
-
-function render(results) {
-  const el = $("results");
+function render() {
+  const el = $("results-grid"); // Matches index.html
   el.innerHTML = "";
   
-  // Calculate slice for current page
   const start = (currentPage - 1) * resultsPerPage;
   const end = start + resultsPerPage;
-  const paginatedItems = results.slice(start, end);
+  const paginatedItems = filteredCourses.slice(start, end);
 
-  $("count").textContent = `Showing ${start + 1}-${Math.min(end, results.length)} of ${results.length.toLocaleString()} courses`;
+  $("results-count").textContent = `Showing ${start + 1}-${Math.min(end, filteredCourses.length)} of ${filteredCourses.length.toLocaleString()} courses`;
 
   const frag = document.createDocumentFragment();
+
   for (const r of paginatedItems) {
-    const uni = universitiesById.get(String(r.university_id)); 
+    const uni = universitiesById.get(String(r.university_id)); // Matches 'university_id' in your JSON
     const card = document.createElement("div");
-    card.className = "card"; // Matches your style.css
+    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
 
     card.innerHTML = `
-      <h3>${r.title}</h3>
-      <p>${uni ? uni.name : 'University ID: ' + r.university_id}</p>
-      <div class="card-meta">${SUBJECT_LABELS[activeSubject] || "General"}</div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${r.title}</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
+        <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
+                ${SUBJECT_LABELS[activeSubject]}
+            </span>
+        </div>
     `;
     frag.appendChild(card);
   }
+
   el.appendChild(frag);
-  renderPaginationControls(results.length);
+  renderPagination(filteredCourses.length);
 }
 
-function renderPaginationControls(totalResults) {
-  const totalPages = Math.ceil(totalResults / resultsPerPage);
-  let nav = $("pagination-nav");
-  
-  if (!nav) {
-    nav = document.createElement("div");
-    nav.id = "pagination-nav";
-    nav.className = "flex justify-center gap-4 mt-8";
-    $("results").after(nav);
-  }
+function renderPagination(totalResults) {
+    const totalPages = Math.ceil(totalResults / resultsPerPage);
+    let nav = $("pagination-nav");
+    
+    if (!nav) {
+        nav = document.createElement("div");
+        nav.id = "pagination-nav";
+        nav.className = "col-span-full flex justify-center items-center gap-4 mt-8 pb-10";
+        $("results-grid").after(nav);
+    }
 
-  nav.innerHTML = `
-    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="chip">Previous</button>
-    <span class="flex items-center font-bold">Page ${currentPage} of ${totalPages}</span>
-    <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="chip">Next</button>
-  `;
+    nav.innerHTML = `
+        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold disabled:opacity-50">Previous</button>
+        <span class="text-sm font-bold">Page ${currentPage} of ${totalPages}</span>
+        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold disabled:opacity-50">Next</button>
+    `;
 }
 
-window.changePage = (direction) => {
-  currentPage += direction;
-  render(filteredResults);
-  window.scrollTo(0, 0); // Scroll to top when page changes
+window.changePage = (dir) => {
+    currentPage += dir;
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 function search() {
-  const q = normalize($("q").value);
-  currentPage = 1; // Reset to page 1 on new search
-  filteredResults = q
+  const q = normalize($("search-input").value); // Matches index.html
+  filteredCourses = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses;
-
-  render(filteredResults);
+  
+  currentPage = 1;
+  render();
 }
 
 async function setSubject(subjectKey) {
@@ -98,33 +102,40 @@ async function setSubject(subjectKey) {
   search();
 }
 
+// Theme Toggle
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
 async function init() {
-  // Load university names
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
+  
+  if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  $("btn").addEventListener("click", search);
-  $("q").addEventListener("input", search); // Real-time search
+  // Search input listener
+  $("search-input").addEventListener("input", search);
 
-  // Link the buttons you added in HTML
-  document.querySelectorAll(".chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      document.querySelectorAll(".chip").forEach(btn => btn.classList.remove("is-active"));
-      chip.classList.add("is-active");
-      const subject = chip.dataset.subject;
-      $("subject").value = subject;
-      setSubject(subject);
-    });
+  // Setup chips
+  const filters = $("category-filters");
+  Object.keys(SUBJECT_LABELS).forEach(key => {
+    const btn = document.createElement("button");
+    btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
+    btn.textContent = SUBJECT_LABELS[key];
+    btn.onclick = () => {
+        document.querySelectorAll('.chip').forEach(c => {
+            c.classList.remove('bg-indigo-600', 'text-white');
+            c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+        });
+        btn.classList.add('bg-indigo-600', 'text-white');
+        btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+        setSubject(key);
+    };
+    filters.appendChild(btn);
   });
 
-  await setSubject($("subject").value);
+  await setSubject("compsci");
+  lucide.createIcons();
 }
 
-init().catch(err => {
-  console.error(err);
-  $("results").innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
-});
+init().catch(console.error);
