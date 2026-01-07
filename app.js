@@ -64,7 +64,7 @@ function search() {
   const q = normalize(input ? input.value : "");
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 200); // Default limit
+    : currentCourses.slice(0, 500); // Default limit
 
   render(results);
 }
