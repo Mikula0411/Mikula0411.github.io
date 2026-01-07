@@ -17,9 +17,14 @@ let currentCourses = [];
 let activeSubject = "compsci";
 
 async function loadJSON(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-  return res.json();
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    console.error("Error loading JSON:", err);
+    return [];
+  }
 }
 
 function normalize(s) {
@@ -27,14 +32,16 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Matches index.html
+  const el = $("results-grid"); // Updated to match index.html
+  if (!el) return;
+
   el.innerHTML = "";
-  $("results-count").textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
+  $("results-count").textContent = `Showing ${results.length.toLocaleString()} courses matching your search`; // Updated to match index.html
 
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    const uni = universitiesById.get(String(r.university_id)); // Matches JSON field 'university_id'
+    const uni = universitiesById.get(String(r.university_id)); // Matches 'university_id' in JSON
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
 
@@ -51,8 +58,8 @@ function render(results) {
     const metaValue = document.createElement("span");
     metaValue.className = "px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase";
     metaValue.textContent = SUBJECT_LABELS[activeSubject] || "General";
+    
     meta.appendChild(metaValue);
-
     card.appendChild(h3);
     card.appendChild(p);
     card.appendChild(meta);
@@ -63,10 +70,10 @@ function render(results) {
 }
 
 function search() {
-  const q = normalize($("search-input").value); // Matches index.html
+  const q = normalize($("search-input").value); // Updated to match index.html
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 50); // Default limit
+    : currentCourses.slice(0, 50); // Default limit for performance
 
   render(results);
 }
@@ -81,28 +88,44 @@ async function init() {
   // Load universities first to map names to IDs
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
-
-  // Listeners
-  $("search-input").addEventListener("input", search); // Real-time search
   
-  // Setup category filters manually if they aren't in HTML
-  const filters = $("category-filters");
-  Object.keys(SUBJECT_LABELS).forEach(key => {
-    const btn = document.createElement("button");
-    btn.className = "chip whitespace-nowrap px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-bold transition-all hover:bg-indigo-600 hover:text-white";
-    btn.textContent = SUBJECT_LABELS[key];
-    btn.onclick = () => {
+  // Update institutional count in footer
+  if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
+
+  // Search input listener
+  const searchInput = $("search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", search);
+  }
+
+  // Inject category filters dynamically into the 'category-filters' div
+  const filtersContainer = $("category-filters");
+  if (filtersContainer) {
+    Object.keys(SUBJECT_LABELS).forEach(key => {
+      const btn = document.createElement("button");
+      btn.className = "chip whitespace-nowrap px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-bold transition-all hover:bg-indigo-600 hover:text-white";
+      if (key === activeSubject) btn.classList.add("bg-indigo-600", "text-white");
+      btn.textContent = SUBJECT_LABELS[key];
+      btn.onclick = () => {
         document.querySelectorAll('.chip').forEach(c => c.classList.remove('bg-indigo-600', 'text-white'));
         btn.classList.add('bg-indigo-600', 'text-white');
         setSubject(key);
-    };
-    filters.appendChild(btn);
-  });
+      };
+      filtersContainer.appendChild(btn);
+    });
+  }
 
+  // Load initial subject
   await setSubject("compsci");
 }
 
+// Global theme toggle function (requested in index.html)
+window.toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+};
+
 init().catch(err => {
   console.error(err);
-  $("results-grid").innerHTML = `<p class="text-red-500 text-center col-span-full">${err.message}</p>`;
+  const grid = $("results-grid");
+  if (grid) grid.innerHTML = `<p class="text-red-500">Error loading data: ${err.message}</p>`;
 });
