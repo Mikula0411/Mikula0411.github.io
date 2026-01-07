@@ -14,10 +14,7 @@ const SUBJECT_LABELS = {
 
 let universitiesById = new Map();
 let currentCourses = [];
-let filteredCourses = [];
 let activeSubject = "compsci";
-let currentPage = 1;
-const resultsPerPage = 50; // Every page will have 50 results
 
 async function loadJSON(path) {
   const res = await fetch(path);
@@ -29,25 +26,21 @@ function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
-function render() {
-  const el = $("results-grid"); // Matches index.html ID
+function render(results) {
+  const el = $("results-grid"); // Updated to match index.html
   if (!el) return;
   el.innerHTML = "";
   
-  // Pagination logic
-  const start = (currentPage - 1) * resultsPerPage;
-  const end = start + resultsPerPage;
-  const paginatedItems = filteredCourses.slice(start, end);
-
-  const countEl = $("results-count"); // Matches index.html ID
+  const countEl = $("results-count"); // Updated to match index.html
   if (countEl) {
-    countEl.textContent = `Showing ${start + 1}-${Math.min(end, filteredCourses.length)} of ${filteredCourses.length.toLocaleString()} courses`;
+    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
 
   const frag = document.createDocumentFragment();
 
-  for (const r of paginatedItems) {
-    const uni = universitiesById.get(String(r.university_id)); // Changed to university_id to match JSON
+  for (const r of results) {
+    // Uses 'university_id' from your JSON files
+    const uni = universitiesById.get(String(r.university_id)); 
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
 
@@ -64,41 +57,16 @@ function render() {
   }
 
   el.appendChild(frag);
-  renderPaginationControls(filteredCourses.length);
 }
-
-function renderPaginationControls(totalResults) {
-    const totalPages = Math.ceil(totalResults / resultsPerPage);
-    let nav = $("pagination-nav");
-    
-    if (!nav) {
-        nav = document.createElement("div");
-        nav.id = "pagination-nav";
-        nav.className = "col-span-full flex justify-center items-center gap-4 mt-8 pb-10";
-        $("results-grid").after(nav);
-    }
-
-    nav.innerHTML = `
-        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold disabled:opacity-30">Previous</button>
-        <span class="text-sm font-bold">Page ${currentPage} of ${totalPages}</span>
-        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold disabled:opacity-30">Next</button>
-    `;
-}
-
-window.changePage = (dir) => {
-    currentPage += dir;
-    render();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
 
 function search() {
-  const q = normalize($("search-input").value); // Matches index.html ID
-  filteredCourses = q
+  const input = $("search-input"); // Updated to match index.html
+  const q = normalize(input ? input.value : "");
+  const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses;
-  
-  currentPage = 1; // Reset to first page on search
-  render();
+    : currentCourses.slice(0, 200); // Original limit
+
+  render(results);
 }
 
 async function setSubject(subjectKey) {
@@ -112,38 +80,42 @@ window.toggleTheme = () => {
 };
 
 async function init() {
+  // Load university names
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
-  // Fill stat counter in footer
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  $("search-input").addEventListener("input", search);
+  // Search input listener
+  const searchInput = $("search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", search);
+  }
 
-  // Dynamically inject chips into the filter bar
+  // Inject chips into empty container
   const filters = $("category-filters");
-  Object.keys(SUBJECT_LABELS).forEach(key => {
-    const btn = document.createElement("button");
-    btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
-    btn.textContent = SUBJECT_LABELS[key];
-    btn.onclick = () => {
-        document.querySelectorAll('.chip').forEach(c => {
-            c.classList.remove('bg-indigo-600', 'text-white');
-            c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-        });
-        btn.classList.add('bg-indigo-600', 'text-white');
-        btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-        setSubject(key);
-    };
-    filters.appendChild(btn);
-  });
+  if (filters) {
+    filters.innerHTML = ""; // Clear existing
+    Object.keys(SUBJECT_LABELS).forEach(key => {
+        const btn = document.createElement("button");
+        btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
+        btn.textContent = SUBJECT_LABELS[key];
+        btn.onclick = () => {
+            document.querySelectorAll('.chip').forEach(c => {
+                c.classList.remove('bg-indigo-600', 'text-white');
+                c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+            });
+            btn.classList.add('bg-indigo-600', 'text-white');
+            btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+            setSubject(key);
+        };
+        filters.appendChild(btn);
+    });
+  }
 
   await setSubject("compsci");
-  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
 init().catch(err => {
   console.error(err);
-  const grid = $("results-grid");
-  if (grid) grid.innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
 });
