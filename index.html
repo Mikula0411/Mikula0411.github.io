@@ -5,27 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Student Uni Finder 2026</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Tailwind CSS CDN -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    borderRadius: {
-                        '4xl': '2rem',
-                        '5xl': '2.5rem',
-                    }
-                }
-            }
-        }
-    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="transition-colors duration-300 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12">
 
-    <!-- Header -->
     <header class="border-b sticky top-0 z-40 transition-colors duration-300 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -38,93 +22,48 @@
             </div>
             
             <div class="flex items-center gap-4">
-                <button 
-                    onclick="toggleTheme()"
-                    class="p-2 rounded-xl transition-all bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-amber-400"
-                    id="theme-toggle"
-                >
+                <button onclick="toggleTheme()" class="p-2 rounded-xl transition-all bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-amber-400" id="theme-toggle">
                     <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
                 </button>
-
-                <nav class="flex p-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                    <div class="px-6 py-1.5 rounded-lg text-sm font-bold text-indigo-600 dark:text-indigo-400">
-                        Course Finder
-                    </div>
-                </nav>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4 mt-8">
         <div class="space-y-8">
-            <!-- Hero Section -->
             <div class="text-center space-y-4 mb-12">
-                <span class="bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                    International Entry Guide 2026
-                </span>
-                <h2 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                    Search the UK Database
-                </h2>
-                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-                    Instant access to university data, IB/A-Level requirements, and IELTS benchmarks.
-                </p>
+                <h2 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Search the UK Database</h2>
             </div>
 
-            <!-- Search Bar -->
             <div class="p-4 rounded-3xl shadow-sm border transition-colors bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
-                <div class="relative mb-4">
-                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5.5 h-5.5"></i>
-                    <input 
-                        type="text" 
-                        id="search-input"
-                        placeholder="Search by subject, university (e.g. Hull York), or UCAS code..."
-                        class="w-full pl-12 pr-4 py-4 rounded-2xl transition-all outline-none border focus:border-indigo-500 text-lg bg-slate-50 border-transparent text-slate-900 focus:bg-white dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700"
-                    >
+                <div class="relative mb-4 flex gap-2">
+                    <div class="relative flex-1">
+                        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5"></i>
+                        <input type="text" id="q" placeholder="Search by subject..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500 text-lg bg-slate-50 border-transparent text-slate-900 dark:bg-slate-800 dark:text-white">
+                    </div>
+                    <button id="btn" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all">Search</button>
                 </div>
                 
                 <div id="category-filters" class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
-                    <!-- Categories will be injected here -->
+                    <button class="chip is-active" data-subject="compsci">Computer Science</button>
+                    <button class="chip" data-subject="engineering">Engineering</button>
+                    <button class="chip" data-subject="business">Business</button>
                 </div>
+                <select id="subject" class="hidden">
+                    <option value="compsci">compsci</option>
+                    <option value="engineering">engineering</option>
+                    <option value="business">business</option>
+                </select>
             </div>
 
-            <!-- Real-time Status -->
-            <div class="flex justify-between items-center px-2">
-                <p id="results-count" class="text-sm font-medium text-slate-400">
-                    Loading courses...
-                </p>
-            </div>
+            <p id="count" class="text-sm font-medium text-slate-400 px-2">Loading courses...</p>
 
-            <!-- Results Grid -->
-            <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Courses will be injected here -->
-            </div>
+            <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
         </div>
     </main>
 
-    <!-- Modal -->
-    <div id="modal-container" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-        <div id="modal-content" class="w-full max-w-xl rounded-[2.5rem] overflow-hidden shadow-2xl modal-enter bg-white dark:bg-slate-900 dark:border dark:border-slate-800">
-            <!-- Modal data injected here -->
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <div class="p-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-slate-500">
-                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                </div>
-                <p class="text-slate-500 font-bold text-sm tracking-tight">International Student Uni Finder 2026</p>
-            </div>
-            <div class="flex gap-8 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
-                <span id="stat-institutions" class="flex items-center gap-2">0 Institutions</span>
-                <span id="stat-courses" class="flex items-center gap-2">0 Courses</span>
-            </div>
-        </div>
-    </footer>
-
     <script src="app.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
