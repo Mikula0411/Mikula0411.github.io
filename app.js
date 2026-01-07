@@ -27,26 +27,18 @@ function normalize(s) {
 }
 
 function render(results) {
-  // Matches 'results-grid' ID in your index.html
-  const el = $("results-grid"); 
-  if (!el) return;
-
+  const el = $("results");
   el.innerHTML = "";
-  
-  // Matches 'results-count' ID in your index.html
-  const countEl = $("results-count");
-  if (countEl) {
-    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
-  }
+  $("count").textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
 
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // FIX: Use 'university_id' to match your JSON data keys
+    // Corrected to 'university_id' to match your JSON data
     const uni = universitiesById.get(String(r.university_id)); 
     
     const card = document.createElement("div");
-    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm";
+    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm";
 
     const h3 = document.createElement("h3");
     h3.className = "text-lg font-bold mb-2";
@@ -65,19 +57,14 @@ function render(results) {
     card.appendChild(meta);
     frag.appendChild(card);
   }
-
   el.appendChild(frag);
 }
 
 function search() {
-  // Matches 'search-input' ID in your index.html
-  const input = $("search-input");
-  const q = input ? normalize(input.value) : "";
-  
+  const q = normalize($("q").value);
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses.slice(0, 50);
-
   render(results);
 }
 
@@ -87,35 +74,33 @@ async function setSubject(subjectKey) {
   search();
 }
 
-async function init() {
-  // Load universities first
-  const universities = await loadJSON("data/universities.json");
-  universitiesById = new Map(universities.map(u => [String(u.id), u]));
-
-  // Setup search input listener
-  const searchInput = $("search-input");
-  if (searchInput) {
-    searchInput.addEventListener("input", search);
-  }
-
-  // Handle category chips if they exist in HTML
-  document.querySelectorAll(".chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      document.querySelectorAll(".chip").forEach(btn => btn.classList.remove("is-active"));
-      chip.classList.add("is-active");
-      setSubject(chip.dataset.subject);
-    });
-  });
-
-  // Initial data load
-  await setSubject("compsci");
-}
-
-// Simple Theme Toggle for the moon button
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
+async function init() {
+  // Load university names
+  const universities = await loadJSON("data/universities.json");
+  universitiesById = new Map(universities.map(u => [String(u.id), u]));
+
+  $("btn").addEventListener("click", search);
+  $("q").addEventListener("input", search); // Real-time search
+
+  // Link the buttons you added in HTML
+  document.querySelectorAll(".chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll(".chip").forEach(btn => btn.classList.remove("is-active"));
+      chip.classList.add("is-active");
+      const subject = chip.dataset.subject;
+      $("subject").value = subject;
+      setSubject(subject);
+    });
+  });
+
+  await setSubject($("subject").value);
+}
+
 init().catch(err => {
   console.error(err);
+  $("results").innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
 });
