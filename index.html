@@ -6,61 +6,41 @@
     <title>International Student Uni Finder 2026</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="transition-colors duration-300 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12">
 
     <header class="border-b sticky top-0 z-40 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="bg-indigo-600 p-2 rounded-lg text-white">
-                    <i data-lucide="globe" class="w-6 h-6"></i>
-                </div>
-                <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                    Intl Student Uni Finder
-                </h1>
-            </div>
-            <button onclick="toggleTheme()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 dark:text-amber-400">
-                <i data-lucide="moon" class="w-5 h-5"></i>
-            </button>
+            <h1 class="text-xl font-bold">Intl Student Uni Finder</h1>
+            <button onclick="toggleTheme()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800">Toggle Theme</button>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 mt-8">
-        <div class="space-y-8">
-            <div class="text-center space-y-4 mb-12">
-                <h2 class="text-4xl font-extrabold tracking-tight">Search the UK Database</h2>
+        <div class="p-4 rounded-3xl border bg-white dark:bg-slate-900">
+            <div class="flex gap-2 mb-4">
+                <input type="text" id="q" placeholder="Search courses..." class="w-full p-4 rounded-2xl bg-slate-50 dark:bg-slate-800">
+                <button id="btn" class="px-8 bg-indigo-600 text-white rounded-2xl font-bold">Search</button>
+            </div>
+            
+            <div id="category-filters" class="flex gap-2 overflow-x-auto pb-1">
+                <button class="chip is-active" data-subject="compsci">Computer Science</button>
+                <button class="chip" data-subject="engineering">Engineering</button>
+                <button class="chip" data-subject="business">Business</button>
             </div>
 
-            <div class="p-4 rounded-3xl border bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
-                <div class="relative mb-4 flex gap-2">
-                    <div class="relative flex-1">
-                        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5"></i>
-                        <input type="text" id="q" placeholder="Search courses..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500 bg-slate-50 dark:bg-slate-800 dark:text-white border-transparent">
-                    </div>
-                    <button id="btn" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all">Search</button>
-                </div>
-                
-                <div id="category-filters" class="flex gap-2 overflow-x-auto pb-1">
-                    <button class="chip is-active" data-subject="compsci">Computer Science</button>
-                    <button class="chip" data-subject="engineering">Engineering</button>
-                    <button class="chip" data-subject="business">Business</button>
-                </div>
-
-                <select id="subject" class="hidden">
-                    <option value="compsci">compsci</option>
-                    <option value="engineering">engineering</option>
-                    <option value="business">business</option>
-                </select>
-            </div>
-
-            <p id="count" class="text-sm font-medium text-slate-400">Loading courses...</p>
-
-            <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <select id="subject" class="hidden">
+                <option value="compsci">compsci</option>
+                <option value="engineering">engineering</option>
+                <option value="business">business</option>
+            </select>
         </div>
+
+        <p id="count" class="text-sm text-slate-400 mt-4">Loading courses...</p>
+
+        <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
     </main>
 
     <script src="app.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>
