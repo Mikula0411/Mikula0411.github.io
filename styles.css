@@ -107,3 +107,25 @@ body {
     background-color: rgba(79, 70, 229, 0.1);
     color: #818cf8; /* indigo-400 */
 }
+
+/* Pagination Styling */
+#pagination-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#pagination-nav button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #e2e8f0;
+    color: #94a3b8;
+}
+
+#pagination-nav span {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
