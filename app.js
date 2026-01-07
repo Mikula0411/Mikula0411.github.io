@@ -27,11 +27,13 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Matches index.html ID
+  // FIX: Matches the ID "results-grid" in your index.html
+  const el = $("results-grid"); 
   if (!el) return;
   el.innerHTML = "";
   
-  const countEl = $("results-count"); // Matches index.html ID
+  // FIX: Matches the ID "results-count" in your index.html
+  const countEl = $("results-count");
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
@@ -39,7 +41,7 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // Matches 'university_id' in your JSON files
+    // FIX: Changed from 'institution_id' to 'university_id' to match your JSON data
     const uni = universitiesById.get(String(r.university_id)); 
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
@@ -60,11 +62,13 @@ function render(results) {
 }
 
 function search() {
-  const input = $("search-input"); // Matches index.html ID
+  // FIX: Matches the ID "search-input" in your index.html
+  const input = $("search-input");
   const q = normalize(input ? input.value : "");
+  
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 500); // Default limit
+    : currentCourses.slice(0, 500); // Your updated limit of 500
 
   render(results);
 }
@@ -75,28 +79,29 @@ async function setSubject(subjectKey) {
   search();
 }
 
-// Simple Theme Toggle for index.html
+// Added theme toggle function for the moon button in your header
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
 async function init() {
-  // Load universities first
+  // Load university data
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
-  // Update footer stats
+  // Update footer institutional count
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // Search input listener
+  // Search input listener (triggers as you type)
   const searchInput = $("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", search);
   }
 
-  // Inject category chips into the container
+  // Inject category buttons into "category-filters" container
   const filters = $("category-filters");
   if (filters) {
+    filters.innerHTML = "";
     Object.keys(SUBJECT_LABELS).forEach(key => {
         const btn = document.createElement("button");
         btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
