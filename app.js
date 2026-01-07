@@ -26,46 +26,70 @@ function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
+let currentPage = 1;
+const resultsPerPage = 50;
+let filteredResults = []; // Store current search results globally
+
 function render(results) {
   const el = $("results");
   el.innerHTML = "";
-  $("count").textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
+  
+  // Calculate slice for current page
+  const start = (currentPage - 1) * resultsPerPage;
+  const end = start + resultsPerPage;
+  const paginatedItems = results.slice(start, end);
+
+  $("count").textContent = `Showing ${start + 1}-${Math.min(end, results.length)} of ${results.length.toLocaleString()} courses`;
 
   const frag = document.createDocumentFragment();
-
-  for (const r of results) {
-    // Corrected to 'university_id' to match your JSON data
+  for (const r of paginatedItems) {
     const uni = universitiesById.get(String(r.university_id)); 
-    
     const card = document.createElement("div");
-    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm";
+    card.className = "card"; // Matches your style.css
 
-    const h3 = document.createElement("h3");
-    h3.className = "text-lg font-bold mb-2";
-    h3.textContent = r.title;
-
-    const p = document.createElement("p");
-    p.className = "text-slate-500 text-sm mb-4";
-    p.textContent = uni ? uni.name : `University ID: ${r.university_id}`;
-
-    const meta = document.createElement("div");
-    meta.className = "text-xs font-bold uppercase text-indigo-600";
-    meta.textContent = SUBJECT_LABELS[activeSubject] || "General";
-
-    card.appendChild(h3);
-    card.appendChild(p);
-    card.appendChild(meta);
+    card.innerHTML = `
+      <h3>${r.title}</h3>
+      <p>${uni ? uni.name : 'University ID: ' + r.university_id}</p>
+      <div class="card-meta">${SUBJECT_LABELS[activeSubject] || "General"}</div>
+    `;
     frag.appendChild(card);
   }
   el.appendChild(frag);
+  renderPaginationControls(results.length);
 }
+
+function renderPaginationControls(totalResults) {
+  const totalPages = Math.ceil(totalResults / resultsPerPage);
+  let nav = $("pagination-nav");
+  
+  if (!nav) {
+    nav = document.createElement("div");
+    nav.id = "pagination-nav";
+    nav.className = "flex justify-center gap-4 mt-8";
+    $("results").after(nav);
+  }
+
+  nav.innerHTML = `
+    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="chip">Previous</button>
+    <span class="flex items-center font-bold">Page ${currentPage} of ${totalPages}</span>
+    <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="chip">Next</button>
+  `;
+}
+
+window.changePage = (direction) => {
+  currentPage += direction;
+  render(filteredResults);
+  window.scrollTo(0, 0); // Scroll to top when page changes
+};
 
 function search() {
   const q = normalize($("q").value);
-  const results = q
+  currentPage = 1; // Reset to page 1 on new search
+  filteredResults = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 50);
-  render(results);
+    : currentCourses;
+
+  render(filteredResults);
 }
 
 async function setSubject(subjectKey) {
