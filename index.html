@@ -1,70 +1,130 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>UK Uni Subject Finder</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Student Uni Finder 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Tailwind CSS CDN -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-  <header class="wrap">
-    <h1>UK Uni Subject Finder</h1>
-    <p>Search courses by keyword and filter by subject group.</p>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">◎</span>
-        <span class="brand-name">UK Uni Subject Finder</span>
-      </div>
-      <nav class="topbar-actions">
-        <button class="icon-btn" type="button" aria-label="Toggle theme">◐</button>
-        <button class="pill-btn" type="button">Course Finder</button>
-      </nav>
+<body class="transition-colors duration-300 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12">
+
+    <!-- Header -->
+    <header class="border-b sticky top-0 z-40 transition-colors duration-300 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="bg-indigo-600 p-2 rounded-lg text-white">
+                    <i data-lucide="globe" class="w-6 h-6"></i>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent hidden sm:block">
+                    Intl Student Uni Finder
+                </h1>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button 
+                    onclick="toggleTheme()"
+                    class="p-2 rounded-xl transition-all bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-amber-400"
+                    id="theme-toggle"
+                >
+                    <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
+                </button>
+
+                <nav class="flex p-1 rounded-xl bg-slate-100 dark:bg-slate-800">
+                    <div class="px-6 py-1.5 rounded-lg text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                        Course Finder
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="space-y-8">
+            <!-- Hero Section -->
+            <div class="text-center space-y-4 mb-12">
+                <span class="bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                    International Entry Guide 2026
+                </span>
+                <h2 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Search the UK Database
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                    Instant access to university data, IB/A-Level requirements, and IELTS benchmarks.
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="p-4 rounded-3xl shadow-sm border transition-colors bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+                <div class="relative mb-4">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5.5 h-5.5"></i>
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Search by subject, university (e.g. Hull York), or UCAS code..."
+                        class="w-full pl-12 pr-4 py-4 rounded-2xl transition-all outline-none border focus:border-indigo-500 text-lg bg-slate-50 border-transparent text-slate-900 focus:bg-white dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700"
+                    >
+                </div>
+                
+                <div id="category-filters" class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+                    <!-- Categories will be injected here -->
+                </div>
+            </div>
+
+            <!-- Real-time Status -->
+            <div class="flex justify-between items-center px-2">
+                <p id="results-count" class="text-sm font-medium text-slate-400">
+                    Loading courses...
+                </p>
+            </div>
+
+            <!-- Results Grid -->
+            <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Courses will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal-container" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+        <div id="modal-content" class="w-full max-w-xl rounded-[2.5rem] overflow-hidden shadow-2xl modal-enter bg-white dark:bg-slate-900 dark:border dark:border-slate-800">
+            <!-- Modal data injected here -->
+        </div>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="controls">
-      <input id="q" type="search" placeholder="Search course title (e.g., data science)" />
-      <select id="subject">
-        <option value="compsci">Computer Science</option>
-        <option value="engineering">Engineering</option>
-        <option value="business">Business</option>
-      </select>
-      <button id="btn">Search</button>
-    <section class="hero">
-      <span class="eyebrow">International entry guide 2026</span>
-      <h1>Search the UK Database</h1>
-      <p>Instant access to university data, course requirements, and searchable subject groups.</p>
-    </section>
+    <!-- Footer -->
+    <footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-slate-500">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <p class="text-slate-500 font-bold text-sm tracking-tight">International Student Uni Finder 2026</p>
+            </div>
+            <div class="flex gap-8 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
+                <span id="stat-institutions" class="flex items-center gap-2">0 Institutions</span>
+                <span id="stat-courses" class="flex items-center gap-2">0 Courses</span>
+            </div>
+        </div>
+    </footer>
 
-    <section class="search-card">
-      <div class="controls">
-        <label class="search-field" for="q">
-          <span class="search-icon" aria-hidden="true">🔍</span>
-          <input id="q" type="search" placeholder="Search by subject, university, or keyword..." />
-        </label>
-        <select id="subject" class="visually-hidden">
-          <option value="compsci">Computer Science</option>
-          <option value="engineering">Engineering</option>
-          <option value="business">Business</option>
-        </select>
-        <button id="btn" class="primary" type="button">Search</button>
-      </div>
-      <div class="chips" role="tablist" aria-label="Subject groups">
-        <button class="chip is-active" type="button" data-subject="compsci">All</button>
-        <button class="chip" type="button" data-subject="engineering">Engineering</button>
-        <button class="chip" type="button" data-subject="business">Business</button>
-      </div>
-    </section>
-
-    <section class="meta">
-      <span id="count"></span>
-    </section>
-
-    <section id="results" class="results"></section>
-  </main>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
