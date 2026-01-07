@@ -10,6 +10,17 @@
   <header class="wrap">
     <h1>UK Uni Subject Finder</h1>
     <p>Search courses by keyword and filter by subject group.</p>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-name">UK Uni Subject Finder</span>
+      </div>
+      <nav class="topbar-actions">
+        <button class="icon-btn" type="button" aria-label="Toggle theme">◐</button>
+        <button class="pill-btn" type="button">Course Finder</button>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
@@ -21,6 +32,30 @@
         <option value="business">Business</option>
       </select>
       <button id="btn">Search</button>
+    <section class="hero">
+      <span class="eyebrow">International entry guide 2026</span>
+      <h1>Search the UK Database</h1>
+      <p>Instant access to university data, course requirements, and searchable subject groups.</p>
+    </section>
+
+    <section class="search-card">
+      <div class="controls">
+        <label class="search-field" for="q">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="q" type="search" placeholder="Search by subject, university, or keyword..." />
+        </label>
+        <select id="subject" class="visually-hidden">
+          <option value="compsci">Computer Science</option>
+          <option value="engineering">Engineering</option>
+          <option value="business">Business</option>
+        </select>
+        <button id="btn" class="primary" type="button">Search</button>
+      </div>
+      <div class="chips" role="tablist" aria-label="Subject groups">
+        <button class="chip is-active" type="button" data-subject="compsci">All</button>
+        <button class="chip" type="button" data-subject="engineering">Engineering</button>
+        <button class="chip" type="button" data-subject="business">Business</button>
+      </div>
     </section>
 
     <section class="meta">
