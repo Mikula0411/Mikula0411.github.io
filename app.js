@@ -30,25 +30,30 @@ function normalize(s) {
 }
 
 function render() {
-  const el = $("results-grid"); // Matches index.html
+  const el = $("results-grid"); // Corrected ID to match HTML
+  if (!el) return;
   el.innerHTML = "";
   
   const start = (currentPage - 1) * resultsPerPage;
   const end = start + resultsPerPage;
   const paginatedItems = filteredCourses.slice(start, end);
 
-  $("results-count").textContent = `Showing ${start + 1}-${Math.min(end, filteredCourses.length)} of ${filteredCourses.length.toLocaleString()} courses`;
+  // Corrected ID to match HTML
+  const countEl = $("results-count");
+  if (countEl) {
+    countEl.textContent = `Showing ${start + 1}-${Math.min(end, filteredCourses.length)} of ${filteredCourses.length.toLocaleString()} courses`;
+  }
 
   const frag = document.createDocumentFragment();
 
   for (const r of paginatedItems) {
-    const uni = universitiesById.get(String(r.university_id)); // Matches 'university_id' in your JSON
+    const uni = universitiesById.get(String(r.university_id)); // Use university_id from JSON
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
 
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${r.title}</h3>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
+        <p class="text-slate-50 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
         <div class="flex items-center gap-2">
             <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject]}
@@ -87,7 +92,7 @@ window.changePage = (dir) => {
 };
 
 function search() {
-  const q = normalize($("search-input").value); // Matches index.html
+  const q = normalize($("search-input").value); // Corrected ID to match HTML
   filteredCourses = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses;
@@ -102,7 +107,6 @@ async function setSubject(subjectKey) {
   search();
 }
 
-// Theme Toggle
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
@@ -113,10 +117,8 @@ async function init() {
   
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // Search input listener
   $("search-input").addEventListener("input", search);
 
-  // Setup chips
   const filters = $("category-filters");
   Object.keys(SUBJECT_LABELS).forEach(key => {
     const btn = document.createElement("button");
@@ -138,4 +140,8 @@ async function init() {
   lucide.createIcons();
 }
 
-init().catch(console.error);
+init().catch(err => {
+  console.error(err);
+  const grid = $("results-grid");
+  if (grid) grid.innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
+});
