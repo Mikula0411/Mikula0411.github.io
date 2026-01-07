@@ -17,7 +17,7 @@ let currentCourses = [];
 let filteredCourses = [];
 let activeSubject = "compsci";
 let currentPage = 1;
-const resultsPerPage = 50;
+const resultsPerPage = 50; // Every page will have 50 results
 
 async function loadJSON(path) {
   const res = await fetch(path);
@@ -30,16 +30,16 @@ function normalize(s) {
 }
 
 function render() {
-  const el = $("results-grid"); // Corrected ID to match HTML
+  const el = $("results-grid"); // Matches index.html ID
   if (!el) return;
   el.innerHTML = "";
   
+  // Pagination logic
   const start = (currentPage - 1) * resultsPerPage;
   const end = start + resultsPerPage;
   const paginatedItems = filteredCourses.slice(start, end);
 
-  // Corrected ID to match HTML
-  const countEl = $("results-count");
+  const countEl = $("results-count"); // Matches index.html ID
   if (countEl) {
     countEl.textContent = `Showing ${start + 1}-${Math.min(end, filteredCourses.length)} of ${filteredCourses.length.toLocaleString()} courses`;
   }
@@ -47,13 +47,13 @@ function render() {
   const frag = document.createDocumentFragment();
 
   for (const r of paginatedItems) {
-    const uni = universitiesById.get(String(r.university_id)); // Use university_id from JSON
+    const uni = universitiesById.get(String(r.university_id)); // Changed to university_id to match JSON
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
 
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${r.title}</h3>
-        <p class="text-slate-50 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
         <div class="flex items-center gap-2">
             <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject]}
@@ -64,10 +64,10 @@ function render() {
   }
 
   el.appendChild(frag);
-  renderPagination(filteredCourses.length);
+  renderPaginationControls(filteredCourses.length);
 }
 
-function renderPagination(totalResults) {
+function renderPaginationControls(totalResults) {
     const totalPages = Math.ceil(totalResults / resultsPerPage);
     let nav = $("pagination-nav");
     
@@ -79,9 +79,9 @@ function renderPagination(totalResults) {
     }
 
     nav.innerHTML = `
-        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold disabled:opacity-50">Previous</button>
+        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold disabled:opacity-30">Previous</button>
         <span class="text-sm font-bold">Page ${currentPage} of ${totalPages}</span>
-        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold disabled:opacity-50">Next</button>
+        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="px-6 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold disabled:opacity-30">Next</button>
     `;
 }
 
@@ -92,12 +92,12 @@ window.changePage = (dir) => {
 };
 
 function search() {
-  const q = normalize($("search-input").value); // Corrected ID to match HTML
+  const q = normalize($("search-input").value); // Matches index.html ID
   filteredCourses = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses;
   
-  currentPage = 1;
+  currentPage = 1; // Reset to first page on search
   render();
 }
 
@@ -115,10 +115,12 @@ async function init() {
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
+  // Fill stat counter in footer
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
   $("search-input").addEventListener("input", search);
 
+  // Dynamically inject chips into the filter bar
   const filters = $("category-filters");
   Object.keys(SUBJECT_LABELS).forEach(key => {
     const btn = document.createElement("button");
@@ -137,7 +139,7 @@ async function init() {
   });
 
   await setSubject("compsci");
-  lucide.createIcons();
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
 init().catch(err => {
