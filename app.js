@@ -27,12 +27,10 @@ function normalize(s) {
 }
 
 function render(results) {
-  // FIX: Matches the ID "results-grid" in your index.html
-  const el = $("results-grid"); 
+  const el = $("results-grid");
   if (!el) return;
   el.innerHTML = "";
   
-  // FIX: Matches the ID "results-count" in your index.html
   const countEl = $("results-count");
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
@@ -41,20 +39,31 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // FIX: Changed from 'institution_id' to 'university_id' to match your JSON data
     const uni = universitiesById.get(String(r.university_id)); 
     const card = document.createElement("div");
-    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all";
+    // Added 'cursor-pointer' to show it's clickable
+    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
+    // Build the card content
     card.innerHTML = `
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${r.title}</h3>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">${r.title}</h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
-        <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
-                ${SUBJECT_LABELS[activeSubject]}
-            </span>
+        <div class="flex items-center justify-between">
+            <span class="card-meta">${SUBJECT_LABELS[activeSubject]}</span>
+            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline">Click to view course link →</span>
         </div>
     `;
+
+    // Add the click feature
+    card.onclick = () => {
+      // Option A: Open a dynamic search link for the specific course
+      const query = encodeURIComponent(`${r.title} ${uni ? uni.name : ''} UK course`);
+      const courseUrl = `https://www.google.com/search?q=${query}`;
+      
+      // Option B: You could instead show a link in a modal or a designated area
+      window.open(courseUrl, '_blank'); 
+    };
+
     frag.appendChild(card);
   }
 
