@@ -27,42 +27,51 @@ function normalize(s) {
 }
 
 function render(results) {
-  // Matches index.html ID
-  const el = $("results-grid"); 
+  const el = $("results-grid"); // Matches index.html
   if (!el) return;
   el.innerHTML = "";
   
-  // Matches index.html ID
-  const countEl = $("results-count");
+  const countEl = $("results-count"); // Matches index.html
   if (countEl) {
-    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
+    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`; //
   }
 
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // FIX: Use 'university_id' (from JSON) instead of 'institution_id'
+    // Correctly map university names using the ID from your JSON
     const uni = universitiesById.get(String(r.university_id)); 
     
     const card = document.createElement("div");
-    card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
+    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group"; //
 
-    // Correctly accessing the university name or showing ID if not found
+    // FIX: Using r.name (the new field) instead of r.title
     card.innerHTML = `
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">${r.title}</h3>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
+            ${r.name || "Unknown Course"}
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+            ${uni ? uni.name : 'University ID: ' + r.university_id}
+        </p>
         <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
-                ${SUBJECT_LABELS[activeSubject]}
+            <span class="card-meta">
+                ${SUBJECT_LABELS[activeSubject] || "General"}
             </span>
-            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">View Subject Link →</span>
+            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">
+                Visit Course Page →
+            </span>
         </div>
     `;
 
-    // Click feature
+    // Updated to use the direct course_website from your database
     card.onclick = () => {
-      const query = encodeURIComponent(`${r.title} ${uni ? uni.name : ''} UK course 2026`);
-      window.open(`https://www.google.com/search?q=${query}`, '_blank');
+      if (r.course_website) {
+        window.open(r.course_website, '_blank');
+      } else {
+        // Fallback if no website is provided in the JSON
+        const query = encodeURIComponent(`${r.name} at ${uni ? uni.name : ''} UK`);
+        window.open(`https://www.google.com/search?q=${query}`, '_blank');
+      }
     };
 
     frag.appendChild(card);
@@ -70,15 +79,17 @@ function render(results) {
   el.appendChild(frag);
 }
 
+// Ensure the search function also looks at the new 'name' field
 function search() {
   const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
-  const results = q
-    ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 500);
-
-  render(results);
+  filteredCourses = q
+    ? currentCourses.filter(c => normalize(c.name).includes(q)) // Updated from 'title' to 'name'
+    : currentCourses;
+  
+  currentPage = 1;
+  render(filteredCourses.slice(0, 500)); // Show your requested 500 limit
 }
 
 async function setSubject(subjectKey) {
