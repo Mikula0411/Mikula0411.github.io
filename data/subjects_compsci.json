@@ -7,21 +7,7 @@
     "course_website": "https://www.aru.ac.uk/study/undergraduate/software-development"
   },
   {
-    "id": "K00099",
-    "name": "Software Development",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/software-development"
-  },
-  {
     "id": "K00123",
-    "name": "Computer Science",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computer-science-beng"
-  },
-  {
-    "id": "K00170",
     "name": "Computer Science",
     "university_id": 10000291,
     "university_website": "https://www.anglia.ac.uk",
@@ -35,21 +21,7 @@
     "course_website": "https://www.aru.ac.uk/study/undergraduate/applied-computer-science-west-anglia"
   },
   {
-    "id": "K00365",
-    "name": "Applied Computer Science",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/applied-computer-science-west-anglia"
-  },
-  {
     "id": "K00367",
-    "name": "Cyber Security",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security"
-  },
-  {
-    "id": "K00368",
     "name": "Cyber Security",
     "university_id": 10000291,
     "university_website": "https://www.anglia.ac.uk",
@@ -63,46 +35,11 @@
     "course_website": "https://www.aru.ac.uk/study/undergraduate/artificial-intelligence"
   },
   {
-    "id": "K00391",
-    "name": "Artificial Intelligence",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/artificial-intelligence"
-  },
-  {
-    "id": "K00476",
-    "name": "Computer Science",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computer-science-beng"
-  },
-  {
-    "id": "K00484",
-    "name": "Artificial Intelligence",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/artificial-intelligence"
-  },
-  {
     "id": "K00517",
     "name": "Computer Science",
     "university_id": 10000291,
     "university_website": "https://www.anglia.ac.uk",
     "course_website": "https://www.aru.ac.uk/study/undergraduate/computer-science-bsc"
-  },
-  {
-    "id": "K00518",
-    "name": "Computer Science",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computer-science-bsc"
-  },
-  {
-    "id": "K00520",
-    "name": "Cyber Security",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security"
   },
   {
     "id": "K00537",
@@ -112,56 +49,7 @@
     "course_website": "https://www.aru.ac.uk/study/undergraduate/software-engineering"
   },
   {
-    "id": "K00538",
-    "name": "Software Engineering",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/software-engineering"
-  },
-  {
-    "id": "K00539",
-    "name": "Software Engineering",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/software-engineering"
-  },
-  {
-    "id": "K00747",
-    "name": "Software Development",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/software-development"
-  },
-  {
-    "id": "K00748",
-    "name": "Software Development",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/software-development"
-  },
-  {
     "id": "K00753",
-    "name": "Cyber Security and Forensic Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-with-forensic-computing"
-  },
-  {
-    "id": "K00754",
-    "name": "Cyber Security and Forensic Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-with-forensic-computing"
-  },
-  {
-    "id": "K00755",
-    "name": "Cyber Security and Forensic Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-with-forensic-computing"
-  },
-  {
-    "id": "K00756",
     "name": "Cyber Security and Forensic Computing",
     "university_id": 10000291,
     "university_website": "https://www.anglia.ac.uk",
@@ -175,49 +63,7 @@
     "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics"
   },
   {
-    "id": "K00778",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics"
-  },
-  {
-    "id": "K00779",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics"
-  },
-  {
-    "id": "K00780",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics"
-  },
-  {
     "id": "K00789",
-    "name": "Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computing"
-  },
-  {
-    "id": "K00790",
-    "name": "Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computing"
-  },
-  {
-    "id": "K00791",
-    "name": "Computing",
-    "university_id": 10000291,
-    "university_website": "https://www.anglia.ac.uk",
-    "course_website": "https://www.aru.ac.uk/study/undergraduate/computing"
-  },
-  {
-    "id": "K00792",
     "name": "Computing",
     "university_id": 10000291,
     "university_website": "https://www.anglia.ac.uk",
@@ -252,20 +98,6 @@
     "course_website": "http://www.bathspa.ac.uk/courses/ug-creative-computing-gaming/"
   },
   {
-    "id": "BSCCGMSWCCGMSPSSW",
-    "name": "Creative Computing (Gaming) Specialised with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "http://www.bathspa.ac.uk/courses/ug-creative-computing-gaming/"
-  },
-  {
-    "id": "BSCCSWCCSPSSW",
-    "name": "Creative Computing Specialised with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-creative-computing/"
-  },
-  {
     "id": "BSCCWTCCWTSPS",
     "name": "Creative Computing (Web Technologies) Specialised",
     "university_id": 10000571,
@@ -273,22 +105,8 @@
     "course_website": "https://www.bathspa.ac.uk/courses/ug-creative-computing-web-technologies/"
   },
   {
-    "id": "BSCCWTSWCCWTSPSSW",
-    "name": "Creative Computing (Web Technologies) Specialised with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-creative-computing-web-technologies/"
-  },
-  {
     "id": "BSCMCMSIN",
     "name": "Computing Single Honours",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computing/"
-  },
-  {
-    "id": "BSCMSWCMSINSW",
-    "name": "Computing Single with Professional Placement Year",
     "university_id": 10000571,
     "university_website": "",
     "course_website": "https://www.bathspa.ac.uk/courses/ug-computing/"
@@ -308,20 +126,6 @@
     "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-artificial-intelligence/"
   },
   {
-    "id": "BSCSIAIFYCSIAISINFY",
-    "name": "Computer Science (Artificial Intelligence) with Integrated Foundation Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-artificial-intelligence/"
-  },
-  {
-    "id": "BSCSIAISWCSIAISINSW",
-    "name": "Computer Science (Artificial Intelligence) with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-artificial-intelligence/"
-  },
-  {
     "id": "BSCSICSISIN",
     "name": "Computer Science",
     "university_id": 10000571,
@@ -336,41 +140,6 @@
     "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-data-analytics/"
   },
   {
-    "id": "BSCSIDAFYCSIDASINFY",
-    "name": "Computer Science (Data Analytics) with Integrated Foundation Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-data-analytics/"
-  },
-  {
-    "id": "BSCSIDASWCSIDASINSW",
-    "name": "Computer Science (Data Analytics) with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-data-analytics/"
-  },
-  {
-    "id": "BSCSIFYCSISINFY",
-    "name": "Computer Science with Integrated Foundation Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-/"
-  },
-  {
-    "id": "BSCSISWCSISINSW",
-    "name": "Computer Science with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-computer-science-/"
-  },
-  {
-    "id": "BSCSSWCYSSINSW",
-    "name": "Cyber Security with Professional Placement Year",
-    "university_id": 10000571,
-    "university_website": "",
-    "course_website": "https://www.bathspa.ac.uk/courses/ug-cyber-security/"
-  },
-  {
     "id": "BSCCOM",
     "name": "Computer Science",
     "university_id": 10000712,
@@ -379,20 +148,6 @@
   },
   {
     "id": "BSCCYS",
-    "name": "Cyber Security",
-    "university_id": 10000712,
-    "university_website": "https://www.ucb.ac.uk",
-    "course_website": "https://www.ucb.ac.uk/study/courses/undergraduate/cyber-security-bsc-hons-fdsc/"
-  },
-  {
-    "id": "FDGCOM",
-    "name": "Computer Science",
-    "university_id": 10000712,
-    "university_website": "https://www.ucb.ac.uk",
-    "course_website": "https://www.ucb.ac.uk/study/courses/undergraduate/computing-bsc-hons-fdsc/"
-  },
-  {
-    "id": "FDGCYS",
     "name": "Cyber Security",
     "university_id": 10000712,
     "university_website": "https://www.ucb.ac.uk",
@@ -483,48 +238,6 @@
     "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-data-science-artificial-intelligence"
   },
   {
-    "id": "BSFBCAS_I231",
-    "name": "Business Computing with Analytics (with Foundation Year)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-business-computing-analytics-0"
-  },
-  {
-    "id": "BSFCOSS_I101",
-    "name": "Computer Science (with Foundation Year)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-computer-science"
-  },
-  {
-    "id": "BSFCOS_G609",
-    "name": "Computing (with Foundation Year)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-computing"
-  },
-  {
-    "id": "BSFCSDFS_I141",
-    "name": "Cyber Security with Digital Forensics (with Foundation Year)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-cyber-security-digital-forensics"
-  },
-  {
-    "id": "BSFCSMS_2DA7",
-    "name": "Cyber Security Management (with Foundation Year option)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-cyber-security-management-1"
-  },
-  {
-    "id": "BSFDSAIS_I401",
-    "name": "Data Science and Artificial Intelligence (with Foundation Year)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-data-science-artificial-intelligence"
-  },
-  {
     "id": "BSFNCSS_I126",
     "name": "Networks and Cyber Security (with Foundation Year)",
     "university_id": 10000824,
@@ -534,20 +247,6 @@
   {
     "id": "BSFSES_G603",
     "name": "Software Engineering (with Foundation Year option)",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-software-engineering"
-  },
-  {
-    "id": "BSNCSS_I125",
-    "name": "Networks and Cyber Security",
-    "university_id": 10000824,
-    "university_website": "https://www.wiltshire.ac.uk",
-    "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-networks-cyber-security"
-  },
-  {
-    "id": "BSSES_G602",
-    "name": "Software Engineering",
     "university_id": 10000824,
     "university_website": "https://www.wiltshire.ac.uk",
     "course_website": "https://www.bournemouth.ac.uk/study/courses/bsc-hons-software-engineering"
@@ -637,13 +336,6 @@
     "course_website": "https://www.bradfordcollege.ac.uk/courses/level-5-hnd-in-computing-for-england/"
   },
   {
-    "id": "PFHN025",
-    "name": "Computing for England (Data Analytics) HTQ",
-    "university_id": 10000840,
-    "university_website": "https://www.bradfordcollege.ac.uk",
-    "course_website": "https://www.bradfordcollege.ac.uk/courses/higher-national-certificate-in-computing-data-analytics/"
-  },
-  {
     "id": "PFHN026",
     "name": "HND in Computing for England (Cyber Security)",
     "university_id": 10000840,
@@ -665,25 +357,11 @@
     "course_website": "https://www.bradfordcollege.ac.uk/courses/higher-national-certificate-in-computing-cyber-security-part-time"
   },
   {
-    "id": "PPHN018",
-    "name": "Computing for England",
-    "university_id": 10000840,
-    "university_website": "https://www.bradfordcollege.ac.uk",
-    "course_website": "https://www.bradfordcollege.ac.uk/courses/level-5-hnd-in-computing-for-england/"
-  },
-  {
     "id": "00304075-bsc-digital-tech",
     "name": "Computing and Digital Technologies",
     "university_id": 10000878,
     "university_website": "https://www.bridgwater.ac.uk",
     "course_website": "https://www.somerset.ac.uk/courses/computing-and-digital-technologies-bsc-hons.html"
-  },
-  {
-    "id": "00304076-fdeg-digital-tech",
-    "name": "Computing and Digital Technologies",
-    "university_id": 10000878,
-    "university_website": "https://www.bridgwater.ac.uk",
-    "course_website": "https://www.somerset.ac.uk/courses/computing-and-digital-technologies-foundation-degree-full-time.html"
   },
   {
     "id": "00304076-fdeg-digital-tech",
@@ -749,22 +427,8 @@
     "course_website": "https://www.gre.ac.uk/foundation-degrees/engsci/computing-fdsc"
   },
   {
-    "id": "K0078",
-    "name": "Computing (Bexley)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/foundation-degrees/engsci/computing-fdsc"
-  },
-  {
     "id": "2DC3UCPMPSCI-FT-BSC",
     "name": "Computer Science (Cybersecurity)",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-cybersecurity-bsc"
-  },
-  {
-    "id": "2DC3UCPMPSCI-KW-BSC",
-    "name": "Computer Science (Cybersecurity) with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-cybersecurity-bsc"
@@ -777,22 +441,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/electronic-and-electrical-engineering-artificial-intelligence-beng"
   },
   {
-    "id": "FB58UEEEEAI-KW-BENG",
-    "name": "Electronic and Electrical Engineering (Artificial Intelligence) with Professional Development",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/electronic-and-electrical-engineering-artificial-intelligence-beng"
-  },
-  {
     "id": "G1G4USMTHCP2-FT-BSC",
     "name": "Mathematics with Computer Science",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/mathematics-with-computer-science-bsc"
-  },
-  {
-    "id": "G1G4USMTHCP2-KW-BSC",
-    "name": "Mathematics with Computer Science and Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/mathematics-with-computer-science-bsc"
@@ -805,22 +455,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-artificial-intelligence-bsc"
   },
   {
-    "id": "G400UCSARTIN-KW-BSC",
-    "name": "Computer Science (Artificial Intelligence) with Placement Year",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-artificial-intelligence-bsc"
-  },
-  {
     "id": "G400UDIGMEDI-FT-BSC",
     "name": "Computer Science (Digital Media and Games)",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-digital-media-and-games-bsc"
-  },
-  {
-    "id": "G400UDIGMEDI-KW-BSC",
-    "name": "Computer Science (Digital Media and Games) with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-digital-media-and-games-bsc"
@@ -833,22 +469,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-network-computing-bsc"
   },
   {
-    "id": "G400UNETWKCM-KW-BSC",
-    "name": "Computer Science (Network Computing) with Placement Year",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-network-computing-bsc"
-  },
-  {
     "id": "G400USCMPSC1-FT-BSC",
     "name": "Computer Science",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-bsc"
-  },
-  {
-    "id": "G400USCMPSC1-KW-BSC",
-    "name": "Computer Science with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-bsc"
@@ -861,22 +483,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-software-engineering-bsc"
   },
   {
-    "id": "G400USOFENG1-KW-BSC",
-    "name": "Computer Science (Software Engineering) with Placement Year",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-science-software-engineering-bsc"
-  },
-  {
     "id": "G500UBUSCOME-FT-BSC",
     "name": "Business Computing (eBusiness)",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-ebusiness-bsc"
-  },
-  {
-    "id": "G500UBUSCOME-KW-BSC",
-    "name": "Business Computing (eBusiness) with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-ebusiness-bsc"
@@ -889,22 +497,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-human-computer-interaction-bsc"
   },
   {
-    "id": "G500UBUSCOMH-KW-BSC",
-    "name": "Business Computing (Human-Computer Interaction) with Placement Year",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-human-computer-interaction-bsc"
-  },
-  {
     "id": "G500UBUSCOMP-FT-BSC",
     "name": "Business Computing",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-bsc"
-  },
-  {
-    "id": "G500UBUSCOMP-KW-BSC",
-    "name": "Business Computing with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-bsc"
@@ -917,13 +511,6 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-social-media-bsc"
   },
   {
-    "id": "G500UBUSCOMS-KW-BSC",
-    "name": "Business Computing (Social Media) with Placement Year",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/business-computing-social-media-bsc"
-  },
-  {
     "id": "HM2DUECSYEAI-FT-BENG",
     "name": "Computer Systems Engineering (Artificial Intelligence)",
     "university_id": 10000961,
@@ -931,22 +518,8 @@
     "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-systems-engineering-artificial-intelligence-beng"
   },
   {
-    "id": "HM2DUECSYEAI-KW-BENG",
-    "name": "Computer Systems Engineering (Artificial Intelligence) with Placement",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "https://www.brunel.ac.uk/study/undergraduate/computer-systems-engineering-artificial-intelligence-beng"
-  },
-  {
     "id": "J2JAUMADASCI-FT-BSC",
     "name": "Mathematics for Data Science",
-    "university_id": 10000961,
-    "university_website": "https://www.brunel.ac.uk",
-    "course_website": "http://www.brunel.ac.uk/study/undergraduate/mathematics-for-data-science-bsc"
-  },
-  {
-    "id": "J2JAUMADASCI-KW-BSC",
-    "name": "Mathematics for Data Science with Placement Year",
     "university_id": 10000961,
     "university_website": "https://www.brunel.ac.uk",
     "course_website": "http://www.brunel.ac.uk/study/undergraduate/mathematics-for-data-science-bsc"
@@ -966,36 +539,8 @@
     "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-computer-science"
   },
   {
-    "id": "KBSCOSCFYCSFY",
-    "name": "Computer Science with Foundation Year",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-computer-science"
-  },
-  {
-    "id": "KBSCSAIFTARIN",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-computer-science"
-  },
-  {
-    "id": "KBSCSAIFYARIF",
-    "name": "Computer Science with Artificial Intelligence with Foundation Year",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-computer-science"
-  },
-  {
     "id": "KBSCYBEFTCYBS",
     "name": "Cyber Security",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-cyber-security"
-  },
-  {
-    "id": "KBSCYBEFYCYSF",
-    "name": "Cyber Security with Foundation Year",
     "university_id": 10000975,
     "university_website": "",
     "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-cyber-security"
@@ -1008,22 +553,8 @@
     "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-data-science"
   },
   {
-    "id": "KBSDATAFYDSC4",
-    "name": "Data Science with Foundation Year",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-data-science"
-  },
-  {
     "id": "KBSSOFTFTI300",
     "name": "Software Engineering",
-    "university_id": 10000975,
-    "university_website": "",
-    "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-software-engineering"
-  },
-  {
-    "id": "KBSSOFTFYLL30",
-    "name": "Software Engineering with Foundation Year",
     "university_id": 10000975,
     "university_website": "",
     "course_website": "https://www.bnu.ac.uk/courses/undergraduate/bsc-hons-software-engineering"
@@ -1246,20 +777,6 @@
     "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/computer-science-msci"
   },
   {
-    "id": "USCOSF",
-    "name": "Computer Science",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/computer-science-foundation"
-  },
-  {
-    "id": "USCSCF",
-    "name": "Computer Science",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/computer-science-foundation"
-  },
-  {
     "id": "USCSCI",
     "name": "Computer Science",
     "university_id": 10001478,
@@ -1272,13 +789,6 @@
     "university_id": 10001478,
     "university_website": "https://www.city.ac.uk",
     "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/computer-science-with-cyber-security"
-  },
-  {
-    "id": "USCSGF",
-    "name": "Computer Science with Games Technology",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/computer-science-foundation"
   },
   {
     "id": "USCSGT",
@@ -1295,13 +805,6 @@
     "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/data-science"
   },
   {
-    "id": "USDASF",
-    "name": "Data Science",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/computer-science-foundation"
-  },
-  {
     "id": "USGTEC",
     "name": "Computer Science with Games Technology",
     "university_id": 10001478,
@@ -1309,25 +812,11 @@
     "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/computer-science-with-games-technology"
   },
   {
-    "id": "USGTEF",
-    "name": "Computer Science with Games Technology",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/computer-science-foundation"
-  },
-  {
     "id": "USMADI",
     "name": "Mathematics with Data Science",
     "university_id": 10001478,
     "university_website": "https://www.city.ac.uk",
     "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/foundation/introduction-to-mathematics"
-  },
-  {
-    "id": "USMADS",
-    "name": "Mathematics with Data Science",
-    "university_id": 10001478,
-    "university_website": "https://www.city.ac.uk",
-    "course_website": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/mathematics-with-data-science"
   },
   {
     "id": "290",
@@ -1344,21 +833,7 @@
     "course_website": "https://www.coventry.ac.uk/cul/course-structure/hnc-hnd-degree/cyber-security/?term=2026-27"
   },
   {
-    "id": "311",
-    "name": "Cyber Security",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/cul/course-structure/hnc-hnd-degree/cyber-security/?term=2026-27"
-  },
-  {
     "id": "312",
-    "name": "Computing Science",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/cul/course-structure/hnc-hnd-degree/computing-science/?term=2026-27"
-  },
-  {
-    "id": "313",
     "name": "Computing Science",
     "university_id": 10001726,
     "university_website": "https://www.coventry.ac.uk",
@@ -1386,21 +861,7 @@
     "course_website": "https://www.coventry.ac.uk/course-structure/ug/eec/data-science-mscibsc/?term=2026-27"
   },
   {
-    "id": "361",
-    "name": "Data Science",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/course-structure/ug/eec/data-science-mscibsc/?term=2026-27"
-  },
-  {
     "id": "374",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/course-structure/ug/eec/computer-science-with-artificial-intelligence-msci-bsc-hons/?term=2026-27"
-  },
-  {
-    "id": "375",
     "name": "Computer Science with Artificial Intelligence",
     "university_id": 10001726,
     "university_website": "https://www.coventry.ac.uk",
@@ -1428,13 +889,6 @@
     "course_website": "https://www.coventry.ac.uk/cul/course-structure/hnc-hnd-degree/cloud-computing-bsc-hons/?term=2026-27"
   },
   {
-    "id": "42",
-    "name": "Computer Science",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/course-structure/ug/eec/computer-science-mscibsc-hons/?term=2026-27"
-  },
-  {
     "id": "433",
     "name": "Information Technology Management",
     "university_id": 10001726,
@@ -1454,20 +908,6 @@
     "university_id": 10001726,
     "university_website": "https://www.coventry.ac.uk",
     "course_website": "https://www.coventry.ac.uk/cuc/course-structure/hnc-hnd-degree/cloud-computing/?term=2026-27&type=foundation"
-  },
-  {
-    "id": "494",
-    "name": "Computing Science",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/cus/course-structure/hnc-hnd-degree/computing-science/?term=2026-27"
-  },
-  {
-    "id": "495",
-    "name": "Cyber Security",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/cus/course-structure/hnc-hnd-degree/cyber-security/?term=2026-27"
   },
   {
     "id": "534",
@@ -1519,13 +959,6 @@
     "course_website": "https://www.coventry.ac.uk/cus/course-structure/higher-technical-qualifications/computing-for-england-hnd/?term=2026-27"
   },
   {
-    "id": "65",
-    "name": "Ethical Hacking and Cyber Security",
-    "university_id": 10001726,
-    "university_website": "https://www.coventry.ac.uk",
-    "course_website": "https://www.coventry.ac.uk/course-structure/ug/eec/ethical-hacking-and-cybersecurity-bsc/?term=2026-27"
-  },
-  {
     "id": "G400DM",
     "name": "Computer Science",
     "university_id": 10001883,
@@ -1566,13 +999,6 @@
     "university_id": 10001919,
     "university_website": "https://www.derby-college.ac.uk",
     "course_website": "https://www.derby-college.ac.uk/course/foundation-degree-software-development-fdsc-2-years/"
-  },
-  {
-    "id": "EC-KISS33",
-    "name": "Applied Computing",
-    "university_id": 10002370,
-    "university_website": "https://www.exe-coll.ac.uk",
-    "course_website": "https://exe-coll.ac.uk/course/appliedcomputinghnd/"
   },
   {
     "id": "EC-KISS33",
@@ -1624,46 +1050,11 @@
     "course_website": "http://www.gold.ac.uk/ug/bsc-computer-science/"
   },
   {
-    "id": "KG400",
-    "name": "Computer Science",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "http://www.gold.ac.uk/ug/bsc-computer-science/"
-  },
-  {
-    "id": "KG401",
-    "name": "Computer Science with Foundation Year (Integrated Degree)",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "http://www.gold.ac.uk/ug/foundation-computing/"
-  },
-  {
-    "id": "KG401",
-    "name": "Computer Science with Foundation Year (Integrated Degree)",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "http://www.gold.ac.uk/ug/foundation-computing/"
-  },
-  {
-    "id": "KG402",
-    "name": "Creative Computing with Foundation Year (Integrated Degree)",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "http://www.gold.ac.uk/ug/foundation-computing/"
-  },
-  {
     "id": "KG414",
     "name": "Computer Science (Artificial Intelligence and Data Science)",
     "university_id": 10002718,
     "university_website": "https://www.gold.ac.uk",
     "course_website": "https://www.gold.ac.uk/ug/bsc-computer-science-artificial-intelligence-data-science/"
-  },
-  {
-    "id": "KG452",
-    "name": "Creative Computing",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "http://www.gold.ac.uk/ug/bsc-creative-computing/"
   },
   {
     "id": "KG452",
@@ -1722,13 +1113,6 @@
     "course_website": "https://www.gold.ac.uk/ug/bsc-business-computing-entrepreneurship/"
   },
   {
-    "id": "KIN11",
-    "name": "Business Computing and Entrepreneurship",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "https://www.gold.ac.uk/ug/bsc-business-computing-entrepreneurship/"
-  },
-  {
     "id": "KIN13",
     "name": "Business Computing (Systems Analysis)",
     "university_id": 10002718,
@@ -1748,13 +1132,6 @@
     "university_id": 10002718,
     "university_website": "https://www.gold.ac.uk",
     "course_website": "https://www.gold.ac.uk/ug/integrated-degree-electronic-music-computing/"
-  },
-  {
-    "id": "KWG34",
-    "name": "Electronic Music, Computing and Technology",
-    "university_id": 10002718,
-    "university_website": "https://www.gold.ac.uk",
-    "course_website": "https://www.gold.ac.uk/ug/bmus-bsc-electronic-music-computing/"
   },
   {
     "id": "KWG34",
@@ -1785,13 +1162,6 @@
     "course_website": "https://adult.escg.ac.uk/courses/computing-ict/software-development/fdsc-computing-and-systems-development-90714/"
   },
   {
-    "id": "61594",
-    "name": "Computing and Systems Development",
-    "university_id": 10002923,
-    "university_website": "https://www.escg.ac.uk",
-    "course_website": "https://adult.escg.ac.uk/courses/computing-ict/software-development/fdsc-computing-and-systems-development-90714/"
-  },
-  {
     "id": "G65D170",
     "name": "Computing HNC L4 (HTQ)",
     "university_id": 10003023,
@@ -1804,13 +1174,6 @@
     "university_id": 10003146,
     "university_website": "https://www.hopwood.ac.uk",
     "course_website": "https://www.hopwood.ac.uk/course-detail/hnd-in-computing--year-1/ICTL5C1HND/"
-  },
-  {
-    "id": "FDHCOM",
-    "name": "Computing",
-    "university_id": 10003193,
-    "university_website": "https://www.hughbaird.ac.uk",
-    "course_website": "https://www.hughbaird.ac.uk/details/university/ucd:HECOMPFDSC"
   },
   {
     "id": "FDHCOM",
@@ -2016,49 +1379,7 @@
     "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
   },
   {
-    "id": "UFCSA1CSA20",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
-    "id": "UFCSA1CSA55",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
-    "id": "UFCSC1CSC20",
-    "name": "Computer Science",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
-    "id": "UFCSC1CSC55",
-    "name": "Computer Science",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
     "id": "UFCYS1DIF20",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/cyber-security-computer-forensics/"
-  },
-  {
-    "id": "UFCYS1DIF20",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/cyber-security-computer-forensics/"
-  },
-  {
-    "id": "UFCYS1DIF55",
     "name": "Cyber Security and Digital Forensics",
     "university_id": 10003678,
     "university_website": "https://www.royal-needlework.org.uk",
@@ -2072,53 +1393,11 @@
     "course_website": "https://www.kingston.ac.uk/undergraduate/courses/robotic-engineering-and-artificial-intelligence/"
   },
   {
-    "id": "UFRAI1RAI55",
-    "name": "Robotic Engineering and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/robotic-engineering-and-artificial-intelligence/"
-  },
-  {
-    "id": "UFRAI1RAI80",
-    "name": "Robotic Engineering and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/robotic-engineering-and-artificial-intelligence/"
-  },
-  {
-    "id": "USCSA1CSA45",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
-    "id": "USCSC1CSC45",
-    "name": "Computer Science",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/computer-science/"
-  },
-  {
     "id": "USCYS1DIF45",
     "name": "Cyber Security and Digital Forensics",
     "university_id": 10003678,
     "university_website": "https://www.royal-needlework.org.uk",
     "course_website": "https://www.kingston.ac.uk/undergraduate/courses/cyber-security-digital-forensics/"
-  },
-  {
-    "id": "USRAI1RAI41",
-    "name": "Robotic Engineering and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/robotic-engineering-and-artificial-intelligence/"
-  },
-  {
-    "id": "USRAI1RAI45",
-    "name": "Robotic Engineering and Artificial Intelligence",
-    "university_id": 10003678,
-    "university_website": "https://www.royal-needlework.org.uk",
-    "course_website": "https://www.kingston.ac.uk/undergraduate/courses/robotic-engineering-and-artificial-intelligence/"
   },
   {
     "id": "BCOSC_A337",
@@ -2140,13 +1419,6 @@
     "university_id": 10003861,
     "university_website": "https://www.leedsbeckett.ac.uk",
     "course_website": "https://www.leedsbeckett.ac.uk/courses/cyber-security-bsc/"
-  },
-  {
-    "id": "BDTAI_C372",
-    "name": "Data Science and Artificial Intelligence",
-    "university_id": 10003861,
-    "university_website": "https://www.leedsbeckett.ac.uk",
-    "course_website": "https://www.leedsbeckett.ac.uk/courses/data-science-artificial-intelligence-bsc/"
   },
   {
     "id": "BDTAI_C372",
@@ -2660,32 +1932,11 @@
     "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/artificial-intelligence-and-robotics---beng-hons/"
   },
   {
-    "id": "UDARINRO",
-    "name": "Artificial Intelligence and Robotics",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/artificial-intelligence-and-robotics---beng-hons/"
-  },
-  {
     "id": "UDCMPSCI",
     "name": "Computer Science",
     "university_id": 10004048,
     "university_website": "",
     "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/computer-science---bsc-hons/"
-  },
-  {
-    "id": "UDCMPSCI",
-    "name": "Computer Science",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/computer-science---bsc-hons/"
-  },
-  {
-    "id": "UDCMPTNG",
-    "name": "Computing",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/computing---bsc-hons/"
   },
   {
     "id": "UDCMPTNG",
@@ -2702,32 +1953,11 @@
     "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/computer-networking-and-cyber-security---bsc-hons/"
   },
   {
-    "id": "UDCOMNCS",
-    "name": "Computer Networking and Cyber Security",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/computer-networking-and-cyber-security---bsc-hons/"
-  },
-  {
     "id": "UDDATSCI",
     "name": "Data Science",
     "university_id": 10004048,
     "university_website": "",
     "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/data-science---bsc-hons/"
-  },
-  {
-    "id": "UDDATSCI",
-    "name": "Data Science",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/data-science---bsc-hons/"
-  },
-  {
-    "id": "UDDIFOCS",
-    "name": "Digital Forensics and Cyber Security",
-    "university_id": 10004048,
-    "university_website": "",
-    "course_website": "https://www.londonmet.ac.uk/courses/undergraduate/digital-forensics-and-cyber-security---bsc-hons/"
   },
   {
     "id": "UDDIFOCS",
@@ -2765,20 +1995,6 @@
     "course_website": "https://www.lsbu.ac.uk/study/course-finder/bsc-hons-computer-science#overview"
   },
   {
-    "id": "4637A",
-    "name": "Computer Science",
-    "university_id": 10004078,
-    "university_website": "https://www.lsbu.ac.uk",
-    "course_website": "https://www.lsbu.ac.uk/study/course-finder/bsc-hons-computer-science#overview"
-  },
-  {
-    "id": "5453A",
-    "name": "Information Technology",
-    "university_id": 10004078,
-    "university_website": "https://www.lsbu.ac.uk",
-    "course_website": "https://www.lsbu.ac.uk/study/course-finder/bsc-hons-computer-science-information-technology#overview"
-  },
-  {
     "id": "5453A",
     "name": "Information Technology",
     "university_id": 10004078,
@@ -2807,21 +2023,7 @@
     "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/chemistry-with-computing-mchem/"
   },
   {
-    "id": "KISF131",
-    "name": "Chemistry with Computing",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/chemistry-with-computing-mchem/"
-  },
-  {
     "id": "KISF132",
-    "name": "Chemistry with Computing",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/chemistry-with-computing-bsc/"
-  },
-  {
-    "id": "KISF133",
     "name": "Chemistry with Computing",
     "university_id": 10004113,
     "university_website": "https://www.lboro.ac.uk",
@@ -2835,21 +2037,7 @@
     "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/physics-with-computing-mphys/"
   },
   {
-    "id": "KISF331",
-    "name": "Physics with Computing",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/physics-with-computing-mphys/"
-  },
-  {
     "id": "KISFG33",
-    "name": "Physics with Computing",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/a-z/physics-with-computing-bsc/"
-  },
-  {
-    "id": "KISFG34",
     "name": "Physics with Computing",
     "university_id": 10004113,
     "university_website": "https://www.lboro.ac.uk",
@@ -2863,21 +2051,7 @@
     "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-bsc/#default"
   },
   {
-    "id": "KISG401",
-    "name": "Computer Science",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-bsc/#default"
-  },
-  {
     "id": "KISG402",
-    "name": "Computer Science",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-msci/#default"
-  },
-  {
-    "id": "KISG403",
     "name": "Computer Science",
     "university_id": 10004113,
     "university_website": "https://www.lboro.ac.uk",
@@ -2898,13 +2072,6 @@
     "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-bsc/"
   },
   {
-    "id": "KISG407",
-    "name": "Computer Science and Cyber Security",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-bsc/"
-  },
-  {
     "id": "KISG4G0",
     "name": "Computer Science and Cyber Security",
     "university_id": 10004113,
@@ -2912,21 +2079,7 @@
     "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-msci/"
   },
   {
-    "id": "KISG4G4",
-    "name": "Computer Science and Cyber Security",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "https://www.lboro.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-msci/"
-  },
-  {
     "id": "KISG500",
-    "name": "Information Technology Management for Business",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/information-technology-management-for-business/#default"
-  },
-  {
-    "id": "KISG501",
     "name": "Information Technology Management for Business",
     "university_id": 10004113,
     "university_website": "https://www.lboro.ac.uk",
@@ -2947,13 +2100,6 @@
     "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-mathematics-bsc/#default"
   },
   {
-    "id": "KISGG4D",
-    "name": "Computer Science and Mathematics",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-mathematics-bsc/#default"
-  },
-  {
     "id": "KISGG4R",
     "name": "Computer Science and Artificial Intelligence",
     "university_id": 10004113,
@@ -2961,28 +2107,7 @@
     "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-artificial-intelligence-msci/#default"
   },
   {
-    "id": "KISGG4T",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-artificial-intelligence-bsc/#default"
-  },
-  {
     "id": "KISGGK1",
-    "name": "Computer Science and Mathematics",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-mathematics-msci/#default"
-  },
-  {
-    "id": "KISGGK7",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computer-science-and-artificial-intelligence-msci/#default"
-  },
-  {
-    "id": "KISGGL1",
     "name": "Computer Science and Mathematics",
     "university_id": 10004113,
     "university_website": "https://www.lboro.ac.uk",
@@ -3010,27 +2135,6 @@
     "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/information-technology-management-for-business-bsc/#default"
   },
   {
-    "id": "KISGN52",
-    "name": "Information Technology Management for Business",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/information-technology-management-for-business-bsc/#default"
-  },
-  {
-    "id": "KISGNK2",
-    "name": "Computing and Management",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computing-and-management-bsc/#default"
-  },
-  {
-    "id": "KISGNL2",
-    "name": "Computing and Management",
-    "university_id": 10004113,
-    "university_website": "https://www.lboro.ac.uk",
-    "course_website": "http://www.lboro.ac.uk/study/undergraduate/courses/a-z/computing-and-management-msci/#default"
-  },
-  {
     "id": "K0104",
     "name": "Computer Science",
     "university_id": 10004180,
@@ -3038,21 +2142,7 @@
     "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science/september-2026/"
   },
   {
-    "id": "K0105",
-    "name": "Computer Science",
-    "university_id": 10004180,
-    "university_website": "https://www.mmu.ac.uk",
-    "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science/september-2026/"
-  },
-  {
     "id": "K0115",
-    "name": "Software Engineering",
-    "university_id": 10004180,
-    "university_website": "https://www.mmu.ac.uk",
-    "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-software-engineering/september-2026/"
-  },
-  {
-    "id": "K0116",
     "name": "Software Engineering",
     "university_id": 10004180,
     "university_website": "https://www.mmu.ac.uk",
@@ -3073,20 +2163,6 @@
     "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-cyber-security/september-2026/"
   },
   {
-    "id": "K0993",
-    "name": "AI and Data Science",
-    "university_id": 10004180,
-    "university_website": "https://www.mmu.ac.uk",
-    "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-ai-and-data-science/september-2026/"
-  },
-  {
-    "id": "K0995",
-    "name": "Cyber Security",
-    "university_id": 10004180,
-    "university_website": "https://www.mmu.ac.uk",
-    "course_website": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-cyber-security/september-2026/"
-  },
-  {
     "id": "COMF5O-CO2F1",
     "name": "Computing",
     "university_id": 10004344,
@@ -3101,20 +2177,6 @@
     "course_website": "http://www.mdx.ac.uk/courses/undergraduate/computer-science"
   },
   {
-    "id": "144I102K3",
-    "name": "Computer Science",
-    "university_id": 10004351,
-    "university_website": "https://www.mdx.ac.uk",
-    "course_website": "http://www.mdx.ac.uk/courses/undergraduate/computer-science"
-  },
-  {
-    "id": "144I118K3",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10004351,
-    "university_website": "https://www.mdx.ac.uk",
-    "course_website": "https://www.mdx.ac.uk/courses/undergraduate/cyber-security-digital-forensics"
-  },
-  {
     "id": "144I118K3",
     "name": "Cyber Security and Digital Forensics",
     "university_id": 10004351,
@@ -3129,32 +2191,11 @@
     "course_website": "http://www.mdx.ac.uk/courses/undergraduate/information-technology"
   },
   {
-    "id": "144I201K3",
-    "name": "Information Technology",
-    "university_id": 10004351,
-    "university_website": "https://www.mdx.ac.uk",
-    "course_website": "http://www.mdx.ac.uk/courses/undergraduate/information-technology"
-  },
-  {
     "id": "144I213K3",
     "name": "Business Computing and Data Analytics",
     "university_id": 10004351,
     "university_website": "https://www.mdx.ac.uk",
     "course_website": "https://www.mdx.ac.uk/courses/undergraduate/business-computing--data-analytics-bsc/"
-  },
-  {
-    "id": "144I213K3",
-    "name": "Business Computing and Data Analytics",
-    "university_id": 10004351,
-    "university_website": "https://www.mdx.ac.uk",
-    "course_website": "https://www.mdx.ac.uk/courses/undergraduate/business-computing--data-analytics-bsc/"
-  },
-  {
-    "id": "144I400K3",
-    "name": "Artificial Intelligence and Data Science",
-    "university_id": 10004351,
-    "university_website": "https://www.mdx.ac.uk",
-    "course_website": "https://www.mdx.ac.uk/courses/undergraduate/artificial-intelligence-and-data-science-bsc-honours/"
   },
   {
     "id": "144I400K3",
@@ -3276,21 +2317,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-animation/"
   },
   {
-    "id": "UBAANIFTDCC",
-    "name": "Animation with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-animation/"
-  },
-  {
     "id": "UBAAV4FTDCC",
-    "name": "Animation and Visual Effects with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-animation-visual-effects/"
-  },
-  {
-    "id": "UBAAVXFTDCC",
     "name": "Animation and Visual Effects with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3311,13 +2338,6 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fine-art/"
   },
   {
-    "id": "UBAFARFTDCC",
-    "name": "Fine Art with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fine-art/"
-  },
-  {
     "id": "UBAFB4FTDCC",
     "name": "Fashion Marketing and Business with Diploma in Creative Computing",
     "university_id": 10004775,
@@ -3332,29 +2352,8 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fashion-communication-promotion/"
   },
   {
-    "id": "UBAFCPFTDCC",
-    "name": "Fashion Communication and Promotion with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fashion-communication-promotion/"
-  },
-  {
     "id": "UBAFM4FTDCC",
     "name": "Film & Moving Image Production with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-film-moving-image-production/"
-  },
-  {
-    "id": "UBAFMBFTDCC",
-    "name": "Fashion Marketing and Business with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fashion-marketing-and-business/"
-  },
-  {
-    "id": "UBAFMIFTDCC",
-    "name": "Film and Moving Image Production with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-film-moving-image-production/"
@@ -3367,21 +2366,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fashion/"
   },
   {
-    "id": "UBAFSNFTDCC",
-    "name": "Fashion with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-fashion/"
-  },
-  {
     "id": "UBAGA4FTDCC",
-    "name": "Games Art & Design with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-games-art-design/"
-  },
-  {
-    "id": "UBAGADFTDCC",
     "name": "Games Art & Design with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3402,28 +2387,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-graphic-design/"
   },
   {
-    "id": "UBAGRCFTDCC",
-    "name": "Graphic Communication with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-graphic-communication/"
-  },
-  {
-    "id": "UBAGRDFTDCC",
-    "name": "Graphic Design with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-graphic-design/"
-  },
-  {
     "id": "UBAIL4FTDCC",
-    "name": "Illustration with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-illustration/"
-  },
-  {
-    "id": "UBAILLFTDCC",
     "name": "Illustration with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3437,21 +2401,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-interior-design/"
   },
   {
-    "id": "UBAINDFTDCC",
-    "name": "Interior Design with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-interior-design/"
-  },
-  {
     "id": "UBAPH4FTDCC",
-    "name": "Photography with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-photography/"
-  },
-  {
-    "id": "UBAPHOFTDCC",
     "name": "Photography with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3465,21 +2415,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-design-publishing/"
   },
   {
-    "id": "UBAPUBFTDCC",
-    "name": "Design for Publishing with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-design-publishing/"
-  },
-  {
     "id": "UBATX4FTDCC",
-    "name": "Textile Design with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/ba-hons-textile-design/"
-  },
-  {
-    "id": "UBATXDFTDCC",
     "name": "Textile Design with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3493,21 +2429,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/bsc-hons-creative-computing/"
   },
   {
-    "id": "UBSCCPFTDPDA",
-    "name": "Creative Computing with Diploma in Creative Professional Development",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/bsc-hons-creative-computing/"
-  },
-  {
     "id": "UBSGDEFTDCC",
-    "name": "Games Development with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/bsc-hons-games-development/"
-  },
-  {
-    "id": "UBSGV4FTDCC",
     "name": "Games Development with Diploma in Creative Computing",
     "university_id": 10004775,
     "university_website": "https://www.nua.ac.uk",
@@ -3521,28 +2443,7 @@
     "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/bsc-hons-user-experience-design/"
   },
   {
-    "id": "UBSUXDFTDCC",
-    "name": "User Experience Design with Diploma in Creative Computing",
-    "university_id": 10004775,
-    "university_website": "https://www.nua.ac.uk",
-    "course_website": "https://www.norwichuni.ac.uk/study-at-norwich/courses/bsc-hons-user-experience-design/"
-  },
-  {
     "id": "COMP004_1",
-    "name": "Software Engineering",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-software-engineering"
-  },
-  {
-    "id": "COMP005_1",
-    "name": "Software Engineering",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-software-engineering"
-  },
-  {
-    "id": "COMP005_1",
     "name": "Software Engineering",
     "university_id": 10004797,
     "university_website": "https://www.ntu.ac.uk",
@@ -3556,21 +2457,7 @@
     "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computer-science"
   },
   {
-    "id": "COMP010_1",
-    "name": "Computer Science",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computer-science"
-  },
-  {
     "id": "COMP033_1",
-    "name": "Computer Science (Games Technology)",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computer-science-games-technology"
-  },
-  {
-    "id": "COMP034_1",
     "name": "Computer Science (Games Technology)",
     "university_id": 10004797,
     "university_website": "https://www.ntu.ac.uk",
@@ -3584,21 +2471,7 @@
     "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computing"
   },
   {
-    "id": "COMP136_1",
-    "name": "Computing",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computing"
-  },
-  {
     "id": "COMP164_1",
-    "name": "Computer Science",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/mcomp-hons-computer-science"
-  },
-  {
-    "id": "COMP165_1",
     "name": "Computer Science",
     "university_id": 10004797,
     "university_website": "https://www.ntu.ac.uk",
@@ -3612,13 +2485,6 @@
     "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-computer-science-artificial-intelligence"
   },
   {
-    "id": "COMP184_1",
-    "name": "Compute Science (Artificial Intelligence)",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-computer-science-artificial-intelligence"
-  },
-  {
     "id": "COMP185_1",
     "name": "Cyber Security",
     "university_id": 10004797,
@@ -3626,21 +2492,7 @@
     "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-cyber-security"
   },
   {
-    "id": "COMP186_1",
-    "name": "Cyber Security",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-cyber-security"
-  },
-  {
     "id": "COMP200_1",
-    "name": "Data Science",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-data-science"
-  },
-  {
-    "id": "COMP201_1",
     "name": "Data Science",
     "university_id": 10004797,
     "university_website": "https://www.ntu.ac.uk",
@@ -3710,13 +2562,6 @@
     "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computer-science-and-mathematics"
   },
   {
-    "id": "MATH008_1",
-    "name": "Computer Science and Mathematics",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/bsc-hons-computer-science-and-mathematics"
-  },
-  {
     "id": "MATH026_1",
     "name": "Computer Science and Mathematics (Foundation Year)",
     "university_id": 10004797,
@@ -3725,13 +2570,6 @@
   },
   {
     "id": "MATH048_1",
-    "name": "Mathematics with Data Science",
-    "university_id": 10004797,
-    "university_website": "https://www.ntu.ac.uk",
-    "course_website": "https://www.ntu.ac.uk/course/science-and-technology/ug/mathematics-with-data-science"
-  },
-  {
-    "id": "MATH049_1",
     "name": "Mathematics with Data Science",
     "university_id": 10004797,
     "university_website": "https://www.ntu.ac.uk",
@@ -3773,20 +2611,6 @@
     "course_website": "https://www.brookes.ac.uk/courses/undergraduate/artificial-intelligence"
   },
   {
-    "id": "BSCH-AI",
-    "name": "Artificial Intelligence",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/artificial-intelligence"
-  },
-  {
-    "id": "BSCH-CYB",
-    "name": "Computer Science for Cyber Security",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/computer-science-for-cyber-security"
-  },
-  {
     "id": "BSCH-CYB",
     "name": "Computer Science for Cyber Security",
     "university_id": 10004930,
@@ -3801,39 +2625,11 @@
     "course_website": "https://www.brookes.ac.uk/courses/undergraduate/information-technology-for-business"
   },
   {
-    "id": "BSCH-IT",
-    "name": "Information Technology for Business",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/information-technology-for-business"
-  },
-  {
     "id": "BSCH-SQ",
     "name": "Computer Science",
     "university_id": 10004930,
     "university_website": "",
     "course_website": "https://www.brookes.ac.uk/courses/undergraduate/computer-science"
-  },
-  {
-    "id": "BSCH-SQ",
-    "name": "Computer Science",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/computer-science"
-  },
-  {
-    "id": "MSCI-AI",
-    "name": "Artificial Intelligence",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/artificial-intelligence"
-  },
-  {
-    "id": "MSCI-AI",
-    "name": "Artificial Intelligence",
-    "university_id": 10004930,
-    "university_website": "",
-    "course_website": "https://www.brookes.ac.uk/courses/undergraduate/artificial-intelligence"
   },
   {
     "id": "3366",
@@ -3844,20 +2640,6 @@
   },
   {
     "id": "UF7674",
-    "name": "Applied Cyber Security",
-    "university_id": 10005128,
-    "university_website": "https://www.cityplym.ac.uk",
-    "course_website": "https://www.cityplym.ac.uk/courses/applied-cyber-security-2/"
-  },
-  {
-    "id": "UX3366",
-    "name": "Software Development",
-    "university_id": 10005128,
-    "university_website": "https://www.cityplym.ac.uk",
-    "course_website": "https://www.cityplym.ac.uk/courses/fdsc-software-development-uf3366/"
-  },
-  {
-    "id": "UX7675",
     "name": "Applied Cyber Security",
     "university_id": 10005128,
     "university_website": "https://www.cityplym.ac.uk",
@@ -3991,13 +2773,6 @@
   },
   {
     "id": "DLBSCOM002SDLBSCOS",
-    "name": "Computing",
-    "university_id": 10005451,
-    "university_website": "https://www.arden.ac.uk",
-    "course_website": "https://arden.ac.uk/our-courses/undergraduate/computing-degrees/bsc-hons-computing"
-  },
-  {
-    "id": "SCBSCOM002SSCBSCOS",
     "name": "Computing",
     "university_id": 10005451,
     "university_website": "https://www.arden.ac.uk",
@@ -4214,13 +2989,6 @@
     "course_website": "https://www.royalholloway.ac.uk/studying-here/undergraduate/economics/economics-and-data-science/"
   },
   {
-    "id": "3674",
-    "name": "Economics and Data Science with a Year in Business",
-    "university_id": 10005553,
-    "university_website": "https://www.rhul.ac.uk",
-    "course_website": "https://www.royalholloway.ac.uk/studying-here/undergraduate/economics/economics-and-data-science/"
-  },
-  {
     "id": "3816",
     "name": "Computer Science (Cyber Security)",
     "university_id": 10005553,
@@ -4256,20 +3024,6 @@
     "course_website": "https://www.shu.ac.uk/courses/computing/beng-honours-software-engineering/full-time"
   },
   {
-    "id": "11654",
-    "name": "Software Engineering",
-    "university_id": 10005790,
-    "university_website": "https://www.shu.ac.uk",
-    "course_website": "https://www.shu.ac.uk/courses/computing/beng-honours-software-engineering/full-time"
-  },
-  {
-    "id": "11665",
-    "name": "Information Technology with Business Studies",
-    "university_id": 10005790,
-    "university_website": "https://www.shu.ac.uk",
-    "course_website": "https://www.shu.ac.uk/courses/computing/bsc-honours-information-technology-with-business-studies/full-time"
-  },
-  {
     "id": "11665",
     "name": "Information Technology with Business Studies",
     "university_id": 10005790,
@@ -4291,13 +3045,6 @@
     "course_website": "https://www.shu.ac.uk/courses/computing/bsc-honours-computer-science/full-time"
   },
   {
-    "id": "11670",
-    "name": "Computer Science",
-    "university_id": 10005790,
-    "university_website": "https://www.shu.ac.uk",
-    "course_website": "https://www.shu.ac.uk/courses/computing/bsc-honours-computer-science/full-time"
-  },
-  {
     "id": "11673",
     "name": "Cyber Security with Forensics",
     "university_id": 10005790,
@@ -4310,13 +3057,6 @@
     "university_id": 10005790,
     "university_website": "https://www.shu.ac.uk",
     "course_website": "https://www.shu.ac.uk/courses/digital-media/ba-honours-game-design-and-development/full-time"
-  },
-  {
-    "id": "14335",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10005790,
-    "university_website": "https://www.shu.ac.uk",
-    "course_website": "https://www.shu.ac.uk/courses/computing/bsc-honours-computer-science-with-artificial-intelligence"
   },
   {
     "id": "14335",
@@ -4445,20 +3185,6 @@
     "course_website": "https://www.staffs.ac.uk/london/course/cyber-security-bsc"
   },
   {
-    "id": "SDIL-F-S-C-0005",
-    "name": "Computer Science",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/london/course/computer-science-bsc"
-  },
-  {
-    "id": "SDIL-F-S-C-0013",
-    "name": "Cyber Security",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/london/course/cyber-security-bsc"
-  },
-  {
     "id": "SSTK-F-F-C-0237",
     "name": "Artificial Intelligence (with a foundation year)",
     "university_id": 10006299,
@@ -4494,99 +3220,8 @@
     "course_website": "https://www.staffs.ac.uk/course/computer-science-bsc"
   },
   {
-    "id": "SSTK-F-P-C-0162",
-    "name": "Artificial Intelligence (with a placement year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/artificial-intelligence-bsc"
-  },
-  {
-    "id": "SSTK-F-P-C-0163",
-    "name": "Cyber Security (with a placement year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/cyber-security-bsc"
-  },
-  {
-    "id": "SSTK-F-P-C-0174",
-    "name": "Cloud and Network Computing (with a placement year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/cloud-and-network-computing-bsc"
-  },
-  {
-    "id": "SSTK-F-P-C-0175",
-    "name": "Software Development (with a placement year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/software-development-bsc"
-  },
-  {
-    "id": "SSTK-F-P-C-0180",
-    "name": "Computer Science (with a placement year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/computer-science-bsc"
-  },
-  {
-    "id": "SSTK-F-S-C-0564",
-    "name": "Artificial Intelligence",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/artificial-intelligence-bsc"
-  },
-  {
-    "id": "SSTK-F-S-C-0565",
-    "name": "Cyber Security",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/cyber-security-bsc"
-  },
-  {
-    "id": "SSTK-F-S-C-0591",
-    "name": "Computer Science",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/computer-science-bsc"
-  },
-  {
-    "id": "SSTK-F-S-C-0598",
-    "name": "Cloud and Network Computing",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/cloud-and-network-computing-bsc"
-  },
-  {
-    "id": "SSTK-F-S-C-0599",
-    "name": "Software Development",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/course/software-development-bsc"
-  },
-  {
-    "id": "UWKS-F-F-F-0001",
-    "name": "Computer Science (with a foundation year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/london/course/computer-science-bsc"
-  },
-  {
-    "id": "UWKS-F-F-F-0002",
-    "name": "Cyber Security (with a foundation year)",
-    "university_id": 10006299,
-    "university_website": "",
-    "course_website": "https://www.staffs.ac.uk/london/course/cyber-security-bsc"
-  },
-  {
     "id": "FCO4FBSH",
     "name": "Creative Computing with Professional Practice Year",
-    "university_id": 10006427,
-    "university_website": "",
-    "course_website": "https://www.uca.ac.uk/study/courses/bsc-creative-computing/"
-  },
-  {
-    "id": "FCOMFBSH",
-    "name": "Creative Computing",
     "university_id": 10006427,
     "university_website": "",
     "course_website": "https://www.uca.ac.uk/study/courses/bsc-creative-computing/"
@@ -4604,20 +3239,6 @@
     "university_id": 10006427,
     "university_website": "",
     "course_website": "https://uca.ac.uk/study/courses/bsc-computer-science/"
-  },
-  {
-    "id": "FCS5FBSH",
-    "name": "Computer Science with Integrated Foundation Year and Professional Practice Year",
-    "university_id": 10006427,
-    "university_website": "",
-    "course_website": "https://uca.ac.uk/study/courses/bsc-computer-science/"
-  },
-  {
-    "id": "FCSCFBSH",
-    "name": "Computer Science",
-    "university_id": 10006427,
-    "university_website": "",
-    "course_website": "https://www.uca.ac.uk/study/courses/bsc-computer-science/"
   },
   {
     "id": "CPT-L4-1-NC",
@@ -4655,13 +3276,6 @@
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/audio-software-engineering"
   },
   {
-    "id": "AUDSEWSTWW1M",
-    "name": "Audio Software Engineering",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/audio-software-engineering"
-  },
-  {
     "id": "AUDSWEFYWW3M",
     "name": "Audio Software Engineering with Foundation",
     "university_id": 10006566,
@@ -4676,28 +3290,7 @@
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/biomedical-informatics-foundation-year"
   },
   {
-    "id": "BIOMINFYWW3M",
-    "name": "Biomedical Informatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/biomedical-informatics-foundation-year"
-  },
-  {
     "id": "BIOMINPLWW5M",
-    "name": "Biomedical Informatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/biomedical-informatics"
-  },
-  {
-    "id": "BIOMINSTWW1M",
-    "name": "Biomedical Informatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/biomedical-informatics"
-  },
-  {
-    "id": "BIOMINSTWW1M",
     "name": "Biomedical Informatics",
     "university_id": 10006566,
     "university_website": "https://www.skyborne.com",
@@ -4739,20 +3332,6 @@
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/computer-science"
   },
   {
-    "id": "COMSCISTWW1M",
-    "name": "Computer Science",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/computer-science"
-  },
-  {
-    "id": "COMSCISTWW1M",
-    "name": "Computer Science",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/computer-science"
-  },
-  {
     "id": "CYBSECFYWW1M",
     "name": "Cyber Security",
     "university_id": 10006566,
@@ -4762,20 +3341,6 @@
   {
     "id": "CYBSECSAWW4M",
     "name": "Cyber Security (Saturday Intensive)",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/cyber-security"
-  },
-  {
-    "id": "CYBSECSTWW1M",
-    "name": "Cyber Security",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/cyber-security"
-  },
-  {
-    "id": "CYBSECSTWW1M",
-    "name": "Cyber Security",
     "university_id": 10006566,
     "university_website": "https://www.skyborne.com",
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/cyber-security"
@@ -4802,28 +3367,7 @@
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/genomics-bioinformatics-foundation-year"
   },
   {
-    "id": "GENBIOFYWW3M",
-    "name": "Genomics with Bioinformatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/genomics-bioinformatics-foundation-year"
-  },
-  {
     "id": "GENBIOPLWW5M",
-    "name": "Genomics with Bioinformatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/genomics-bioinformatics"
-  },
-  {
-    "id": "GENBIOSTWW1M",
-    "name": "Genomics with Bioinformatics",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/genomics-bioinformatics"
-  },
-  {
-    "id": "GENBIOSTWW1M",
     "name": "Genomics with Bioinformatics",
     "university_id": 10006566,
     "university_website": "https://www.skyborne.com",
@@ -4844,13 +3388,6 @@
     "course_website": "https://www.uwl.ac.uk/course/undergraduate/information-technology"
   },
   {
-    "id": "INFTECSTWW1M",
-    "name": "Information Technology",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/information-technology"
-  },
-  {
     "id": "ITMBUSFYWW3M",
     "name": "Information Technology Management for Business (ITMB)",
     "university_id": 10006566,
@@ -4859,13 +3396,6 @@
   },
   {
     "id": "ITMBUSPLWW1M",
-    "name": "Information Technology Management for Business (ITMB)",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://www.uwl.ac.uk/course/undergraduate/information-technology-management-business-itmb"
-  },
-  {
-    "id": "ITMBUSSTWW1M",
     "name": "Information Technology Management for Business (ITMB)",
     "university_id": 10006566,
     "university_website": "https://www.skyborne.com",
@@ -5264,20 +3794,6 @@
     "course_website": "https://www.uhi.ac.uk/en/courses/hnd-computer-science/"
   },
   {
-    "id": "U001I",
-    "name": "Computer Science",
-    "university_id": 10007114,
-    "university_website": "https://www.uhi.ac.uk",
-    "course_website": "https://www.uhi.ac.uk/en/courses/hnd-computer-science/"
-  },
-  {
-    "id": "U75NG",
-    "name": "Administration and Information Technology",
-    "university_id": 10007114,
-    "university_website": "https://www.uhi.ac.uk",
-    "course_website": "https://www.uhi.ac.uk/en/courses/hnd-administration-and-information-technology/"
-  },
-  {
     "id": "U75NG",
     "name": "Administration and Information Technology",
     "university_id": 10007114,
@@ -5290,20 +3806,6 @@
     "university_id": 10007114,
     "university_website": "https://www.uhi.ac.uk",
     "course_website": "https://www.uhi.ac.uk/en/courses/bsc-hons-computing/"
-  },
-  {
-    "id": "UG400",
-    "name": "Computing",
-    "university_id": 10007114,
-    "university_website": "https://www.uhi.ac.uk",
-    "course_website": "https://www.uhi.ac.uk/en/courses/bsc-hons-computing/"
-  },
-  {
-    "id": "UI310",
-    "name": "Applied Software Development",
-    "university_id": 10007114,
-    "university_website": "https://www.uhi.ac.uk",
-    "course_website": "https://www.uhi.ac.uk/en/courses/bsc-hons-applied-software-development/"
   },
   {
     "id": "UI310",
@@ -5327,22 +3829,8 @@
     "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/artificial-intelligence-and-data-science-bsc-hons"
   },
   {
-    "id": "UBSCAIADS4FUN",
-    "name": "Artificial Intelligence and Data Science (with Foundation Year)",
-    "university_id": 10007138,
-    "university_website": "https://www.northampton.ac.uk/apprenticeships/",
-    "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/artificial-intelligence-and-data-science-bsc-hons"
-  },
-  {
     "id": "UBSCBUCOM3FUN",
     "name": "Business Computing",
-    "university_id": 10007138,
-    "university_website": "https://www.northampton.ac.uk/apprenticeships/",
-    "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/business-computing-bsc-hons"
-  },
-  {
-    "id": "UBSCBUCOM4FUN",
-    "name": "Business Computing (with Foundation Year)",
     "university_id": 10007138,
     "university_website": "https://www.northampton.ac.uk/apprenticeships/",
     "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/business-computing-bsc-hons"
@@ -5355,22 +3843,8 @@
     "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/computer-science-bsc-hons"
   },
   {
-    "id": "UBSCCOMSC4FUN",
-    "name": "Computer Science (with Foundation Year)",
-    "university_id": 10007138,
-    "university_website": "https://www.northampton.ac.uk/apprenticeships/",
-    "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/computer-science-bsc-hons"
-  },
-  {
     "id": "UBSCSOFEN3FUN",
     "name": "Software Engineering",
-    "university_id": 10007138,
-    "university_website": "https://www.northampton.ac.uk/apprenticeships/",
-    "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/software-engineering-bsc-hons"
-  },
-  {
-    "id": "UBSCSOFEN4FUN",
-    "name": "Software Engineering (with Foundation Year)",
     "university_id": 10007138,
     "university_website": "https://www.northampton.ac.uk/apprenticeships/",
     "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/software-engineering-bsc-hons"
@@ -5383,22 +3857,8 @@
     "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/web-development-and-cyber-security-bsc-hons"
   },
   {
-    "id": "UBSCWBDCS4FUN",
-    "name": "Web Development and Cyber Security (with Foundation Year)",
-    "university_id": 10007138,
-    "university_website": "https://www.northampton.ac.uk/apprenticeships/",
-    "course_website": "https://www.northampton.ac.uk/courses/https://www.northampton.ac.uk/courses/web-development-and-cyber-security-bsc-hons"
-  },
-  {
     "id": "ARTISHO",
     "name": "Artificial Intelligence",
-    "university_id": 10007139,
-    "university_website": "https://www.ironmill.co.uk",
-    "course_website": "https://www.worcester.ac.uk/courses/artificial-intelligence-bsc-hons"
-  },
-  {
-    "id": "ARTISHOS",
-    "name": "Artificial Intelligence (Placement Year)",
     "university_id": 10007139,
     "university_website": "https://www.ironmill.co.uk",
     "course_website": "https://www.worcester.ac.uk/courses/artificial-intelligence-bsc-hons"
@@ -5418,13 +3878,6 @@
     "course_website": "https://www.worcester.ac.uk/courses/computing-foundation-year"
   },
   {
-    "id": "COMPSHOS",
-    "name": "Computing (Placement Yr)",
-    "university_id": 10007139,
-    "university_website": "https://www.ironmill.co.uk",
-    "course_website": "https://www.worcester.ac.uk/courses/computing-bsc-hons.html"
-  },
-  {
     "id": "COSCSHO",
     "name": "Computer Science",
     "university_id": 10007139,
@@ -5432,22 +3885,8 @@
     "course_website": "https://www.worcester.ac.uk/courses/computer-science-bsc-hons?option=d6676b5a-aa46-59b6-86c8-3f0f18e6ea7e"
   },
   {
-    "id": "COSCSHOS",
-    "name": "Computer Science (Placement Yr)",
-    "university_id": 10007139,
-    "university_website": "https://www.ironmill.co.uk",
-    "course_website": "https://www.worcester.ac.uk/courses/computer-science-bsc-hons?option=d6676b5a-aa46-59b6-86c8-3f0f18e6ea7e"
-  },
-  {
     "id": "CYSCSHO",
     "name": "Cyber Security",
-    "university_id": 10007139,
-    "university_website": "https://www.ironmill.co.uk",
-    "course_website": "https://www.worcester.ac.uk/courses/cyber-security-bsc-hons"
-  },
-  {
-    "id": "CYSCSHOS",
-    "name": "Cyber Security (Placement Yr)",
     "university_id": 10007139,
     "university_website": "https://www.ironmill.co.uk",
     "course_website": "https://www.worcester.ac.uk/courses/cyber-security-bsc-hons"
@@ -5516,25 +3955,11 @@
     "course_website": "https://www.bcu.ac.uk/courses/computer-science-with-artificial-intelligence-bsc-hons-2026-27"
   },
   {
-    "id": "US1381F-00",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10007140,
-    "university_website": "https://www.bcu.ac.uk",
-    "course_website": "https://www.bcu.ac.uk/courses/computer-science-with-artificial-intelligence-bsc-hons-2026-27"
-  },
-  {
     "id": "US1539-00",
     "name": "Artificial Intelligence",
     "university_id": 10007140,
     "university_website": "https://www.bcu.ac.uk",
     "course_website": "https://www.bcu.ac.uk/courses/artificial-intelligence-bsc-hons-2025-26"
-  },
-  {
-    "id": "ULAISC100",
-    "name": "Artificial Intelligence and Data Science",
-    "university_id": 10007141,
-    "university_website": "https://www.lcaeducation.ac.uk",
-    "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/artificial-intelligence-data-science-bsc"
   },
   {
     "id": "ULAISC100",
@@ -5593,25 +4018,11 @@
     "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/computer-science-bsc"
   },
   {
-    "id": "ULCOSC100",
-    "name": "Computer Science",
-    "university_id": 10007141,
-    "university_website": "https://www.lcaeducation.ac.uk",
-    "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/computer-science-bsc"
-  },
-  {
     "id": "ULCOSC110",
     "name": "Computer Science (with Foundation Year)",
     "university_id": 10007141,
     "university_website": "https://www.lcaeducation.ac.uk",
     "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/computer-science-bsc-foundation"
-  },
-  {
-    "id": "ULCYSE100",
-    "name": "Cyber Security",
-    "university_id": 10007141,
-    "university_website": "https://www.lcaeducation.ac.uk",
-    "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/cyber-security-bsc-hons"
   },
   {
     "id": "ULCYSE100",
@@ -5640,20 +4051,6 @@
     "university_id": 10007141,
     "university_website": "https://www.lcaeducation.ac.uk",
     "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/computing-bsc-hons"
-  },
-  {
-    "id": "VSCOMP100",
-    "name": "Computing",
-    "university_id": 10007141,
-    "university_website": "https://www.lcaeducation.ac.uk",
-    "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/computing-bsc-hons"
-  },
-  {
-    "id": "VSSWEN100",
-    "name": "Software Engineering",
-    "university_id": 10007141,
-    "university_website": "https://www.lcaeducation.ac.uk",
-    "course_website": "https://www.lancashire.ac.uk/undergraduate/courses/software-engineering-bsc"
   },
   {
     "id": "VSSWEN100",
@@ -5754,20 +4151,6 @@
     "course_website": "https://www.glos.ac.uk/courses/course/CUS-BSc-Computer/"
   },
   {
-    "id": "CUSDG4",
-    "name": "Computer Science with Placement",
-    "university_id": 10007145,
-    "university_website": "",
-    "course_website": "https://www.glos.ac.uk/courses/course/CUS-BSc-Computer/"
-  },
-  {
-    "id": "CUSDGFY",
-    "name": "Computer Science with Foundation",
-    "university_id": 10007145,
-    "university_website": "",
-    "course_website": "https://www.glos.ac.uk/courses/course/CUS-BSc-Computer/"
-  },
-  {
     "id": "CYSDG",
     "name": "Cyber Security",
     "university_id": 10007145,
@@ -5775,39 +4158,11 @@
     "course_website": "https://www.glos.ac.uk/courses/course/CYS-BSc-Cyber/"
   },
   {
-    "id": "CYSDG4",
-    "name": "Cyber Security with Placement",
-    "university_id": 10007145,
-    "university_website": "",
-    "course_website": "https://www.glos.ac.uk/courses/course/CYS-BSc-Cyber/"
-  },
-  {
-    "id": "CYSDGFY",
-    "name": "Cyber Security with Foundation",
-    "university_id": 10007145,
-    "university_website": "",
-    "course_website": "https://www.glos.ac.uk/courses/course/CYS-BSc-Cyber/"
-  },
-  {
     "id": "K0074",
     "name": "Computer Science",
     "university_id": 10007146,
     "university_website": "",
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-bsc-hons"
-  },
-  {
-    "id": "K0074",
-    "name": "Computer Science",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-bsc-hons"
-  },
-  {
-    "id": "K0075",
-    "name": "Business Computing",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/business-computing-bsc-hons"
   },
   {
     "id": "K0075",
@@ -5824,20 +4179,6 @@
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons"
   },
   {
-    "id": "K0077",
-    "name": "Computing",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons"
-  },
-  {
-    "id": "K0088",
-    "name": "Software Engineering",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/software-engineering-beng-hons"
-  },
-  {
     "id": "K0088",
     "name": "Software Engineering",
     "university_id": 10007146,
@@ -5850,20 +4191,6 @@
     "university_id": 10007146,
     "university_website": "",
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/cyber-security-and-digital-forensics-bsc-hons"
-  },
-  {
-    "id": "K0091",
-    "name": "Cyber Security and Digital Forensics",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/cyber-security-and-digital-forensics-bsc-hons"
-  },
-  {
-    "id": "K0092",
-    "name": "Mathematics and Computer Science",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-and-computer-science-bsc-hons"
   },
   {
     "id": "K0092",
@@ -5887,32 +4214,11 @@
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-networking-bsc-hons"
   },
   {
-    "id": "K0593",
-    "name": "Computer Science (Networking)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-networking-bsc-hons"
-  },
-  {
     "id": "K0594",
     "name": "Computer Science (Cyber Security)",
     "university_id": 10007146,
     "university_website": "",
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-cyber-security-bsc-hons"
-  },
-  {
-    "id": "K0594",
-    "name": "Computer Science (Cyber Security)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-cyber-security-bsc-hons"
-  },
-  {
-    "id": "K0595",
-    "name": "Computer Science (Data Science)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-data-science-bsc-hons"
   },
   {
     "id": "K0595",
@@ -5929,32 +4235,11 @@
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-games-bsc-hons"
   },
   {
-    "id": "K0596",
-    "name": "Computer Science (Games)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-games-bsc-hons"
-  },
-  {
     "id": "K0597",
     "name": "Computer Science (Artificial Intelligence)",
     "university_id": 10007146,
     "university_website": "",
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-artificial-intelligence-bsc-hons"
-  },
-  {
-    "id": "K0597",
-    "name": "Computer Science (Artificial Intelligence)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-artificial-intelligence-bsc-hons"
-  },
-  {
-    "id": "K0598",
-    "name": "Computing (Network Systems)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-network-systems-bsc-hons"
   },
   {
     "id": "K0598",
@@ -5971,39 +4256,11 @@
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-information-systems-bsc-hons"
   },
   {
-    "id": "K0599",
-    "name": "Computing (Information Systems)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-information-systems-bsc-hons"
-  },
-  {
     "id": "K0681",
     "name": "Data Science",
     "university_id": 10007146,
     "university_website": "",
     "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/data-science-bsc-hons"
-  },
-  {
-    "id": "K0681",
-    "name": "Data Science",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/data-science-bsc-hons"
-  },
-  {
-    "id": "K0682",
-    "name": "Computing (Artificial Intelligence)",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons"
-  },
-  {
-    "id": "K0683",
-    "name": "Computing for Emerging Technologies",
-    "university_id": 10007146,
-    "university_website": "",
-    "course_website": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-for-emerging-technologies-bsc-hons"
   },
   {
     "id": "K0683",
@@ -6025,20 +4282,6 @@
     "university_id": 10007147,
     "university_website": "https://www.westherts.ac.uk",
     "course_website": "https://www.herts.ac.uk/courses/undergraduate/beng-hons-robotics-and-artificial-intelligence"
-  },
-  {
-    "id": "ECRAIBENG-ROB_ARTIF_INTEL",
-    "name": "Robotics And Artificial Intelligence",
-    "university_id": 10007147,
-    "university_website": "https://www.westherts.ac.uk",
-    "course_website": "https://www.herts.ac.uk/courses/undergraduate/beng-hons-robotics-and-artificial-intelligence"
-  },
-  {
-    "id": "PEDS-DATA-SC",
-    "name": "Data Science",
-    "university_id": 10007147,
-    "university_website": "https://www.westherts.ac.uk",
-    "course_website": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-data-science"
   },
   {
     "id": "PEDS-DATA-SC",
@@ -6174,13 +4417,6 @@
     "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-bsc-meng?year=2026&opt=placement-year"
   },
   {
-    "id": "UGCOMSXFU01",
-    "name": "Computer Science",
-    "university_id": 10007149,
-    "university_website": "https://www.hull.ac.uk",
-    "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-bsc-meng?year=2026&opt=standard"
-  },
-  {
     "id": "UGCSAIAFU01",
     "name": "Computer Science (Artificial Intelligence) with Study Abroad",
     "university_id": 10007149,
@@ -6209,13 +4445,6 @@
     "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-artificial-intelligence-bsc-meng?year=2026&opt=placement-year"
   },
   {
-    "id": "UGCSAIXFU01",
-    "name": "Computer Science (Artificial Intelligence)",
-    "university_id": 10007149,
-    "university_website": "https://www.hull.ac.uk",
-    "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-artificial-intelligence-bsc-meng?year=2026&opt=standard"
-  },
-  {
     "id": "UGCSGPAFU01",
     "name": "Computer Science for Games Programming",
     "university_id": 10007149,
@@ -6242,13 +4471,6 @@
     "university_id": 10007149,
     "university_website": "https://www.hull.ac.uk",
     "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-for-games-programming-bsc-meng?year=2026&opt=placement-year"
-  },
-  {
-    "id": "UGCSGPXFU01",
-    "name": "Computer Science for Games Programming",
-    "university_id": 10007149,
-    "university_website": "https://www.hull.ac.uk",
-    "course_website": "https://www.hull.ac.uk/study/undergraduate/computer-science-for-games-programming-bsc-meng?year=2026&opt=standard"
   },
   {
     "id": "UGMTDSFFU01",
@@ -6319,13 +4541,6 @@
     "university_id": 10007149,
     "university_website": "https://www.hull.ac.uk",
     "course_website": "https://www.hull.ac.uk/study/undergraduate/software-engineering-bsc-meng?year=2026&opt=masters"
-  },
-  {
-    "id": "UGSOWEPFU01",
-    "name": "Software Engineering with Industrial Placement",
-    "university_id": 10007149,
-    "university_website": "https://www.hull.ac.uk",
-    "course_website": "https://www.hull.ac.uk/study/undergraduate/software-engineering-bsc-meng?year=2026&opt=year-abroad"
   },
   {
     "id": "UGSOWEXFU01",
@@ -6433,20 +4648,6 @@
     "course_website": "https://www.lincoln.ac.uk/course/sfysfyub/computerscience/"
   },
   {
-    "id": "CAISFYUB",
-    "name": "Computer Science with Artificial Intelligence with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CGPCMPUB",
-    "name": "Games Computing",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CGPCMPUB/"
-  },
-  {
     "id": "CGPCMPUB",
     "name": "Games Computing",
     "university_id": 10007151,
@@ -6461,35 +4662,7 @@
     "course_website": "https://www.lincoln.ac.uk/home/course/CGPCMPUM/"
   },
   {
-    "id": "CGPCMPUM",
-    "name": "Games Computing",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CGPCMPUM/"
-  },
-  {
     "id": "CGPSFYUB",
-    "name": "Games Computing with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CGPSFYUB",
-    "name": "Games Computing with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CGPSFYUM",
-    "name": "Games Computing with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CGPSFYUM",
     "name": "Games Computing with Science Foundation Year",
     "university_id": 10007151,
     "university_website": "https://www.lincoln.ac.uk",
@@ -6510,32 +4683,11 @@
     "course_website": "http://www.lincoln.ac.uk/home/course/CMPCAIUB"
   },
   {
-    "id": "CMPCAIUB",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "http://www.lincoln.ac.uk/home/course/CMPCAIUB"
-  },
-  {
     "id": "CMPCLCUB",
     "name": "Computer Science with Cloud Computing",
     "university_id": 10007151,
     "university_website": "https://www.lincoln.ac.uk",
     "course_website": "https://www.lincoln.ac.uk/home/course/CMPCLCUB/"
-  },
-  {
-    "id": "CMPCLCUB",
-    "name": "Computer Science with Cloud Computing",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CMPCLCUB/"
-  },
-  {
-    "id": "CMPCMSUB",
-    "name": "Computer Science",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CMPCMSUB/"
   },
   {
     "id": "CMPCMSUB",
@@ -6552,70 +4704,14 @@
     "course_website": "https://www.lincoln.ac.uk/home/course/CMPCMSUM/"
   },
   {
-    "id": "CMPCMSUM",
-    "name": "Computer Science",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CMPCMSUM/"
-  },
-  {
     "id": "CMPCYBUB",
     "name": "Computer Science with Cyber Security",
     "university_id": 10007151,
     "university_website": "https://www.lincoln.ac.uk",
     "course_website": "https://www.lincoln.ac.uk/home/course/CMPCYBUB/"
-  },
-  {
-    "id": "CMPCYBUB",
-    "name": "Computer Science with Cyber Security",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/CMPCYBUB/"
-  },
-  {
-    "id": "CMPSFYUB",
-    "name": "Computer Science with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CMPSFYUB",
-    "name": "Computer Science with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CMPSFYUM",
-    "name": "Computer Science with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CMPSFYUM",
-    "name": "Computer Science with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/computerscience/"
-  },
-  {
-    "id": "CVRSFYUB",
-    "name": "Games Computing with Virtual and Augmented Reality with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/course/sfysfyub/computerscience/"
   },
   {
     "id": "MCMSFYUB",
-    "name": "Mathematics and Computer Science with Science Foundation Year",
-    "university_id": 10007151,
-    "university_website": "https://www.lincoln.ac.uk",
-    "course_website": "https://www.lincoln.ac.uk/home/course/sfysfyub/mathematicsandphysics/"
-  },
-  {
-    "id": "MCMSFYUM",
     "name": "Mathematics and Computer Science with Science Foundation Year",
     "university_id": 10007151,
     "university_website": "https://www.lincoln.ac.uk",
@@ -6643,13 +4739,6 @@
     "course_website": "https://www.beds.ac.uk/courses/artificial-intelligence-and-robotics"
   },
   {
-    "id": "BSCARAAF",
-    "name": "Artificial Intelligence and Robotics",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/artificial-intelligence-and-robotics"
-  },
-  {
     "id": "BSCCSAAF",
     "name": "Computer Science",
     "university_id": 10007152,
@@ -6664,36 +4753,8 @@
     "course_website": "https://www.beds.ac.uk/courses/software-engineering"
   },
   {
-    "id": "BSCSFAAF",
-    "name": "Computer Science (with Foundation Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/computer-science"
-  },
-  {
-    "id": "BSCSPAAF",
-    "name": "Computer Science (With Professional Practice Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/computer-science"
-  },
-  {
     "id": "BSCYFAAF",
     "name": "Cybersecurity (with Foundation Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/cybersecurity"
-  },
-  {
-    "id": "BSCYSAAF",
-    "name": "Cybersecurity",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/cybersecurity"
-  },
-  {
-    "id": "BSCYSAAP",
-    "name": "Cybersecurity",
     "university_id": 10007152,
     "university_website": "https://www.beds.ac.uk",
     "course_website": "https://www.beds.ac.uk/courses/cybersecurity"
@@ -6706,50 +4767,8 @@
     "course_website": "https://www.beds.ac.uk/courses/information-technology"
   },
   {
-    "id": "BSINTAAP",
-    "name": "Information Technology",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/information-technology"
-  },
-  {
     "id": "BSITBAAF",
     "name": "Information Technology Management for Business",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/information-technology-management-for-business"
-  },
-  {
-    "id": "BSITFAAF",
-    "name": "Information Technology (with Foundation Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/information-technology"
-  },
-  {
-    "id": "BSSEFAAF",
-    "name": "Software Engineering (with Foundation Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/software-engineering"
-  },
-  {
-    "id": "BSSEPAAF",
-    "name": "Software Engineering (With Professional Practice Year)",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/software-engineering"
-  },
-  {
-    "id": "BSSOEAAP",
-    "name": "Software Engineering",
-    "university_id": 10007152,
-    "university_website": "https://www.beds.ac.uk",
-    "course_website": "https://www.beds.ac.uk/courses/software-engineering"
-  },
-  {
-    "id": "BSTBFAAF",
-    "name": "Information Technology Management for Business (with Foundation Year)",
     "university_id": 10007152,
     "university_website": "https://www.beds.ac.uk",
     "course_website": "https://www.beds.ac.uk/courses/information-technology-management-for-business"
@@ -6909,13 +4928,6 @@
     "course_website": "https://www.port.ac.uk/study/courses/ba-bsc-hons-creative-computing"
   },
   {
-    "id": "U3535PYC",
-    "name": "Creative Computing",
-    "university_id": 10007155,
-    "university_website": "https://www.port.ac.uk",
-    "course_website": "https://www.port.ac.uk/study/courses/ba-bsc-hons-creative-computing"
-  },
-  {
     "id": "U3906FTC",
     "name": "Computing with Foundation Year",
     "university_id": 10007155,
@@ -6928,20 +4940,6 @@
     "university_id": 10007156,
     "university_website": "https://www.salford.ac.uk",
     "course_website": "https://www.salford.ac.uk/courses/undergraduate/digital-and-software-technology"
-  },
-  {
-    "id": "DP_DST_F",
-    "name": "Digital and Software Technology",
-    "university_id": 10007156,
-    "university_website": "https://www.salford.ac.uk",
-    "course_website": "https://www.salford.ac.uk/courses/undergraduate/digital-and-software-technology"
-  },
-  {
-    "id": "DP_DS_F",
-    "name": "Data Science",
-    "university_id": 10007156,
-    "university_website": "https://www.salford.ac.uk",
-    "course_website": "https://www.salford.ac.uk/courses/undergraduate/data-science"
   },
   {
     "id": "DP_DS_F",
@@ -6960,13 +4958,6 @@
   {
     "id": "S_BINP_S",
     "name": "Business Information Technology with Placement",
-    "university_id": 10007156,
-    "university_website": "https://www.salford.ac.uk",
-    "course_website": "https://www.salford.ac.uk/courses/undergraduate/business-information-technology"
-  },
-  {
-    "id": "S_BIN_F",
-    "name": "Business Information Technology",
     "university_id": 10007156,
     "university_website": "https://www.salford.ac.uk",
     "course_website": "https://www.salford.ac.uk/courses/undergraduate/business-information-technology"
@@ -7126,36 +5117,8 @@
     "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-meng"
   },
   {
-    "id": "1133",
-    "name": "Artificial Intelligence with Foundation Year",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-meng"
-  },
-  {
-    "id": "1134",
-    "name": "Artificial Intelligence with Industrial Studies",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-meng"
-  },
-  {
-    "id": "1135",
-    "name": "Artificial Intelligence with Industrial Studies and Foundation Year",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-meng"
-  },
-  {
     "id": "1140",
     "name": "Artificial Intelligence",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-beng"
-  },
-  {
-    "id": "1141",
-    "name": "Artificial Intelligence with Foundation Year",
     "university_id": 10007158,
     "university_website": "https://www.soton.ac.uk",
     "course_website": "https://www.southampton.ac.uk/courses/artificial-intelligence-degree-beng"
@@ -7175,13 +5138,6 @@
     "course_website": "https://www.southampton.ac.uk/courses/computer-science-degree-bsc"
   },
   {
-    "id": "240",
-    "name": "Computer Science",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/computer-science-degree-meng"
-  },
-  {
     "id": "244",
     "name": "Software Engineering",
     "university_id": 10007158,
@@ -7196,13 +5152,6 @@
     "course_website": "https://www.southampton.ac.uk/courses/computer-science-with-artificial-intelligence-degree-meng"
   },
   {
-    "id": "248",
-    "name": "Software Engineering",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/software-engineering-degree-meng"
-  },
-  {
     "id": "257",
     "name": "Electronic Engineering with Artificial Intelligence",
     "university_id": 10007158,
@@ -7210,53 +5159,11 @@
     "course_website": "https://www.southampton.ac.uk/courses/electronic-engineering-with-artificial-intelligence-degree-meng"
   },
   {
-    "id": "442",
-    "name": "Software Engineering with Foundation Year",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/software-engineering-degree-beng"
-  },
-  {
-    "id": "443",
-    "name": "Computer Science with Foundation Year",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/computer-science-degree-bsc"
-  },
-  {
-    "id": "456",
-    "name": "Software Engineering",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/software-engineering-degree-meng"
-  },
-  {
-    "id": "514",
-    "name": "Computer Science with Foundation Year",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/computer-science-degree-meng"
-  },
-  {
     "id": "540",
     "name": "Computer Science with Cyber Security",
     "university_id": 10007158,
     "university_website": "https://www.soton.ac.uk",
     "course_website": "https://www.southampton.ac.uk/courses/computer-science-with-cyber-security-degree-meng"
-  },
-  {
-    "id": "615",
-    "name": "Computer Science with Industrial Studies",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/computer-science-degree-meng"
-  },
-  {
-    "id": "630",
-    "name": "Software Engineering with Industrial Studies",
-    "university_id": 10007158,
-    "university_website": "https://www.soton.ac.uk",
-    "course_website": "https://www.southampton.ac.uk/courses/software-engineering-degree-meng"
   },
   {
     "id": "690",
@@ -7308,70 +5215,7 @@
     "course_website": "https://www.surrey.ac.uk/undergraduate/physics-quantum-computing/2026"
   },
   {
-    "id": "UCK10F0018U",
-    "name": "Physics with Quantum Computing with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/physics-quantum-computing/2026"
-  },
-  {
-    "id": "UCK10S0017U",
-    "name": "Physics with Quantum Computing",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/physics-quantum-computing/2026"
-  },
-  {
-    "id": "UCK10S0018U",
-    "name": "Physics with Quantum Computing with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/physics-quantum-computing/2026"
-  },
-  {
-    "id": "UCK21F0006U",
-    "name": "Physics with Quantum Computing",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/physics-quantum-computing/2026"
-  },
-  {
     "id": "UFA12F0037U",
-    "name": "Electronic Engineering with Artificial Intelligence",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/electronic-engineering-with-artificial-intelligence/2026"
-  },
-  {
-    "id": "UFA12F0038U",
-    "name": "Electronic Engineering with Artificial Intelligence with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/electronic-engineering-with-artificial-intelligence/2026"
-  },
-  {
-    "id": "UFA12S0037U",
-    "name": "Electronic Engineering with Artificial Intelligence",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/electronic-engineering-with-artificial-intelligence/2026"
-  },
-  {
-    "id": "UFA12S0038U",
-    "name": "Electronic Engineering with Artificial Intelligence with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/electronic-engineering-with-artificial-intelligence/2026"
-  },
-  {
-    "id": "UFA15F0032U",
-    "name": "Electronic Engineering with Artificial Intelligence",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/electronic-engineering-with-artificial-intelligence/2026"
-  },
-  {
-    "id": "UFA15S0032U",
     "name": "Electronic Engineering with Artificial Intelligence",
     "university_id": 10007160,
     "university_website": "https://www.surrey.ac.uk",
@@ -7385,13 +5229,6 @@
     "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
   },
   {
-    "id": "UGA10F0009U",
-    "name": "Computer Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
-  },
-  {
     "id": "UGA10F0012U",
     "name": "Computing with Business Management",
     "university_id": 10007160,
@@ -7399,64 +5236,8 @@
     "course_website": "https://www.surrey.ac.uk/undergraduate/computing-business-management/2026"
   },
   {
-    "id": "UGA10S0010U",
-    "name": "Computer Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
-  },
-  {
-    "id": "UGA10S0012U",
-    "name": "Computer Science with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
-  },
-  {
-    "id": "UGA10S0013U",
-    "name": "Computing with Business Management",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computing-business-management/2026"
-  },
-  {
-    "id": "UGA15F0001U",
-    "name": "Computer Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
-  },
-  {
-    "id": "UGA15S0001U",
-    "name": "Computer Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/computer-science/2026"
-  },
-  {
     "id": "UGB10F0020U",
     "name": "Mathematics with Data Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/mathematics-data-science/2026"
-  },
-  {
-    "id": "UGB10F0021U",
-    "name": "Mathematics with Data Science with Foundation Year",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/mathematics-data-science/2026"
-  },
-  {
-    "id": "UGB10S0020U",
-    "name": "Mathematics with Data Science",
-    "university_id": 10007160,
-    "university_website": "https://www.surrey.ac.uk",
-    "course_website": "https://www.surrey.ac.uk/undergraduate/mathematics-data-science/2026"
-  },
-  {
-    "id": "UGB10S0021U",
-    "name": "Mathematics with Data Science with Foundation Year",
     "university_id": 10007160,
     "university_website": "https://www.surrey.ac.uk",
     "course_website": "https://www.surrey.ac.uk/undergraduate/mathematics-data-science/2026"
@@ -7476,13 +5257,6 @@
     "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_artificial_intelligence_and_computer_science_(with_foundation_year).cfm"
   },
   {
-    "id": "AICBS_PT",
-    "name": "Artificial Intelligence and Computer Science",
-    "university_id": 10007161,
-    "university_website": "https://www.tees.ac.uk",
-    "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_artificial_intelligence_and_computer_science.cfm"
-  },
-  {
     "id": "CBYBS_FT",
     "name": "Cyber Security",
     "university_id": 10007161,
@@ -7495,13 +5269,6 @@
     "university_id": 10007161,
     "university_website": "https://www.tees.ac.uk",
     "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_cyber_security_(with_foundation_year).cfm"
-  },
-  {
-    "id": "CBYBS_PT",
-    "name": "Cyber Security",
-    "university_id": 10007161,
-    "university_website": "https://www.tees.ac.uk",
-    "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_cyber_security.cfm"
   },
   {
     "id": "CSSNG_FT",
@@ -7518,13 +5285,6 @@
     "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_computer_science_(with_foundation_year).cfm"
   },
   {
-    "id": "CSSNG_PT",
-    "name": "Computer Science",
-    "university_id": 10007161,
-    "university_website": "https://www.tees.ac.uk",
-    "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_computer_science.cfm"
-  },
-  {
     "id": "INFSNG_FT",
     "name": "Information Technology",
     "university_id": 10007161,
@@ -7537,13 +5297,6 @@
     "university_id": 10007161,
     "university_website": "https://www.tees.ac.uk",
     "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_information_technology_(with_foundation_year).cfm"
-  },
-  {
-    "id": "INFSNG_PT",
-    "name": "Information Technology",
-    "university_id": 10007161,
-    "university_website": "https://www.tees.ac.uk",
-    "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_information_technology.cfm"
   },
   {
     "id": "L1010BS_FT",
@@ -7572,13 +5325,6 @@
     "university_id": 10007161,
     "university_website": "https://www.tees.ac.uk",
     "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_software_engineering_(with_foundation_year).cfm"
-  },
-  {
-    "id": "SEBS_PT",
-    "name": "Software Engineering",
-    "university_id": 10007161,
-    "university_website": "https://www.tees.ac.uk",
-    "course_website": "https://www.tees.ac.uk/undergraduate_courses/computing_&_cyber_security/bsc_(hons)_software_engineering.cfm"
   },
   {
     "id": "CCIBSCOMF01",
@@ -7987,13 +5733,6 @@
     "course_website": "https://www.herts.ac.uk/courses/foundation/computing-technologies-software-development-whc"
   },
   {
-    "id": "PEWHCSFD-SOFTWARE_DEV",
-    "name": "Computing Technologies (Software Development) - Whc (Revised 2024)",
-    "university_id": 10007147,
-    "university_website": "https://www.westherts.ac.uk",
-    "course_website": "https://www.herts.ac.uk/courses/foundation/computing-technologies-software-development-whc"
-  },
-  {
     "id": "WHC89761",
     "name": "Computing for England: Cyber Security",
     "university_id": 10007417,
@@ -8043,13 +5782,6 @@
     "course_website": "https://www.yeovil.ac.uk/course/337466/HND-Computing-for-England-Application-Development-Testing/"
   },
   {
-    "id": "TI-COML5-004-FH1",
-    "name": "Computing for England (Application Development & Testing) (HTQ)",
-    "university_id": 10007696,
-    "university_website": "https://www.yeovil.ac.uk",
-    "course_website": "https://www.yeovil.ac.uk/course/337466/HND-Computing-for-England-Application-Development-Testing/"
-  },
-  {
     "id": "U1BSCOSCS",
     "name": "Computer Science",
     "university_id": 10007713,
@@ -8057,36 +5789,8 @@
     "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/computer-science-bsc-hons/"
   },
   {
-    "id": "U1BSCOSCS",
-    "name": "Computer Science",
-    "university_id": 10007713,
-    "university_website": "https://www.yorksj.ac.uk",
-    "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/computer-science-bsc-hons/"
-  },
-  {
-    "id": "U1BSCOSPW",
-    "name": "Computer Science with Year in Industry",
-    "university_id": 10007713,
-    "university_website": "https://www.yorksj.ac.uk",
-    "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/computer-science-bsc-hons/"
-  },
-  {
     "id": "U1BSCSECS",
     "name": "Cyber Security",
-    "university_id": 10007713,
-    "university_website": "https://www.yorksj.ac.uk",
-    "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/cyber-security-bsc-hons/"
-  },
-  {
-    "id": "U1BSCSECS",
-    "name": "Cyber Security",
-    "university_id": 10007713,
-    "university_website": "https://www.yorksj.ac.uk",
-    "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/cyber-security-bsc-hons/"
-  },
-  {
-    "id": "U1BSCSECW",
-    "name": "Cyber Security with Year in Industry",
     "university_id": 10007713,
     "university_website": "https://www.yorksj.ac.uk",
     "course_website": "https://www.yorksj.ac.uk/courses/undergraduate/computer-science/cyber-security-bsc-hons/"
@@ -8177,111 +5881,6 @@
   },
   {
     "id": "UBSMATDS_C",
-    "name": "Mathematics and Data Science",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/mathematics-and-data-science"
-  },
-  {
-    "id": "UUBFBSCM_C",
-    "name": "Business Computing with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/business-computing"
-  },
-  {
-    "id": "UUBFCMAI_C",
-    "name": "Computer Science with AI with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computer-science-with-ai"
-  },
-  {
-    "id": "UUBFCMSC_C",
-    "name": "Computer Science with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computing"
-  },
-  {
-    "id": "UUBFCSCB_C",
-    "name": "Computer Science for Cybersecurity with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computer-science-for-cybersecurity"
-  },
-  {
-    "id": "UUBFDATA_C",
-    "name": "Data Science with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/data-science"
-  },
-  {
-    "id": "UUBFMTCS_C",
-    "name": "Mathematics and Computer Science with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/mathematics-and-computer-science"
-  },
-  {
-    "id": "UUBFMTDS_C",
-    "name": "Mathematics and Data Science with Foundation Year",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/mathematics-and-data-science"
-  },
-  {
-    "id": "UUBSBSCM_C",
-    "name": "Business Computing",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/business-computing"
-  },
-  {
-    "id": "UUBSCMAI_C",
-    "name": "Computer Science with AI",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computer-science-with-ai"
-  },
-  {
-    "id": "UUBSCMSC_C",
-    "name": "Computer Science",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computing"
-  },
-  {
-    "id": "UUBSCMSP_C",
-    "name": "Computer Science with Placement",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computing"
-  },
-  {
-    "id": "UUBSCSCB_C",
-    "name": "Computer Science for Cybersecurity",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/computer-science-for-cybersecurity"
-  },
-  {
-    "id": "UUBSDATA_C",
-    "name": "Data Science",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/data-science"
-  },
-  {
-    "id": "UUBSMTCS_C",
-    "name": "Mathematics and Computer Science",
-    "university_id": 10007760,
-    "university_website": "https://www.bbk.ac.uk",
-    "course_website": "https://www.bbk.ac.uk/courses/undergraduate/mathematics-and-computer-science"
-  },
-  {
-    "id": "UUBSMTDS_C",
     "name": "Mathematics and Data Science",
     "university_id": 10007760,
     "university_website": "https://www.bbk.ac.uk",
@@ -8652,20 +6251,6 @@
     "course_website": "https://www.napier.ac.uk/courses/bengbeng-hons-software-engineering-undergraduate-fulltime"
   },
   {
-    "id": "U56119",
-    "name": "Software Engineering",
-    "university_id": 10007772,
-    "university_website": "https://www.napier.ac.uk",
-    "course_website": "https://www.napier.ac.uk/courses/bengbeng-hons-software-engineering-undergraduate-fulltime"
-  },
-  {
-    "id": "U56135",
-    "name": "Computing",
-    "university_id": 10007772,
-    "university_website": "https://www.napier.ac.uk",
-    "course_website": "https://www.napier.ac.uk/courses/bengbeng-hons-computing-undergraduate-fulltime"
-  },
-  {
     "id": "U56135",
     "name": "Computing",
     "university_id": 10007772,
@@ -8692,13 +6277,6 @@
     "university_id": 10007772,
     "university_website": "https://www.napier.ac.uk",
     "course_website": "https://www.napier.ac.uk/courses/bsc-hons-data-science---undergraduate-fulltime"
-  },
-  {
-    "id": "U56280",
-    "name": "Computer Science",
-    "university_id": 10007772,
-    "university_website": "https://www.napier.ac.uk",
-    "course_website": "https://www.napier.ac.uk/courses/bscbsc-(hons)-computer-science-undergraduate-fulltime"
   },
   {
     "id": "U56280",
@@ -8827,49 +6405,7 @@
     "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science"
   },
   {
-    "id": "UBSF-QMCOMF1-USCAA",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science-and-artificial-intelligence"
-  },
-  {
-    "id": "UBSF-QMCOMF1-USCOYZ",
-    "name": "Computer Science",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science"
-  },
-  {
-    "id": "UBSF-QMCOMP1-USCAI",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science-and-artificial-intelligence"
-  },
-  {
-    "id": "UBSF-QMCOMP1-USCOSZ",
-    "name": "Computer Science",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science"
-  },
-  {
     "id": "UBSF-QMMATG1-UMMAACOP",
-    "name": "Mathematics with Computing",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/mathematics-with-computing/"
-  },
-  {
-    "id": "UBSF-QMMATH1-UMMASCOP",
-    "name": "Mathematics with Computing",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/mathematics-with-computing/"
-  },
-  {
-    "id": "UBSF-QMMATY1-UMMAICOP",
     "name": "Mathematics with Computing",
     "university_id": 10007775,
     "university_website": "https://www.qmul.ac.uk",
@@ -8883,32 +6419,11 @@
     "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/applied-artificial-intelligence/"
   },
   {
-    "id": "UMIF-QMCOMF2-USCOYZ",
-    "name": "Computer Science",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science"
-  },
-  {
-    "id": "UMIF-QMCOMP1-USCOSZ",
-    "name": "Computer Science",
-    "university_id": 10007775,
-    "university_website": "https://www.qmul.ac.uk",
-    "course_website": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/computer-science"
-  },
-  {
     "id": "G400",
     "name": "Computer Science",
     "university_id": 10007776,
     "university_website": "https://www.roehampton.ac.uk",
     "course_website": "https://www.roehampton.ac.uk/undergraduate-courses/computer-science/"
-  },
-  {
-    "id": "G560",
-    "name": "Computing and Digital Technologies",
-    "university_id": 10007776,
-    "university_website": "https://www.roehampton.ac.uk",
-    "course_website": "https://www.roehampton.ac.uk/undergraduate-courses/computing-and-digital-technologies/"
   },
   {
     "id": "G560",
@@ -8939,25 +6454,11 @@
     "course_website": "https://www.roehampton.ac.uk/undergraduate-courses/cybersecurity/"
   },
   {
-    "id": "I103",
-    "name": "Cyber Security",
-    "university_id": 10007776,
-    "university_website": "https://www.roehampton.ac.uk",
-    "course_website": "https://www.roehampton.ac.uk/undergraduate-courses/cybersecurity/"
-  },
-  {
     "id": "G400",
     "name": "Computing Science",
     "university_id": 10007783,
     "university_website": "https://www.abdn.ac.uk",
     "course_website": "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/527/G400/computing-science/"
-  },
-  {
-    "id": "G401",
-    "name": "Computing Science with Industrial Placement",
-    "university_id": 10007783,
-    "university_website": "https://www.abdn.ac.uk",
-    "course_website": "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/531/G401/computing-science-with-industrial-placement/"
   },
   {
     "id": "G401",
@@ -9086,20 +6587,6 @@
     "course_website": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year"
   },
   {
-    "id": "UFMCOMSING18",
-    "name": "Computer Science with Integrated Foundation Year",
-    "university_id": 10007784,
-    "university_website": "https://www.ucl.ac.uk",
-    "course_website": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year"
-  },
-  {
-    "id": "UFMCOMSRAI18",
-    "name": "Robotics and Artificial Intelligence with Integrated Foundation Year",
-    "university_id": 10007784,
-    "university_website": "https://www.ucl.ac.uk",
-    "course_website": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year"
-  },
-  {
     "id": "UMNCOMAMAT24",
     "name": "Computer Science and Mathematics",
     "university_id": 10007784,
@@ -9184,13 +6671,6 @@
     "course_website": "https://www.bradford.ac.uk/courses/ug/computer-science-for-cyber-security-bsc/"
   },
   {
-    "id": "UCOS4UFJ-D017",
-    "name": "Computer Science for Artificial Intelligence",
-    "university_id": 10007785,
-    "university_website": "https://www.bradford.ac.uk",
-    "course_website": "https://www.bradford.ac.uk/courses/ug/computer-science-artificial-intelligence/"
-  },
-  {
     "id": "UCOS4UFJ-DF01",
     "name": "Computer Science with Integrated Foundation Year",
     "university_id": 10007785,
@@ -9224,20 +6704,6 @@
     "university_id": 10007785,
     "university_website": "https://www.bradford.ac.uk",
     "course_website": "https://www.bradford.ac.uk/courses/ug/computer-science-with-integrated-foundation/"
-  },
-  {
-    "id": "UCOS5UFJ-DF02",
-    "name": "Computer Science for Cyber Security with Integrated Foundation Year",
-    "university_id": 10007785,
-    "university_website": "https://www.bradford.ac.uk",
-    "course_website": "https://www.bradford.ac.uk/courses/ug/computer-science-cyber-security-with-integrated-foundation/"
-  },
-  {
-    "id": "UCOS5UFJ-DF03",
-    "name": "Computer Science for Artificial Intelligence with Integrated Foundation Year",
-    "university_id": 10007785,
-    "university_website": "https://www.bradford.ac.uk",
-    "course_website": "https://www.bradford.ac.uk/courses/ug/computer-science-artificial-intelligence-integrated-foundation/"
   },
   {
     "id": "1INOV006UU-202425",
@@ -9625,48 +7091,6 @@
     "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
   },
   {
-    "id": "10743",
-    "name": "Computer Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
-  },
-  {
-    "id": "10745",
-    "name": "Computer Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
-  },
-  {
-    "id": "10770",
-    "name": "Mathematics with Computing",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00285/1"
-  },
-  {
-    "id": "10814",
-    "name": "Computer Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
-  },
-  {
-    "id": "13014",
-    "name": "Computer Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
-  },
-  {
-    "id": "13015",
-    "name": "Computer Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00069/1"
-  },
-  {
     "id": "13696",
     "name": "Data Science",
     "university_id": 10007791,
@@ -9674,35 +7098,7 @@
     "course_website": "https://www.essex.ac.uk/courses/UG01034/1"
   },
   {
-    "id": "13697",
-    "name": "Data Science and Analytics",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG01034/1"
-  },
-  {
-    "id": "13698",
-    "name": "Data Science and Analytics",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG01034/1"
-  },
-  {
     "id": "13725",
-    "name": "Sociology with Data Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00372/1"
-  },
-  {
-    "id": "13935",
-    "name": "Mathematics with Computing",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG00285/1"
-  },
-  {
-    "id": "13988",
     "name": "Sociology with Data Science",
     "university_id": 10007791,
     "university_website": "https://www.essex.ac.uk",
@@ -9717,13 +7113,6 @@
   },
   {
     "id": "14569",
-    "name": "Economics with Data Science",
-    "university_id": 10007791,
-    "university_website": "https://www.essex.ac.uk",
-    "course_website": "https://www.essex.ac.uk/courses/UG01265/1"
-  },
-  {
-    "id": "14570",
     "name": "Economics with Data Science",
     "university_id": 10007791,
     "university_website": "https://www.essex.ac.uk",
@@ -9870,20 +7259,6 @@
     "course_website": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science-including-foundation-year/"
   },
   {
-    "id": "JBHS078",
-    "name": "Computer Science",
-    "university_id": 10007793,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science/"
-  },
-  {
-    "id": "JBHS119",
-    "name": "Computing",
-    "university_id": 10007793,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.southwales.ac.uk/courses/bsc-hons-computing/"
-  },
-  {
     "id": "JHDF023CGN",
     "name": "Computing",
     "university_id": 10007793,
@@ -9898,55 +7273,6 @@
     "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
   },
   {
-    "id": "FG34-2208",
-    "name": "Computing Science/Physics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "FG35-2207",
-    "name": "Computing Science/Physics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "FG84-2208",
-    "name": "Computing Science/Geography",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "G400-2208",
-    "name": "Computing Science",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "G401-2208",
-    "name": "Computing Science (Faster Route)",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "G402-2207",
-    "name": "Computing Science",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "G403-2207",
-    "name": "Computing Science (Faster Route)",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
     "id": "G430-2208",
     "name": "Software Engineering",
     "university_id": 10007794,
@@ -9954,70 +7280,7 @@
     "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
   },
   {
-    "id": "G600-2207",
-    "name": "Software Engineering (Faster)",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
-  },
-  {
-    "id": "G600A-2207",
-    "name": "Software Engineering with Work Placement (Faster Route)",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
-  },
-  {
-    "id": "G601-2208",
-    "name": "Software Engineering (Faster)",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
-  },
-  {
-    "id": "G610-2207",
-    "name": "Software Engineering",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
-  },
-  {
-    "id": "G610A-2207",
-    "name": "Software Engineering with Work Placement",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/softwareengineering/"
-  },
-  {
-    "id": "GG34-2208",
-    "name": "Computing Science/Statistics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GG4C-2207",
-    "name": "Computing Science/Mathematics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GGK1-2208",
-    "name": "Computing Science/Mathematics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
     "id": "GH66-2208",
-    "name": "Electronic & Software Engineering",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/electronicsoftwareengineering/"
-  },
-  {
-    "id": "GHP6-2200",
     "name": "Electronic & Software Engineering",
     "university_id": 10007794,
     "university_website": "https://www.gla.ac.uk",
@@ -10031,109 +7294,11 @@
     "course_website": "http://www.gla.ac.uk/undergraduate/degrees/businessmanagement/"
   },
   {
-    "id": "GQ46-2000",
-    "name": "Computing Science/Latin",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GQ46-2000",
-    "name": "Computing Science/Latin",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
     "id": "GQ48-2000",
     "name": "Classics/Computing Science",
     "university_id": 10007794,
     "university_website": "https://www.gla.ac.uk",
     "course_website": "http://www.gla.ac.uk/undergraduate/degrees/classics/"
-  },
-  {
-    "id": "GQ48-2000",
-    "name": "Classics/Computing Science",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/classics/"
-  },
-  {
-    "id": "GQ4H-2000",
-    "name": "Computing Science/English Literature",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GQ4H-2000",
-    "name": "Computing Science/English Literature",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GQ4J-2000",
-    "name": "Computing Science/English Language",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GQ4J-2000",
-    "name": "Computing Science/English Language",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GR41-2034",
-    "name": "Computing Science/French",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GVK3-2000",
-    "name": "Computing Science/History of Art",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GVK3-2000",
-    "name": "Computing Science/History of Art",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GW43-2000",
-    "name": "Computing Science/Music",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GW43-2000",
-    "name": "Computing Science/Music",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GW44-2000",
-    "name": "Computing Science/Theatre Studies",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "GW44-2000",
-    "name": "Computing Science/Theatre Studies",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
   },
   {
     "id": "H671-2200",
@@ -10143,46 +7308,11 @@
     "course_website": "https://www.gla.ac.uk/undergraduate/degrees/robotics-artificial-intelligence/"
   },
   {
-    "id": "HG66-2204",
-    "name": "Electronic & Software Engineering",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/electronicsoftwareengineering/"
-  },
-  {
     "id": "I400-2208",
     "name": "Artificial Intelligence",
     "university_id": 10007794,
     "university_website": "https://www.gla.ac.uk",
     "course_website": "https://www.gla.ac.uk/undergraduate/degrees/artificial-intelligence/"
-  },
-  {
-    "id": "LG24-2308",
-    "name": "Computing Science/Politics",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "NG24-2208",
-    "name": "Computing Science/Business & Management",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "VG34-2308",
-    "name": "Computing Science/Economic & Social History",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/computingscience/"
-  },
-  {
-    "id": "VG64-2000",
-    "name": "Theology & Religious Studies/Computing Science",
-    "university_id": 10007794,
-    "university_website": "https://www.gla.ac.uk",
-    "course_website": "http://www.gla.ac.uk/undergraduate/degrees/theologyreligiousstudies/"
   },
   {
     "id": "VG64-2000",
@@ -10332,20 +7462,6 @@
     "course_website": "https://le.ac.uk/courses/computer-science-mcomp/2026"
   },
   {
-    "id": "COSCO-S",
-    "name": "Computer Science",
-    "university_id": 10007796,
-    "university_website": "https://www.le.ac.uk",
-    "course_website": "https://le.ac.uk/courses/computer-science-bsc/2026"
-  },
-  {
-    "id": "COSCO-Y",
-    "name": "Computer Science",
-    "university_id": 10007796,
-    "university_website": "https://www.le.ac.uk",
-    "course_website": "https://le.ac.uk/courses/computer-science-bsc/2026"
-  },
-  {
     "id": "COWAI-B",
     "name": "Computer Science with Artificial Intelligence",
     "university_id": 10007796,
@@ -10353,28 +7469,7 @@
     "course_website": "https://le.ac.uk/courses/computer-science-with-artificial-intelligence-bsc/2026"
   },
   {
-    "id": "COWAI-S-B",
-    "name": "Computer Science with Artificial Intelligence",
-    "university_id": 10007796,
-    "university_website": "https://www.le.ac.uk",
-    "course_website": "https://le.ac.uk/courses/computer-science-with-artificial-intelligence-bsc/2026"
-  },
-  {
     "id": "EGSSO",
-    "name": "Software Engineering",
-    "university_id": 10007796,
-    "university_website": "https://www.le.ac.uk",
-    "course_website": "https://le.ac.uk/courses/software-engineering-bsc/2026"
-  },
-  {
-    "id": "EGSSO-S",
-    "name": "Software Engineering",
-    "university_id": 10007796,
-    "university_website": "https://www.le.ac.uk",
-    "course_website": "https://le.ac.uk/courses/software-engineering-bsc/2026"
-  },
-  {
-    "id": "EGSSO-Y",
     "name": "Software Engineering",
     "university_id": 10007796,
     "university_website": "https://www.le.ac.uk",
@@ -10400,20 +7495,6 @@
     "university_id": 10007797,
     "university_website": "https://www.lon.ac.uk",
     "course_website": "https://london.ac.uk/courses/computer-science"
-  },
-  {
-    "id": "UBS-COSCI01_U-COSCI",
-    "name": "Computer Science",
-    "university_id": 10007797,
-    "university_website": "https://www.lon.ac.uk",
-    "course_website": "https://london.ac.uk/courses/computer-science"
-  },
-  {
-    "id": "UBS-EMF2U03S_U-DSABU",
-    "name": "Data Science and Business Analytics",
-    "university_id": 10007797,
-    "university_website": "https://www.lon.ac.uk",
-    "course_website": "https://onlinecourses.london.ac.uk/undergraduate/bsc-data-science-business-analytics-degree-online/"
   },
   {
     "id": "UBS-EMF2U03S_U-DSABU",
@@ -10521,35 +7602,7 @@
     "course_website": "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/computing-science/"
   },
   {
-    "id": "G401",
-    "name": "Computing Science",
-    "university_id": 10007800,
-    "university_website": "https://www.uws.ac.uk",
-    "course_website": "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/computing-science/"
-  },
-  {
     "id": "I200",
-    "name": "Cyber Security",
-    "university_id": 10007800,
-    "university_website": "https://www.uws.ac.uk",
-    "course_website": "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/cyber-security/"
-  },
-  {
-    "id": "I200",
-    "name": "Cyber Security",
-    "university_id": 10007800,
-    "university_website": "https://www.uws.ac.uk",
-    "course_website": "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/cyber-security/"
-  },
-  {
-    "id": "I201",
-    "name": "Cyber Security",
-    "university_id": 10007800,
-    "university_website": "https://www.uws.ac.uk",
-    "course_website": "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/cyber-security/"
-  },
-  {
-    "id": "I201",
     "name": "Cyber Security",
     "university_id": 10007800,
     "university_website": "https://www.uws.ac.uk",
@@ -10689,41 +7742,6 @@
     "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
   },
   {
-    "id": "USHFCSCJMGT",
-    "name": "Computer Science and Management",
-    "university_id": 10007803,
-    "university_website": "https://www.st-andrews.ac.uk",
-    "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
-  },
-  {
-    "id": "USHFCSCJMTH",
-    "name": "Computer Science and Mathematics",
-    "university_id": 10007803,
-    "university_website": "https://www.st-andrews.ac.uk",
-    "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
-  },
-  {
-    "id": "USHFCSCJPHI",
-    "name": "Computer Science - Philosophy",
-    "university_id": 10007803,
-    "university_website": "https://www.st-andrews.ac.uk",
-    "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
-  },
-  {
-    "id": "USHFCSCJSTA",
-    "name": "Computer Science and Statistics",
-    "university_id": 10007803,
-    "university_website": "https://www.st-andrews.ac.uk",
-    "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
-  },
-  {
-    "id": "USHFCSCSCSC",
-    "name": "Computer Science",
-    "university_id": 10007803,
-    "university_website": "https://www.st-andrews.ac.uk",
-    "course_website": "http://www.st-andrews.ac.uk/subjects/computer-science/computer-science-bsc/"
-  },
-  {
     "id": "USSFCSCSCSC",
     "name": "Computer Science",
     "university_id": 10007803,
@@ -10740,34 +7758,6 @@
   {
     "id": "U16-CSC",
     "name": "Computing Science",
-    "university_id": 10007804,
-    "university_website": "https://www.stir.ac.uk",
-    "course_website": "https://www.stir.ac.uk/courses/ug/computing-science/"
-  },
-  {
-    "id": "U16-CSCFRE",
-    "name": "Computing Science and French",
-    "university_id": 10007804,
-    "university_website": "https://www.stir.ac.uk",
-    "course_website": "https://www.stir.ac.uk/courses/ug/computing-science/"
-  },
-  {
-    "id": "U16-CSCMAT",
-    "name": "Computing Science and Mathematics",
-    "university_id": 10007804,
-    "university_website": "https://www.stir.ac.uk",
-    "course_website": "https://www.stir.ac.uk/courses/ug/computing-science/"
-  },
-  {
-    "id": "U16-CSCPHI",
-    "name": "Computing Science and Philosophy",
-    "university_id": 10007804,
-    "university_website": "https://www.stir.ac.uk",
-    "course_website": "https://www.stir.ac.uk/courses/ug/computing-science/"
-  },
-  {
-    "id": "U16-CSCSPA",
-    "name": "Computing Science and Spanish",
     "university_id": 10007804,
     "university_website": "https://www.stir.ac.uk",
     "course_website": "https://www.stir.ac.uk/courses/ug/computing-science/"
@@ -11158,60 +8148,11 @@
     "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
   },
   {
-    "id": "BAF000002",
-    "name": "Computing With Stem Foundation Year",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
-  },
-  {
-    "id": "BAF000005",
-    "name": "Information Technology Management For Business With Stem Foundation Year",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
-  },
-  {
-    "id": "BAF000009",
-    "name": "Robotics & Artificial Intelligence With Stem Foundation Year",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
-  },
-  {
-    "id": "BAF000035",
-    "name": "Computer Science & Artificial Intelligence With Stem Foundation Year",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
-  },
-  {
-    "id": "BAF000036",
-    "name": "Software Engineering With Stem Foundation Year",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/stem-foundation-year/"
-  },
-  {
     "id": "BAS000385",
     "name": "Computing",
     "university_id": 10007823,
     "university_website": "https://www.edgehill.ac.uk",
     "course_website": "https://www.edgehill.ac.uk/course/computing/"
-  },
-  {
-    "id": "BAS000385",
-    "name": "Computing",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/computing/"
-  },
-  {
-    "id": "BAS000386",
-    "name": "Information Technology Management For Business",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/information-technology-management-for-business/"
   },
   {
     "id": "BAS000386",
@@ -11228,20 +8169,6 @@
     "course_website": "https://www.edgehill.ac.uk/course/computer-science-bsc/"
   },
   {
-    "id": "BAS000388",
-    "name": "Computer Science",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/computer-science-bsc/"
-  },
-  {
-    "id": "BAS000398",
-    "name": "Software Engineering",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/software-engineering/"
-  },
-  {
     "id": "BAS000398",
     "name": "Software Engineering",
     "university_id": 10007823,
@@ -11254,20 +8181,6 @@
     "university_id": 10007823,
     "university_website": "https://www.edgehill.ac.uk",
     "course_website": "https://www.edgehill.ac.uk/course/robotics-and-artificial-intelligence/"
-  },
-  {
-    "id": "BAS000399",
-    "name": "Robotics & Artificial Intelligence",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/robotics-and-artificial-intelligence/"
-  },
-  {
-    "id": "BAS000408",
-    "name": "Computer Science & Artificial Intelligence",
-    "university_id": 10007823,
-    "university_website": "https://www.edgehill.ac.uk",
-    "course_website": "https://www.edgehill.ac.uk/course/computer-science-and-artificial-intelligence/"
   },
   {
     "id": "BAS000408",
@@ -11305,32 +8218,11 @@
     "course_website": "https://wrexham.ac.uk/courses/Undergraduate-courses/Cyber-Security/"
   },
   {
-    "id": "K25-CYSSNG",
-    "name": "Cyber Security",
-    "university_id": 10007833,
-    "university_website": "https://www.glyndwr.ac.uk",
-    "course_website": "https://wrexham.ac.uk/courses/Undergraduate-courses/Cyber-Security/"
-  },
-  {
     "id": "K25-SENSNG",
     "name": "Software Engineering",
     "university_id": 10007833,
     "university_website": "https://www.glyndwr.ac.uk",
     "course_website": "https://wrexham.ac.uk/courses/undergraduate-courses/software-engineering/"
-  },
-  {
-    "id": "K25-SENSNG",
-    "name": "Software Engineering",
-    "university_id": 10007833,
-    "university_website": "https://www.glyndwr.ac.uk",
-    "course_website": "https://wrexham.ac.uk/courses/undergraduate-courses/software-engineering/"
-  },
-  {
-    "id": "KIS-ACOHND-PC",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.pembrokeshire.ac.uk/"
   },
   {
     "id": "KIS-ACOHND-PC",
@@ -11349,34 +8241,6 @@
   {
     "id": "KIS-BTCSH-PC",
     "name": "Business Information Technology",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.pembrokeshire.ac.uk/courses/"
-  },
-  {
-    "id": "KIS-COMHND-PC",
-    "name": "Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.pembrokeshire.ac.uk/courses/"
-  },
-  {
-    "id": "KIS-COMHND-PC",
-    "name": "Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.pembrokeshire.ac.uk/courses/"
-  },
-  {
-    "id": "KIS-COMSH-PC",
-    "name": "Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.pembrokeshire.ac.uk/courses/"
-  },
-  {
-    "id": "KIS-ICOSH-PC",
-    "name": "Internet Computing",
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.pembrokeshire.ac.uk/courses/"
@@ -11893,13 +8757,6 @@
     "course_website": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science/"
   },
   {
-    "id": "G405",
-    "name": "Computer Science (Artificial Intelligence)",
-    "university_id": 10007854,
-    "university_website": "",
-    "course_website": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science/"
-  },
-  {
     "id": "G500",
     "name": "Computer and Data Science",
     "university_id": 10007854,
@@ -11956,77 +8813,7 @@
     "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/mathematics/bsc-mathematics-and-computer-science-with-foundation-year/"
   },
   {
-    "id": "BSHS4XIICSCS",
-    "name": "Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-computer-science/"
-  },
-  {
-    "id": "BSHS4XIICSFS",
-    "name": "Software Engineering",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-software-engineering/"
-  },
-  {
-    "id": "BSHS4XIICSLS",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-computer-science-ai/"
-  },
-  {
-    "id": "BSHS4XIIMASS",
-    "name": "Mathematics and Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/mathematics/bsc-mathematics-and-computer-science/"
-  },
-  {
-    "id": "BSHS4XSSCSCS",
-    "name": "Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-computer-science/"
-  },
-  {
-    "id": "BSHS4XSSCSFS",
-    "name": "Software Engineering",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-software-engineering/"
-  },
-  {
-    "id": "BSHS4XSSCSLS",
-    "name": "Computer Science and Artificial Intelligence",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/bsc-computer-science-ai/"
-  },
-  {
-    "id": "BSHS4XSSMASS",
-    "name": "Mathematics and Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/mathematics/bsc-mathematics-and-computer-science/"
-  },
-  {
     "id": "MIHS4XX4CSCS",
-    "name": "Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/msci-computer-science/"
-  },
-  {
-    "id": "MIHS5SINCSCS",
-    "name": "Computer Science",
-    "university_id": 10007855,
-    "university_website": "https://www.swan.ac.uk",
-    "course_website": "https://www.swansea.ac.uk/undergraduate/courses/maths-comp-sci/computer-science/msci-computer-science/"
-  },
-  {
-    "id": "MIHS5XS5CSCS",
     "name": "Computer Science",
     "university_id": 10007855,
     "university_website": "https://www.swan.ac.uk",
@@ -12073,13 +8860,6 @@
     "university_id": 10007856,
     "university_website": "https://www.aber.ac.uk",
     "course_website": "http://www.aber.ac.uk/courses/?8RT59E"
-  },
-  {
-    "id": "BSC_G401",
-    "name": "Computer Science (with integrated year in industry)",
-    "university_id": 10007856,
-    "university_website": "https://www.aber.ac.uk",
-    "course_website": "http://www.aber.ac.uk/courses/?QDDKMK"
   },
   {
     "id": "BSC_G406",
@@ -12243,27 +9023,6 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/applied-computing-full-time-campus-full-time-swansea-1"
   },
   {
-    "id": "KIS-ACOHND",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/applied-computing-full-time-campus-full-time-swansea-1"
-  },
-  {
-    "id": "KIS-ACOHND-BM",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/bsc-computing/"
-  },
-  {
-    "id": "KIS-ACOSH",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/applied-computing-full-time-campus-full-time-swansea"
-  },
-  {
     "id": "KIS-ACOSH",
     "name": "Applied Computing",
     "university_id": 10007858,
@@ -12283,13 +9042,6 @@
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/applied-computing-campus-full-time-london"
-  },
-  {
-    "id": "KIS-APCHND-SG",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.colegsirgar.ac.uk/"
   },
   {
     "id": "KIS-APCHND-SG",
@@ -12320,13 +9072,6 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-data-and-information-systems-full-time-campus-0"
   },
   {
-    "id": "KIS-CDIHND",
-    "name": "Computing (Data and Information Systems)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-data-and-information-systems-full-time-campus-0"
-  },
-  {
     "id": "KIS-CDISH",
     "name": "Computing (Data and Information Systems)",
     "university_id": 10007858,
@@ -12334,32 +9079,11 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-data-and-information-systems-full-time-campus"
   },
   {
-    "id": "KIS-CDISH-IY1",
-    "name": "Computing (Data and Information Systems) IY1",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
-  },
-  {
     "id": "KIS-CNCHND",
     "name": "Computer Networks and Cybersecurity",
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-computer-networks-and-cybersecurity-full-time"
-  },
-  {
-    "id": "KIS-CNCHND",
-    "name": "Computer Networks and Cybersecurity",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-computer-networks-and-cybersecurity-full-time"
-  },
-  {
-    "id": "KIS-CNCSH",
-    "name": "Computing (Computer Networks and Cybersecurity)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-computer-networks-and-cybersecurity-full-time-0"
   },
   {
     "id": "KIS-CNCSH",
@@ -12376,39 +9100,11 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/foundation/computing/computing-computer-networks-and-cybersecurity-foundation"
   },
   {
-    "id": "KIS-CNSHND",
-    "name": "Computing (Computer Networks and Cyber Security)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
-  },
-  {
     "id": "KIS-CNSSH",
     "name": "Computing (Computer Networks and Cyber Security)",
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-computer-networks-and-cyber-security-full-time"
-  },
-  {
-    "id": "KIS-CNSSH",
-    "name": "Computing (Computer Networks and Cyber Security)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-computer-networks-and-cyber-security-full-time"
-  },
-  {
-    "id": "KIS-CNSSH-IY1",
-    "name": "Computing (Computer Networks and Cybersecurity)IY1",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
-  },
-  {
-    "id": "KIS-CSDSH-IY1",
-    "name": "Cloud Software Development IY1",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
   },
   {
     "id": "KIS-CWDFD",
@@ -12432,20 +9128,6 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-web-development-full-time-campus-full-time"
   },
   {
-    "id": "KIS-CWDSH",
-    "name": "Computing (Web Development)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-web-development-full-time-campus-full-time"
-  },
-  {
-    "id": "KIS-CWDSH-IY1",
-    "name": "Computing (Web Development) IY1",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
-  },
-  {
     "id": "KIS-DGCFD",
     "name": "Computing (Games Development) with Foundation Year",
     "university_id": 10007858,
@@ -12460,32 +9142,11 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-games-development-full-time-campus-full-time-0"
   },
   {
-    "id": "KIS-DGCHND",
-    "name": "Computing (Games Development)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-games-development-full-time-campus-full-time-0"
-  },
-  {
     "id": "KIS-DGCSH",
     "name": "Computing (Games Development)",
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-games-development-full-time-campus-full-time"
-  },
-  {
-    "id": "KIS-DGCSH",
-    "name": "Computing (Games Development)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-games-development-full-time-campus-full-time"
-  },
-  {
-    "id": "KIS-SECFD",
-    "name": "Computing (Software Engineering) with Foundation Year",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/foundation/computing/computing-software-engineering-foundation-year-full-time"
   },
   {
     "id": "KIS-SECFD",
@@ -12502,39 +9163,11 @@
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-software-engineering-full-time-campus-full-0"
   },
   {
-    "id": "KIS-SECHND",
-    "name": "Computing (Software Engineering)",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-software-engineering-full-time-campus-full-0"
-  },
-  {
     "id": "KIS-SECSH",
     "name": "Computing (Software Engineering",
     "university_id": 10007858,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-software-engineering-full-time-campus-full-time"
-  },
-  {
-    "id": "KIS-SECSH",
-    "name": "Computing (Software Engineering",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/programme-courses/undergraduate/computing/computing-software-engineering-full-time-campus-full-time"
-  },
-  {
-    "id": "KIS-SECSH-IY1",
-    "name": "Computing (Software Engineering) IY1",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
-  },
-  {
-    "id": "KIS-SECSHP",
-    "name": "Computing (Software Engineering) with Yr Industry",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "http://www.uwtsd.ac.uk/"
   },
   {
     "id": "305447",
@@ -12551,25 +9184,11 @@
     "course_website": "https://wcg.ac.uk/course/info/3381"
   },
   {
-    "id": "305448",
-    "name": "Computer Networks and Cybersecurity",
-    "university_id": 10007859,
-    "university_website": "https://wcg.ac.uk",
-    "course_website": "https://wcg.ac.uk/course/info/3381"
-  },
-  {
     "id": "H1616",
     "name": "Computing",
     "university_id": 10007938,
     "university_website": "https://tecpartnership.com",
     "course_website": "https://eastridingcollege.ac.uk/course-detail/fdsc-computing/"
-  },
-  {
-    "id": "COM-HD5",
-    "name": "Computing",
-    "university_id": 10007977,
-    "university_website": "https://www.howcollege.ac.uk",
-    "course_website": "https://www.howcollege.ac.uk/courses/computing-and-it/1330/hnd-computing-for-england-top-up/"
   },
   {
     "id": "COM-HD5",
@@ -12614,13 +9233,6 @@
     "course_website": "https://www.rcl.ac.uk/courses/detail/beng-hons-software-engineering/"
   },
   {
-    "id": "UOBBESED",
-    "name": "Software Engineering",
-    "university_id": 10008455,
-    "university_website": "https://www.regentgroup.org.uk",
-    "course_website": "https://www.rcl.ac.uk/courses/detail/beng-hons-software-engineering/"
-  },
-  {
     "id": "UOBBESEFY",
     "name": "Software Engineering",
     "university_id": 10008455,
@@ -12642,20 +9254,6 @@
     "course_website": "https://www.rcl.ac.uk/courses/foundation-year-routes/bsc-hons-computing-with-foundation-year/"
   },
   {
-    "id": "KIS-APCSH-SG",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.colegsirgar.ac.uk/"
-  },
-  {
-    "id": "KIS-APCSH-SG",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.colegsirgar.ac.uk/"
-  },
-  {
     "id": "KIS-COMSH-SG",
     "name": "Computing",
     "university_id": 10007858,
@@ -12670,29 +9268,8 @@
     "course_website": "http://www.falmouth.ac.uk/study/undergraduate/computing-for-games"
   },
   {
-    "id": "BSCOMPFIU01",
-    "name": "Computing for Games with Integrated Foundation Year",
-    "university_id": 10008640,
-    "university_website": "",
-    "course_website": "http://www.falmouth.ac.uk/study/undergraduate/computing-for-games"
-  },
-  {
-    "id": "BSCOMPFSU01",
-    "name": "Computing for Games with Professional Placement",
-    "university_id": 10008640,
-    "university_website": "",
-    "course_website": "http://www.falmouth.ac.uk/study/undergraduate/computing-for-games"
-  },
-  {
     "id": "BSCOSCFFU02",
     "name": "Computer Science",
-    "university_id": 10008640,
-    "university_website": "",
-    "course_website": "http://www.falmouth.ac.uk/study/undergraduate/computer-science"
-  },
-  {
-    "id": "BSCOSCFIU01",
-    "name": "Computer Science with Integrated Foundation Year",
     "university_id": 10008640,
     "university_website": "",
     "course_website": "http://www.falmouth.ac.uk/study/undergraduate/computer-science"
@@ -12712,32 +9289,11 @@
     "course_website": "http://www.falmouth.ac.uk/study/undergraduate/software-engineering"
   },
   {
-    "id": "BSSFTEFIU01",
-    "name": "Software Engineering with Integrated Foundation Year",
-    "university_id": 10008640,
-    "university_website": "",
-    "course_website": "http://www.falmouth.ac.uk/study/undergraduate/software-engineering"
-  },
-  {
-    "id": "BSSFTEFSU01",
-    "name": "Software Engineering with Professional Placement",
-    "university_id": 10008640,
-    "university_website": "",
-    "course_website": "http://www.falmouth.ac.uk/study/undergraduate/software-engineering"
-  },
-  {
     "id": "CRS0021501PCYCN",
     "name": "Cyber And Information Security",
     "university_id": 10007793,
     "university_website": "https://www.swancoll.ac.uk",
     "course_website": "https://www.cymoedd.ac.uk/course-detail/hnc-in-cyber-security/?course_id=06P424NA"
-  },
-  {
-    "id": "KIS-ACOHND-NPT",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/bsc-computing/"
   },
   {
     "id": "KIS-CISSH-NPT",
@@ -12761,13 +9317,6 @@
     "course_website": "http://www.uos.ac.uk/icom"
   },
   {
-    "id": "ICMSSGLEU-Y",
-    "name": "Computer Science",
-    "university_id": 10014001,
-    "university_website": "",
-    "course_website": "http://www.uos.ac.uk/icom"
-  },
-  {
     "id": "DTC",
     "name": "Digital Technologies (Cyber Security)",
     "university_id": 10015688,
@@ -12784,13 +9333,6 @@
   {
     "id": "HLZL3",
     "name": "Computing For England (Computing)",
-    "university_id": 10020038,
-    "university_website": "",
-    "course_website": "https://cce.ac.uk"
-  },
-  {
-    "id": "HLZL8",
-    "name": "Computing For England",
     "university_id": 10020038,
     "university_website": "",
     "course_website": "https://cce.ac.uk"
@@ -12894,27 +9436,6 @@
     "course_website": "https://www.wic.ac.uk/#/course/computer-science-bsc"
   },
   {
-    "id": "KIS-ACOHND-GO",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/bsc-computing/"
-  },
-  {
-    "id": "KIS-ACOHND-GO",
-    "name": "Applied Computing",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.uwtsd.ac.uk/bsc-computing/"
-  },
-  {
-    "id": "KIS-CISHND-GO",
-    "name": "Computing and Information Systems",
-    "university_id": 10007858,
-    "university_website": "https://www.swancoll.ac.uk",
-    "course_website": "https://www.gcs.ac.uk/courses"
-  },
-  {
     "id": "KIS-CISHND-GO",
     "name": "Computing and Information Systems",
     "university_id": 10007858,
@@ -12943,29 +9464,8 @@
     "course_website": "https://cavc.ac.uk/en/courses/he/bsc-cyber-security"
   },
   {
-    "id": "CYBSECSTCV1O",
-    "name": "Cyber Security",
-    "university_id": 10006566,
-    "university_website": "https://www.skyborne.com",
-    "course_website": "https://cavc.ac.uk/en/courses/he/bsc-cyber-security"
-  },
-  {
-    "id": "6980",
-    "name": "Computing Systems",
-    "university_id": 10007807,
-    "university_website": "http://www.qahighereducation.com/university-of-ulster.html",
-    "course_website": "https://qa.ulster.ac.uk/course/bsc-hons-computing-systems/"
-  },
-  {
     "id": "COMPSCI-3",
     "name": "Computer Science",
-    "university_id": 10039956,
-    "university_website": "https://www.law.ac.uk",
-    "course_website": "https://www.law.ac.uk/study/undergraduate/computer-science/bsc-hons-computer-science/"
-  },
-  {
-    "id": "COMPSCI-FOUND4",
-    "name": "Computer Science with Foundation Year",
     "university_id": 10039956,
     "university_website": "https://www.law.ac.uk",
     "course_website": "https://www.law.ac.uk/study/undergraduate/computer-science/bsc-hons-computer-science/"
@@ -13062,32 +9562,11 @@
     "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science/"
   },
   {
-    "id": "UBS6CS5AF$",
-    "name": "Computer Science",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science/"
-  },
-  {
     "id": "UBS6CY5AF$",
     "name": "Computer Science (Cyber Security)",
     "university_id": 10068157,
     "university_website": "",
     "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science-cyber-security/"
-  },
-  {
-    "id": "UBS6CY5AF$",
-    "name": "Computer Science (Cyber Security)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science-cyber-security/"
-  },
-  {
-    "id": "UBS6NW5AF$",
-    "name": "Computer Science (Networking)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://ucp.ac.uk/course/bsc-hons-computer-science-cyber-security-ft/"
   },
   {
     "id": "UBS6NW5AF$",
@@ -13104,20 +9583,6 @@
     "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science-software-development/"
   },
   {
-    "id": "UBS6SD5AF$",
-    "name": "Computer Science (Software Development)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/bsc-hons-computer-science-software-development/"
-  },
-  {
-    "id": "UHT4CY5AF$",
-    "name": "Computer Science (Cyber Security)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-cyber-security-htq/"
-  },
-  {
     "id": "UHT4CY5AF$",
     "name": "Computer Science (Cyber Security)",
     "university_id": 10068157,
@@ -13132,32 +9597,11 @@
     "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-data-analytics-htq-3/"
   },
   {
-    "id": "UHT4DA5AF$",
-    "name": "Computer Science - Data Analytics",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-data-analytics-htq-3/"
-  },
-  {
     "id": "UHT4NW5AF$",
     "name": "Computer Science (Networking)",
     "university_id": 10068157,
     "university_website": "",
     "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-cloud-networking-htq/"
-  },
-  {
-    "id": "UHT4NW5AF$",
-    "name": "Computer Science (Networking)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-cloud-networking-htq/"
-  },
-  {
-    "id": "UHT4SD5AF$",
-    "name": "Computer Science (Software Programming)",
-    "university_id": 10068157,
-    "university_website": "",
-    "course_website": "https://www.ucp.ac.uk/courses/digital-technologies-for-england-software-development-and-programming-htq/"
   },
   {
     "id": "UHT4SD5AF$",
