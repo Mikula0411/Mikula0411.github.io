@@ -27,25 +27,23 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Matches index.html
+  const el = $("results-grid"); 
   if (!el) return;
   el.innerHTML = "";
   
-  const countEl = $("results-count"); // Matches index.html
+  const countEl = $("results-count");
   if (countEl) {
-    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`; //
+    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
 
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // Correctly map university names using the ID from your JSON
     const uni = universitiesById.get(String(r.university_id)); 
-    
     const card = document.createElement("div");
-    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group"; //
+    card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // FIX: Using r.name (the new field) instead of r.title
+    // UPDATED: Using r.name to match your new database structure
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
             ${r.name || "Unknown Course"}
@@ -54,7 +52,7 @@ function render(results) {
             ${uni ? uni.name : 'University ID: ' + r.university_id}
         </p>
         <div class="flex items-center justify-between">
-            <span class="card-meta">
+            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject] || "General"}
             </span>
             <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">
@@ -63,12 +61,11 @@ function render(results) {
         </div>
     `;
 
-    // Updated to use the direct course_website from your database
+    // UPDATED: Uses course_website from your database if available
     card.onclick = () => {
       if (r.course_website) {
         window.open(r.course_website, '_blank');
       } else {
-        // Fallback if no website is provided in the JSON
         const query = encodeURIComponent(`${r.name} at ${uni ? uni.name : ''} UK`);
         window.open(`https://www.google.com/search?q=${query}`, '_blank');
       }
@@ -79,17 +76,16 @@ function render(results) {
   el.appendChild(frag);
 }
 
-// Ensure the search function also looks at the new 'name' field
 function search() {
   const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
-  filteredCourses = q
-    ? currentCourses.filter(c => normalize(c.name).includes(q)) // Updated from 'title' to 'name'
-    : currentCourses;
-  
-  currentPage = 1;
-  render(filteredCourses.slice(0, 500)); // Show your requested 500 limit
+  // UPDATED: Search now looks at the 'name' field
+  const results = q
+    ? currentCourses.filter(c => normalize(c.name).includes(q))
+    : currentCourses.slice(0, 500);
+
+  render(results);
 }
 
 async function setSubject(subjectKey) {
@@ -98,22 +94,18 @@ async function setSubject(subjectKey) {
   search();
 }
 
-// Fixed theme toggle
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
 async function init() {
-  // 1. Load universities database first
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // 2. Setup search listener
   $("search-input").addEventListener("input", search);
 
-  // 3. Inject category buttons
   const filters = $("category-filters");
   if (filters) {
     filters.innerHTML = "";
@@ -134,7 +126,6 @@ async function init() {
     });
   }
 
-  // 4. Initial load
   await setSubject("compsci");
 }
 
