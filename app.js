@@ -43,30 +43,30 @@ function render(results) {
     const card = document.createElement("div");
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // UPDATED: Using r.name to match your new database structure
+    // FIX: Changed 'r.name' back to 'r.title' to match your JSON data
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
-            ${r.name || "Unknown Course"}
+            ${r.title || "Unknown Subject"}
         </h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
             ${uni ? uni.name : 'University ID: ' + r.university_id}
         </p>
         <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
+            <span class="card-meta">
                 ${SUBJECT_LABELS[activeSubject] || "General"}
             </span>
             <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">
-                Visit Course Page →
+                View Subject Link →
             </span>
         </div>
     `;
 
-    // UPDATED: Uses course_website from your database if available
+    // Click feature: Links to the course website or falls back to a Google search
     card.onclick = () => {
       if (r.course_website) {
         window.open(r.course_website, '_blank');
       } else {
-        const query = encodeURIComponent(`${r.name} at ${uni ? uni.name : ''} UK`);
+        const query = encodeURIComponent(`${r.title} at ${uni ? uni.name : ''} UK course 2026`);
         window.open(`https://www.google.com/search?q=${query}`, '_blank');
       }
     };
@@ -80,9 +80,9 @@ function search() {
   const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
-  // UPDATED: Search now looks at the 'name' field
+  // FIX: Search now looks at the 'title' field to match your JSON
   const results = q
-    ? currentCourses.filter(c => normalize(c.name).includes(q))
+    ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses.slice(0, 500);
 
   render(results);
@@ -99,12 +99,16 @@ window.toggleTheme = () => {
 };
 
 async function init() {
+  // Load university names first to enable mapping
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  $("search-input").addEventListener("input", search);
+  const searchInput = $("search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", search);
+  }
 
   const filters = $("category-filters");
   if (filters) {
@@ -132,5 +136,5 @@ async function init() {
 init().catch(err => {
   console.error(err);
   const grid = $("results-grid");
-  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Error: ${err.message}</p>`;
+  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Database connection error: ${err.message}</p>`;
 });
