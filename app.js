@@ -27,11 +27,13 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid"); // Matches index.html
+  // Matches index.html ID
+  const el = $("results-grid"); 
   if (!el) return;
   el.innerHTML = "";
   
-  const countEl = $("results-count"); // Matches index.html
+  // Matches index.html ID
+  const countEl = $("results-count");
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
   }
@@ -39,12 +41,13 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    // FIX: Use 'university_id' to match your JSON data
+    // FIX: Use 'university_id' (from JSON) instead of 'institution_id'
     const uni = universitiesById.get(String(r.university_id)); 
     
     const card = document.createElement("div");
     card.className = "p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
+    // Correctly accessing the university name or showing ID if not found
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">${r.title}</h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
@@ -52,10 +55,11 @@ function render(results) {
             <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject]}
             </span>
-            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">View Link →</span>
+            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">View Subject Link →</span>
         </div>
     `;
 
+    // Click feature
     card.onclick = () => {
       const query = encodeURIComponent(`${r.title} ${uni ? uni.name : ''} UK course 2026`);
       window.open(`https://www.google.com/search?q=${query}`, '_blank');
@@ -67,11 +71,11 @@ function render(results) {
 }
 
 function search() {
-  const input = $("search-input"); // Matches index.html
+  const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
   const results = q
-    ? currentCourses.filter(c => normalize(c.title).includes(q) || normalize(String(c.university_id)).includes(q))
+    ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses.slice(0, 500);
 
   render(results);
@@ -83,22 +87,22 @@ async function setSubject(subjectKey) {
   search();
 }
 
+// Fixed theme toggle
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
 async function init() {
-  // Load university data
+  // 1. Load universities database first
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
-  if($("stat-courses")) $("stat-courses").textContent = `Database Live`;
 
-  // Search listener
+  // 2. Setup search listener
   $("search-input").addEventListener("input", search);
 
-  // Build the category buttons
+  // 3. Inject category buttons
   const filters = $("category-filters");
   if (filters) {
     filters.innerHTML = "";
@@ -119,13 +123,12 @@ async function init() {
     });
   }
 
-  // Start with Computer Science
+  // 4. Initial load
   await setSubject("compsci");
-  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
 init().catch(err => {
   console.error(err);
   const grid = $("results-grid");
-  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Error loading database: ${err.message}</p>`;
+  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Error: ${err.message}</p>`;
 });
