@@ -43,7 +43,7 @@ function render(results) {
     const card = document.createElement("div");
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // FIX: Changed 'r.name' back to 'r.title' to match your JSON data
+    // FIX: Using r.title to match your JSON data
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
             ${r.title || "Unknown Subject"}
@@ -80,7 +80,7 @@ function search() {
   const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
-  // FIX: Search now looks at the 'title' field to match your JSON
+  // FIX: Search looks at the 'title' field to match your JSON
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
     : currentCourses.slice(0, 500);
@@ -99,7 +99,6 @@ window.toggleTheme = () => {
 };
 
 async function init() {
-  // Load university names first to enable mapping
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
