@@ -27,10 +27,12 @@ function normalize(s) {
 }
 
 function render(results) {
-  const el = $("results-grid");
+  // FIX: Updated to match "results-grid" in your index.html
+  const el = $("results-grid"); 
   if (!el) return;
   el.innerHTML = "";
   
+  // FIX: Updated to match "results-count" in your index.html
   const countEl = $("results-count");
   if (countEl) {
     countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
@@ -39,45 +41,41 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
+    // FIX: Changed 'institution_id' to 'university_id' to match JSON data
     const uni = universitiesById.get(String(r.university_id)); 
+    
     const card = document.createElement("div");
-    // Added 'cursor-pointer' to show it's clickable
+    // Added 'cursor-pointer' to prepare for the click feature
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // Build the card content
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">${r.title}</h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">${uni ? uni.name : 'University ID: ' + r.university_id}</p>
         <div class="flex items-center justify-between">
             <span class="card-meta">${SUBJECT_LABELS[activeSubject]}</span>
-            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline">Click to view course link →</span>
+            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">View Subject Link →</span>
         </div>
     `;
 
-    // Add the click feature
+    // Subject Link Feature: Generates a search link for the specific course
     card.onclick = () => {
-      // Option A: Open a dynamic search link for the specific course
-      const query = encodeURIComponent(`${r.title} ${uni ? uni.name : ''} UK course`);
-      const courseUrl = `https://www.google.com/search?q=${query}`;
-      
-      // Option B: You could instead show a link in a modal or a designated area
-      window.open(courseUrl, '_blank'); 
+      const query = encodeURIComponent(`${r.title} ${uni ? uni.name : ''} UK course 2026`);
+      window.open(`https://www.google.com/search?q=${query}`, '_blank');
     };
 
     frag.appendChild(card);
   }
-
   el.appendChild(frag);
 }
 
 function search() {
-  // FIX: Matches the ID "search-input" in your index.html
+  // FIX: Updated to match "search-input" ID in your index.html
   const input = $("search-input");
   const q = normalize(input ? input.value : "");
   
   const results = q
     ? currentCourses.filter(c => normalize(c.title).includes(q))
-    : currentCourses.slice(0, 500); // Your updated limit of 500
+    : currentCourses.slice(0, 500); // Your requested limit
 
   render(results);
 }
@@ -88,7 +86,6 @@ async function setSubject(subjectKey) {
   search();
 }
 
-// Added theme toggle function for the moon button in your header
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
@@ -98,16 +95,15 @@ async function init() {
   const universities = await loadJSON("data/universities.json");
   universitiesById = new Map(universities.map(u => [String(u.id), u]));
   
-  // Update footer institutional count
   if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  // Search input listener (triggers as you type)
+  // Search input listener
   const searchInput = $("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", search);
   }
 
-  // Inject category buttons into "category-filters" container
+  // Inject category buttons into "category-filters"
   const filters = $("category-filters");
   if (filters) {
     filters.innerHTML = "";
@@ -134,5 +130,5 @@ async function init() {
 init().catch(err => {
   console.error(err);
   const grid = $("results-grid");
-  if (grid) grid.innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
+  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Database connection error: ${err.message}</p>`;
 });
