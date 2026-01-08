@@ -39,34 +39,40 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
+    // Lookup university name using the ID from JSON
     const uni = universitiesById.get(String(r.university_id)); 
+    
+    // THE TRICK: Use either r.name OR r.title, whichever is available
+    const displayTitle = r.name || r.title || "Unknown Subject";
+    const displayUni = uni ? uni.name : (r.university_name || 'University ID: ' + r.university_id);
+
     const card = document.createElement("div");
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // FIX: Using r.title to match your JSON data
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
-            ${r.title || "Unknown Subject"}
+            ${displayTitle}
         </h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
-            ${uni ? uni.name : 'University ID: ' + r.university_id}
+            ${displayUni}
         </p>
         <div class="flex items-center justify-between">
-            <span class="card-meta">
+            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject] || "General"}
             </span>
             <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">
-                View Subject Link →
+                Visit Link →
             </span>
         </div>
     `;
 
-    // Click feature: Links to the course website or falls back to a Google search
+    // Click feature: Priority to direct website, then fallback to Google Search
     card.onclick = () => {
-      if (r.course_website) {
-        window.open(r.course_website, '_blank');
+      const url = r.course_website || r.university_website;
+      if (url) {
+        window.open(url, '_blank');
       } else {
-        const query = encodeURIComponent(`${r.title} at ${uni ? uni.name : ''} UK course 2026`);
+        const query = encodeURIComponent(`${displayTitle} at ${displayUni} UK`);
         window.open(`https://www.google.com/search?q=${query}`, '_blank');
       }
     };
@@ -80,9 +86,12 @@ function search() {
   const input = $("search-input");
   const q = input ? normalize(input.value) : "";
   
-  // FIX: Search looks at the 'title' field to match your JSON
+  // Search checks both 'name' and 'title' fields
   const results = q
-    ? currentCourses.filter(c => normalize(c.title).includes(q))
+    ? currentCourses.filter(c => 
+        normalize(c.name || "").includes(q) || 
+        normalize(c.title || "").includes(q)
+      )
     : currentCourses.slice(0, 500);
 
   render(results);
@@ -90,8 +99,12 @@ function search() {
 
 async function setSubject(subjectKey) {
   activeSubject = subjectKey;
-  currentCourses = await loadJSON(SUBJECT_FILES[subjectKey]);
-  search();
+  try {
+    currentCourses = await loadJSON(SUBJECT_FILES[subjectKey]);
+    search();
+  } catch (e) {
+    console.error("Subject load error:", e);
+  }
 }
 
 window.toggleTheme = () => {
@@ -99,41 +112,38 @@ window.toggleTheme = () => {
 };
 
 async function init() {
-  const universities = await loadJSON("data/universities.json");
-  universitiesById = new Map(universities.map(u => [String(u.id), u]));
-  
-  if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
+  try {
+    const universities = await loadJSON("data/universities.json");
+    universitiesById = new Map(universities.map(u => [String(u.id), u]));
+    
+    if($("stat-institutions")) $("stat-institutions").textContent = `${universities.length} Institutions`;
 
-  const searchInput = $("search-input");
-  if (searchInput) {
-    searchInput.addEventListener("input", search);
+    $("search-input").addEventListener("input", search);
+
+    const filters = $("category-filters");
+    if (filters) {
+      filters.innerHTML = "";
+      Object.keys(SUBJECT_LABELS).forEach(key => {
+          const btn = document.createElement("button");
+          btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
+          btn.textContent = SUBJECT_LABELS[key];
+          btn.onclick = () => {
+              document.querySelectorAll('.chip').forEach(c => {
+                  c.classList.remove('bg-indigo-600', 'text-white');
+                  c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+              });
+              btn.classList.add('bg-indigo-600', 'text-white');
+              btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+              setSubject(key);
+          };
+          filters.appendChild(btn);
+      });
+    }
+
+    await setSubject("compsci");
+  } catch (err) {
+    console.error("Init error:", err);
   }
-
-  const filters = $("category-filters");
-  if (filters) {
-    filters.innerHTML = "";
-    Object.keys(SUBJECT_LABELS).forEach(key => {
-        const btn = document.createElement("button");
-        btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
-        btn.textContent = SUBJECT_LABELS[key];
-        btn.onclick = () => {
-            document.querySelectorAll('.chip').forEach(c => {
-                c.classList.remove('bg-indigo-600', 'text-white');
-                c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-            });
-            btn.classList.add('bg-indigo-600', 'text-white');
-            btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-            setSubject(key);
-        };
-        filters.appendChild(btn);
-    });
-  }
-
-  await setSubject("compsci");
 }
 
-init().catch(err => {
-  console.error(err);
-  const grid = $("results-grid");
-  if (grid) grid.innerHTML = `<p class="p-6 text-red-500">Database connection error: ${err.message}</p>`;
-});
+init();
