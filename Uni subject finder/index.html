@@ -3,36 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>International Student Uni Finder 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!--Use tailwindcss for easy styling-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Use lucid for icon-->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12 transition-colors duration-300">
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="border-b sticky top-0 z-40 bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="bg-indigo-600 p-2 rounded-lg text-white">
+                    <i data-lucide="globe" class="w-6 h-6"></i>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+                    Intl Student Uni Finder
+                </h1>
+            </div>
+            <button onclick="toggleTheme()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 dark:text-amber-400">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+            </button>
+        </div>
     </header>
-
-    <main>
-        <section id="home">
-            <h2>Home Section</h2>
-            <p>This is where your main content goes. HTML provides the structure of the page.</p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>You can add images, text, and links here.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 My Web Page</p>
-    </footer>
-
+    <script src="app.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
