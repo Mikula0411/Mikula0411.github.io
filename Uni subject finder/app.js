@@ -19,3 +19,15 @@ const SUBJECT_LABELS = {
 let universitiesById = new Map(); 
 let currentCourses = [];          
 let activeSubject = "compsci"; // default subject 
+
+// load the data from the JSON files
+async function loadJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return res.json();
+}
+
+// Make the string lowercase and trim the spaces
+function normalize(s) {
+  return (s || "").toLowerCase().trim();
+}
