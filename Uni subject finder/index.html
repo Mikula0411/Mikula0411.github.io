@@ -33,14 +33,22 @@
                 <h2 class="text-4xl">Search the Subject Database</h2>
                 <p class="text-slate-500">Instant access to Course Website and Requirements.</p>
             </div>
-            <!--Making a search bar for user to search subject-->
-            <div class="p-4 rounded-3xl border bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
-                <div class="relative mb-4 flex gap-2">
-                    <div class="relative flex-1">
-                        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-6 h-6"></i>
-                        <input type="text" id="search-input" placeholder="Search courses..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500/75 bg-slate-50 dark:bg-slate-800 dark:text-white border-transparent">
-                    </div>
+        <!--Making a search bar for user to search subject-->
+        <div class="p-4 rounded-3xl border bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+            <div class="relative mb-4 flex gap-2">
+                <div class="relative flex-1">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-6 h-6"></i>
+                    <input type="text" id="search-input" placeholder="Search courses..." class="w-full pl-12 pr-4 py-4 rounded-2xl outline-none border focus:border-indigo-500/75 bg-slate-50 dark:bg-slate-800 dark:text-white border-transparent">
                 </div>
+            </div>
+                    <!--Make a container for filter the subject as the dataset are store in different json file-->
+                    <div id="category-filters" class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+                    </div>
+        </div>
+            <p id="results-count" class="text-sm font-medium text-slate-400 px-2">Loading courses...</p>
+            <!--Make the result showing in phone and pc will have different layout-->
+            <div id="results-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-6"></div>
+        </div>
     </main>
     <!--Add a footer -->
     <footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800">
