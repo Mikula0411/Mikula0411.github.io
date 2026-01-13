@@ -3,9 +3,9 @@ const grab_id = (id) => document.getElementById(id);
 
 // File paths for subject data
 const SUBJECT_FILES = {
-  compsci: "data/subjects_compsci.json",
-  engineering: "data/subjects_engineering.json",
-  business: "data/subjects_business.json",
+  compsci: "Uni subject finder/data/subjects_compsci.json",
+  engineering: "Uni subject finder/data/subjects_engineering.json",
+  business: "Uni subject finder/data/subjects_business.json",
 };
 
 //Subject tag
