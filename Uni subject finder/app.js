@@ -106,3 +106,59 @@ function search() {
 
   render(results); // Pass it to render function to show the results
 }
+
+// Chnage Subject Tag function
+async function setSubject(subjectKey) {
+  activeSubject = subjectKey;
+  try {
+    currentCourses = await loadJSON(SUBJECT_FILES[subjectKey]); // Load the subject data
+    search(); // Refresh the search results
+  } catch (e) {
+    console.error("Subject load error:", e);
+  }
+}
+
+// Theme toggle function
+window.toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+};
+
+async function init() {
+  try {
+    const universities = await loadJSON("data/universities.json");
+    universitiesById = new Map(universities.map(u => [String(u.id), u]));
+
+    // Update the result when user typing in the search box
+    grab_id("search-input").addEventListener("input", search);
+
+    // build subject filter buttons
+    const filters = grab_id("category-filters");
+    if (filters) {
+      filters.innerHTML = "";
+      Object.keys(SUBJECT_LABELS).forEach(key => {
+          const btn = document.createElement("button");
+          // Make the active subject button styled differently
+          btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
+          btn.textContent = SUBJECT_LABELS[key];
+          btn.onclick = () => {
+              document.querySelectorAll('.chip').forEach(c => {
+                  c.classList.remove('bg-indigo-600', 'text-white');
+                  c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+              });
+              btn.classList.add('bg-indigo-600', 'text-white');
+              btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+              setSubject(key);
+          };
+          filters.appendChild(btn);
+      });
+    }
+
+    await setSubject("compsci"); // default subject tag
+    if (window.lucide) window.lucide.createIcons(); // to render icons if lucide is loaded
+    
+  } catch (err) {
+    console.error("Critical Init Error:", err);
+  }
+}
+
+init();
