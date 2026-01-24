@@ -19,6 +19,8 @@ const SUBJECT_LABELS = {
 let universitiesById = new Map(); 
 let currentCourses = [];          
 let activeSubject = "compsci"; // default subject 
+let currentPage = 1;
+const itemsPerPage = 21;
 
 // load the data from the JSON files
 async function loadJSON(path) {
@@ -91,20 +93,20 @@ function render(results) {
 
 // Search function
 function search() {
-  const input = grab_id("search-input"); // Get the search input element
-  const q = input ? normalize(input.value) : ""; // Make the user input into lowercase and trim spaces
+  const input = grab_id("search-input");
+  const q = input ? normalize(input.value) : "";
   
-  // Filter the courses based on the search query
-  const results = q
+  const filtered = q
     ? currentCourses.filter(c => {
         const courseName = normalize(c.name || c.title || "");
         const uniData = universitiesById.get(String(c.university_id));
         const uniName = uniData ? normalize(uniData.name) : "";
         return courseName.includes(q) || uniName.includes(q);
       })
-    : currentCourses.slice(0, 500); 
+    : currentCourses;
 
-  render(results); // Pass it to render function to show the results
+  currentPage = 1; // Reset to page 1 on new search
+  paginateAndRender(filtered); 
 }
 
 // Chnage Subject Tag function
@@ -117,6 +119,53 @@ async function setSubject(subjectKey) {
     console.error("Subject load error:", e);
   }
 }
+
+function paginateAndRender(data) {
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedItems = data.slice(start, end);
+
+  render(paginatedItems); // Show only the slice
+  renderPaginationControls(data.length, totalPages);
+}
+
+function renderPaginationControls(totalItems, totalPages) {
+  let container = grab_id("pagination-controls");
+  
+  // Create container if it doesn't exist
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "pagination-controls";
+    container.className = "flex justify-center items-center gap-4 mt-8";
+    grab_id("results-grid").after(container);
+  }
+
+  container.innerHTML = `
+    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
+      class="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border disabled:opacity-30">Previous</button>
+    <span class="font-bold text-sm">Page ${currentPage} of ${totalPages || 1}</span>
+    <button onclick="changePage(1)" ${currentPage === totalPages || totalPages === 0 ? 'disabled' : ''} 
+      class="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border disabled:opacity-30">Next</button>
+  `;
+}
+
+window.changePage = (step) => {
+    currentPage += step;
+    // We need to run search again but without resetting currentPage to 1
+    // So let's slightly adjust the search logic to allow this
+    const input = grab_id("search-input");
+    const q = input ? normalize(input.value) : "";
+    const filtered = currentCourses.filter(c => {
+        const courseName = normalize(c.name || c.title || "");
+        const uniData = universitiesById.get(String(c.university_id));
+        const uniName = uniData ? normalize(uniData.name) : "";
+        return courseName.includes(q) || uniName.includes(q);
+    });
+    
+    paginateAndRender(filtered);
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll back up to see new results
+};
 
 // Theme toggle function
 window.toggleTheme = () => {
