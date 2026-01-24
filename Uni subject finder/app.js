@@ -115,7 +115,6 @@ function render(results) {
 function renderPaginationControls(totalPages) {
   let container = grab_id("pagination-controls");
   
-  // Create container if it doesn't exist in index.html
   if (!container) {
     container = document.createElement("div");
     container.id = "pagination-controls";
@@ -128,16 +127,20 @@ function renderPaginationControls(totalPages) {
   }
 
   container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
+  
+  // Highlighting the fix: added hover:bg-indigo-50 and dark:hover:bg-indigo-900/20
+  const btnClass = "px-6 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent text-sm font-bold transition-all duration-200 outline-none focus:border-indigo-500/75 active:border-indigo-500/75 disabled:opacity-20 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:border-indigo-200 dark:hover:border-indigo-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400";
+
   container.innerHTML = `
     <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
-      class="px-6 py-2 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      class="${btnClass}">
       Previous
     </button>
     <span class="text-sm font-bold text-slate-500">
       Page ${currentPage} of ${totalPages}
     </span>
     <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
-      class="px-6 py-2 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      class="${btnClass}">
       Next
     </button>
   `;
