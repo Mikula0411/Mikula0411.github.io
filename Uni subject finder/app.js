@@ -128,16 +128,17 @@ function renderPaginationControls(totalPages) {
   }
 
   container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
+  const btnClass = "px-6 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent text-sm font-bold transition-all outline-none focus:border-indigo-500/75 active:border-indigo-500/75 disabled:opacity-20 hover:bg-slate-100/50 dark:hover:bg-slate-800/50";
   container.innerHTML = `
     <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
-      class="px-6 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      class="${btnClass}">
       Previous
     </button>
     <span class="text-sm font-bold text-slate-500">
       Page ${currentPage} of ${totalPages}
     </span>
     <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
-      class="px-6 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      class="${btnClass}">
       Next
     </button>
   `;
@@ -195,7 +196,7 @@ async function init() {
       filters.innerHTML = "";
       Object.keys(SUBJECT_LABELS).forEach(key => {
           const btn = document.createElement("button");
-          const btnClass = "px-6 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent text-sm font-bold transition-all outline-none focus:border-indigo-500/75 active:border-indigo-500/75 disabled:opacity-20 hover:bg-slate-100/50 dark:hover:bg-slate-800/50";
+          btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
           btn.textContent = SUBJECT_LABELS[key];
           btn.onclick = () => {
               document.querySelectorAll('.chip').forEach(c => {
