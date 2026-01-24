@@ -17,10 +17,13 @@ const SUBJECT_LABELS = {
 
 // Global variables
 let universitiesById = new Map(); 
-let currentCourses = [];          
-let activeSubject = "compsci"; // default subject 
+let currentCourses = [];          // Full data for the active subject
+let filteredCourses = [];         // Courses matching the search query
+let activeSubject = "compsci";    // default subject 
+
+// Pagination variables
 let currentPage = 1;
-const itemsPerPage = 21;
+const itemsPerPage = 12;
 
 // load the data from the JSON files
 async function loadJSON(path) {
@@ -34,30 +37,46 @@ function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
+/**
+ * PAGINATION LOGIC
+ * Slices the filtered results and renders the controls
+ */
+function updateDisplay() {
+  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  
+  // Ensure current page is within bounds
+  if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+
+  // Calculate the slice of data to show
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filteredCourses.slice(start, end);
+
+  render(pageItems);
+  renderPaginationControls(totalPages);
+}
+
 function render(results) {
-  // Clear previous results
   const el = grab_id("results-grid"); 
   if (!el) return;
   el.innerHTML = ""; 
   
-  //Count the number of subjects found
   const countEl = grab_id("results-count");
   if (countEl) {
-    countEl.textContent = `Showing ${results.length.toLocaleString()} courses matching your search`;
+    countEl.textContent = `Showing ${filteredCourses.length.toLocaleString()} courses matching your search`;
   }
 
   const frag = document.createDocumentFragment();
 
-  // Create a card for each subject
   for (const r of results) {
-    const uni = universitiesById.get(String(r.university_id));  // Get university details
+    const uni = universitiesById.get(String(r.university_id));
     const displayTitle = r.name || r.title || "Unknown Subject"; 
     const displayUni = uni ? uni.name : (r.university_name || 'University ID: ' + r.university_id);
 
     const card = document.createElement("div");
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
 
-    // Set how the card looks
     card.innerHTML = `
         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
             ${displayTitle} 
@@ -75,14 +94,13 @@ function render(results) {
         </div>
     `;
 
-    // Add click event to open course website
     card.onclick = () => {
       const url = r.course_website || r.university_website;
       if (url) {
-        window.open(url, '_blank'); // Open the course or university website
+        window.open(url, '_blank');
       } else {
         const query = encodeURIComponent(`${displayTitle} at ${displayUni} UK`);
-        window.open(`https://www.google.com/search?q=${query}`, '_blank'); // Search the course if there is no course link inside the dataset
+        window.open(`https://www.google.com/search?q=${query}`, '_blank');
       }
     };
 
@@ -91,12 +109,52 @@ function render(results) {
   el.appendChild(frag); 
 }
 
+/**
+ * Creates the Next/Prev buttons at the bottom of the grid
+ */
+function renderPaginationControls(totalPages) {
+  let container = grab_id("pagination-controls");
+  
+  // Create container if it doesn't exist in index.html
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "pagination-controls";
+    grab_id("results-grid").after(container);
+  }
+
+  if (totalPages <= 1) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
+  container.innerHTML = `
+    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
+      class="px-6 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      Previous
+    </button>
+    <span class="text-sm font-bold text-slate-500">
+      Page ${currentPage} of ${totalPages}
+    </span>
+    <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
+      class="px-6 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold transition-opacity disabled:opacity-20 hover:bg-slate-50">
+      Next
+    </button>
+  `;
+}
+
+window.changePage = (offset) => {
+  currentPage += offset;
+  updateDisplay();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 // Search function
 function search() {
   const input = grab_id("search-input");
   const q = input ? normalize(input.value) : "";
   
-  const filtered = q
+  filteredCourses = q
     ? currentCourses.filter(c => {
         const courseName = normalize(c.name || c.title || "");
         const uniData = universitiesById.get(String(c.university_id));
@@ -105,67 +163,20 @@ function search() {
       })
     : currentCourses;
 
-  currentPage = 1; // Reset to page 1 on new search
-  paginateAndRender(filtered); 
+  currentPage = 1; // Reset to first page on new search
+  updateDisplay();
 }
 
-// Chnage Subject Tag function
+// Change Subject Tag function
 async function setSubject(subjectKey) {
   activeSubject = subjectKey;
   try {
-    currentCourses = await loadJSON(SUBJECT_FILES[subjectKey]); // Load the subject data
-    search(); // Refresh the search results
+    currentCourses = await loadJSON(SUBJECT_FILES[subjectKey]);
+    search(); 
   } catch (e) {
     console.error("Subject load error:", e);
   }
 }
-
-function paginateAndRender(data) {
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const paginatedItems = data.slice(start, end);
-
-  render(paginatedItems); // Show only the slice
-  renderPaginationControls(data.length, totalPages);
-}
-
-function renderPaginationControls(totalItems, totalPages) {
-  let container = grab_id("pagination-controls");
-  
-  // Create container if it doesn't exist
-  if (!container) {
-    container = document.createElement("div");
-    container.id = "pagination-controls";
-    container.className = "flex justify-center items-center gap-4 mt-8";
-    grab_id("results-grid").after(container);
-  }
-
-  container.innerHTML = `
-    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
-      class="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border disabled:opacity-30">Previous</button>
-    <span class="font-bold text-sm">Page ${currentPage} of ${totalPages || 1}</span>
-    <button onclick="changePage(1)" ${currentPage === totalPages || totalPages === 0 ? 'disabled' : ''} 
-      class="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border disabled:opacity-30">Next</button>
-  `;
-}
-
-window.changePage = (step) => {
-    currentPage += step;
-    // We need to run search again but without resetting currentPage to 1
-    // So let's slightly adjust the search logic to allow this
-    const input = grab_id("search-input");
-    const q = input ? normalize(input.value) : "";
-    const filtered = currentCourses.filter(c => {
-        const courseName = normalize(c.name || c.title || "");
-        const uniData = universitiesById.get(String(c.university_id));
-        const uniName = uniData ? normalize(uniData.name) : "";
-        return courseName.includes(q) || uniName.includes(q);
-    });
-    
-    paginateAndRender(filtered);
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll back up to see new results
-};
 
 // Theme toggle function
 window.toggleTheme = () => {
@@ -177,16 +188,13 @@ async function init() {
     const universities = await loadJSON("data/universities.json");
     universitiesById = new Map(universities.map(u => [String(u.id), u]));
 
-    // Update the result when user typing in the search box
     grab_id("search-input").addEventListener("input", search);
 
-    // build subject filter buttons
     const filters = grab_id("category-filters");
     if (filters) {
       filters.innerHTML = "";
       Object.keys(SUBJECT_LABELS).forEach(key => {
           const btn = document.createElement("button");
-          // Make the active subject button styled differently
           btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
           btn.textContent = SUBJECT_LABELS[key];
           btn.onclick = () => {
@@ -202,8 +210,8 @@ async function init() {
       });
     }
 
-    await setSubject("compsci"); // default subject tag
-    if (window.lucide) window.lucide.createIcons(); // to render icons if lucide is loaded
+    await setSubject("compsci");
+    if (window.lucide) window.lucide.createIcons();
     
   } catch (err) {
     console.error("Critical Init Error:", err);
