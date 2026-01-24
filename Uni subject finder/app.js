@@ -128,19 +128,23 @@ function renderPaginationControls(totalPages) {
 
   container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
   
-  // Highlighting the fix: added hover:bg-indigo-50 and dark:hover:bg-indigo-900/20
-  const btnClass = "px-6 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent text-sm font-bold transition-all duration-200 outline-none focus:border-indigo-500/75 active:border-indigo-500/75 disabled:opacity-20 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:border-indigo-200 dark:hover:border-indigo-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400";
+  // These classes match your subject tag "chip" style exactly
+  const baseChipClass = "whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all border-none outline-none";
+  const inactiveClass = "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-600 hover:text-white";
+  const disabledClass = "opacity-20 cursor-not-allowed";
 
   container.innerHTML = `
     <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
-      class="${btnClass}">
+      class="${baseChipClass} ${currentPage === 1 ? disabledClass : inactiveClass}">
       Previous
     </button>
+    
     <span class="text-sm font-bold text-slate-500">
       Page ${currentPage} of ${totalPages}
     </span>
+    
     <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
-      class="${btnClass}">
+      class="${baseChipClass} ${currentPage === totalPages ? disabledClass : inactiveClass}">
       Next
     </button>
   `;
