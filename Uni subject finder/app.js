@@ -1,18 +1,22 @@
 // Make a shortcut to get html Element
 const grab_id = (id) => document.getElementById(id);
 
-// File paths for subject data
+// Updated File paths for subject data inside the temp folder
 const SUBJECT_FILES = {
-  compsci: "data/subjects_compsci.json",
-  engineering: "data/subjects_engineering.json",
-  business: "data/subjects_business.json",
+  compsci: "data/temp/computing_courses.json",
+  engineering: "data/temp/engineering_courses.json",
+  business: "data/temp/business_courses.json",
+  law: "data/temp/law_courses.json",
+  other: "data/temp/other_courses.json",
 };
 
-//Subject tag
+// Updated Subject labels
 const SUBJECT_LABELS = {
   compsci: "Computer Science",
   engineering: "Engineering",
   business: "Business",
+  law: "Law",
+  other: "Other Courses",
 };
 
 // Global variables
@@ -39,16 +43,13 @@ function normalize(s) {
 
 /**
  * PAGINATION LOGIC
- * Slices the filtered results and renders the controls
  */
 function updateDisplay() {
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   
-  // Ensure current page is within bounds
   if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
   if (currentPage < 1) currentPage = 1;
 
-  // Calculate the slice of data to show
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const pageItems = filteredCourses.slice(start, end);
@@ -57,6 +58,10 @@ function updateDisplay() {
   renderPaginationControls(totalPages);
 }
 
+/**
+ * RENDER FUNCTION
+ * Updated to use TITLE, PUBUKPRN, and ASSURL from temp JSON files
+ */
 function render(results) {
   const el = grab_id("results-grid"); 
   if (!el) return;
@@ -70,9 +75,10 @@ function render(results) {
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
-    const uni = universitiesById.get(String(r.university_id));
-    const displayTitle = r.name || r.title || "Unknown Subject"; 
-    const displayUni = uni ? uni.name : (r.university_name || 'University ID: ' + r.university_id);
+    // Map keys from temp data structure
+    const uni = universitiesById.get(String(r.PUBUKPRN));
+    const displayTitle = r.TITLE || "Unknown Subject"; 
+    const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + r.PUBUKPRN;
 
     const card = document.createElement("div");
     card.className = "card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group";
@@ -95,8 +101,8 @@ function render(results) {
     `;
 
     card.onclick = () => {
-      const url = r.course_website || r.university_website;
-      if (url) {
+      const url = r.ASSURL;
+      if (url && url !== "#") {
         window.open(url, '_blank');
       } else {
         const query = encodeURIComponent(`${displayTitle} at ${displayUni} UK`);
@@ -110,7 +116,7 @@ function render(results) {
 }
 
 /**
- * Creates the Next/Prev buttons at the bottom of the grid
+ * PAGINATION CONTROLS
  */
 function renderPaginationControls(totalPages) {
   let container = grab_id("pagination-controls");
@@ -118,17 +124,17 @@ function renderPaginationControls(totalPages) {
   if (!container) {
     container = document.createElement("div");
     container.id = "pagination-controls";
-    grab_id("results-grid").after(container);
+    const grid = grab_id("results-grid");
+    if (grid) grid.after(container);
   }
 
   if (totalPages <= 1) {
-    container.innerHTML = "";
+    if (container) container.innerHTML = "";
     return;
   }
 
   container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
   
-  // These classes match your subject tag "chip" style exactly
   const baseChipClass = "whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all border-none outline-none";
   const inactiveClass = "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-600 hover:text-white";
   const disabledClass = "opacity-20 cursor-not-allowed";
@@ -156,25 +162,24 @@ window.changePage = (offset) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-// Search function
+// Search function - matches against TITLE and University Name
 function search() {
   const input = grab_id("search-input");
   const q = input ? normalize(input.value) : "";
   
   filteredCourses = q
     ? currentCourses.filter(c => {
-        const courseName = normalize(c.name || c.title || "");
-        const uniData = universitiesById.get(String(c.university_id));
-        const uniName = uniData ? normalize(uniData.name) : "";
+        const courseName = normalize(c.TITLE || "");
+        const uniData = universitiesById.get(String(c.PUBUKPRN));
+        const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
         return courseName.includes(q) || uniName.includes(q);
       })
     : currentCourses;
 
-  currentPage = 1; // Reset to first page on new search
+  currentPage = 1; 
   updateDisplay();
 }
 
-// Change Subject Tag function
 async function setSubject(subjectKey) {
   activeSubject = subjectKey;
   try {
@@ -185,15 +190,21 @@ async function setSubject(subjectKey) {
   }
 }
 
-// Theme toggle function
 window.toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
 };
 
+/**
+ * INIT FUNCTION
+ * Updated to handle the nested "data" array in institution.json
+ */
 async function init() {
   try {
-    const universities = await loadJSON("data/universities.json");
-    universitiesById = new Map(universities.map(u => [String(u.id), u]));
+    // Load university data from the temp folder
+    const uniResponse = await loadJSON("data/temp/institution.json");
+    // institution.json is an array of objects; the university data is in the third object's "data" key
+    const uniList = uniResponse[2].data; 
+    universitiesById = new Map(uniList.map(u => [String(u.PUBUKPRN), u]));
 
     grab_id("search-input").addEventListener("input", search);
 
