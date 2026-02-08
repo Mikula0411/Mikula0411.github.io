@@ -21,41 +21,32 @@ const SUBJECT_LABELS = {
 
 // Global variables
 let universitiesById = new Map(); 
-let currentCourses = [];          
-let filteredCourses = [];         
-let activeSubject = "compsci";    
-let activeLocation = "all"; // New global for location filtering
+let currentCourses = [];          // Full data for the active subject
+let filteredCourses = [];         // Courses matching the search query
+let activeSubject = "compsci";    // default subject 
 
 // Pagination variables
 let currentPage = 1;
 const itemsPerPage = 12;
 
+// load the data from the JSON files
 async function loadJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return res.json();
 }
 
+// Make the string lowercase and trim the spaces
 function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
 /**
- * HELPER: Extract City from PROVADDRESS
- * This looks for the word before the postcode in strings like "10, Holloway Road, London, N7 8DB"
+ * PAGINATION LOGIC
  */
-function getCity(address) {
-  if (!address) return "Unknown";
-  const parts = address.split(',').map(p => p.trim());
-  // Postcode is usually the last part, City is often the second to last
-  if (parts.length >= 2) {
-    return parts[parts.length - 2];
-  }
-  return parts[0];
-}
-
 function updateDisplay() {
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  
   if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
   if (currentPage < 1) currentPage = 1;
 
@@ -69,6 +60,7 @@ function updateDisplay() {
 
 /**
  * RENDER FUNCTION
+ * Updated to use TITLE, PUBUKPRN, and ASSURL from temp JSON files
  */
 function render(results) {
   const el = grab_id("results-grid"); 
@@ -77,12 +69,13 @@ function render(results) {
   
   const countEl = grab_id("results-count");
   if (countEl) {
-    countEl.textContent = `Showing ${filteredCourses.length.toLocaleString()} courses matching your criteria`;
+    countEl.textContent = `Showing ${filteredCourses.length.toLocaleString()} courses matching your search`;
   }
 
   const frag = document.createDocumentFragment();
 
   for (const r of results) {
+    // Map keys from temp data structure
     const uni = universitiesById.get(String(r.PUBUKPRN));
     const displayTitle = r.TITLE || "Unknown Subject"; 
     const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + r.PUBUKPRN;
@@ -127,6 +120,7 @@ function render(results) {
  */
 function renderPaginationControls(totalPages) {
   let container = grab_id("pagination-controls");
+  
   if (!container) {
     container = document.createElement("div");
     container.id = "pagination-controls";
@@ -140,6 +134,7 @@ function renderPaginationControls(totalPages) {
   }
 
   container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
+  
   const baseChipClass = "whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all border-none outline-none";
   const inactiveClass = "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-600 hover:text-white";
   const disabledClass = "opacity-20 cursor-not-allowed";
@@ -149,7 +144,11 @@ function renderPaginationControls(totalPages) {
       class="${baseChipClass} ${currentPage === 1 ? disabledClass : inactiveClass}">
       Previous
     </button>
-    <span class="text-sm font-bold text-slate-500">Page ${currentPage} of ${totalPages}</span>
+    
+    <span class="text-sm font-bold text-slate-500">
+      Page ${currentPage} of ${totalPages}
+    </span>
+    
     <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
       class="${baseChipClass} ${currentPage === totalPages ? disabledClass : inactiveClass}">
       Next
@@ -163,82 +162,22 @@ window.changePage = (offset) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-/**
- * IMPROVED SEARCH
- * Now splits the input (e.g., "bristol cyber") to match both City and Subject
- */
+// Search function - matches against TITLE and University Name
 function search() {
   const input = grab_id("search-input");
-  const query = input ? normalize(input.value) : "";
-  const queryWords = query.split(" ").filter(w => w.length > 0);
+  const q = input ? normalize(input.value) : "";
   
-  filteredCourses = currentCourses.filter(c => {
-    const uniData = universitiesById.get(String(c.PUBUKPRN));
-    const courseTitle = normalize(c.TITLE || "");
-    const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
-    const uniCity = uniData ? normalize(getCity(uniData.PROVADDRESS)) : "";
-
-    // Apply Location Filter first
-    if (activeLocation !== "all" && normalize(uniCity) !== normalize(activeLocation)) {
-      return false;
-    }
-
-    // Match all keywords (e.g., "bristol" and "cyber") across name, city, or title
-    return queryWords.every(word => 
-      courseTitle.includes(word) || uniName.includes(word) || uniCity.includes(word)
-    );
-  });
+  filteredCourses = q
+    ? currentCourses.filter(c => {
+        const courseName = normalize(c.TITLE || "");
+        const uniData = universitiesById.get(String(c.PUBUKPRN));
+        const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
+        return courseName.includes(q) || uniName.includes(q);
+      })
+    : currentCourses;
 
   currentPage = 1; 
   updateDisplay();
-}
-
-/**
- * LOCATION FILTER GENERATOR
- */
-function renderLocationFilters() {
-  const container = grab_id("location-filters");
-  if (!container) return;
-
-  // Get unique cities from the current institution list
-  const cities = new Set();
-  universitiesById.forEach(uni => {
-    const city = getCity(uni.PROVADDRESS);
-    if (city && city !== "Unknown") cities.add(city);
-  });
-
-  // Sort cities and limit to the most popular or just a selection
-  const sortedCities = Array.from(cities).sort();
-  
-  container.innerHTML = `<button class="loc-chip chip px-4 py-2 rounded-xl text-sm font-bold bg-indigo-600 text-white" data-loc="all">All Locations</button>`;
-  
-  sortedCities.forEach(city => {
-    const btn = document.createElement("button");
-    btn.className = "loc-chip chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400";
-    btn.textContent = city;
-    btn.onclick = () => {
-      activeLocation = city;
-      document.querySelectorAll('.loc-chip').forEach(c => {
-        c.classList.remove('bg-indigo-600', 'text-white');
-        c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-      });
-      btn.classList.add('bg-indigo-600', 'text-white');
-      btn.classList.remove('bg-slate-100', 'dark:bg-slate-800');
-      search();
-    };
-    container.appendChild(btn);
-  });
-
-  // Handle "All" click specifically
-  container.firstChild.onclick = () => {
-    activeLocation = "all";
-    document.querySelectorAll('.loc-chip').forEach(c => {
-      c.classList.remove('bg-indigo-600', 'text-white');
-      c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-    });
-    container.firstChild.classList.add('bg-indigo-600', 'text-white');
-    search();
-  };
 }
 
 async function setSubject(subjectKey) {
@@ -251,36 +190,44 @@ async function setSubject(subjectKey) {
   }
 }
 
+window.toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+};
+
+/**
+ * INIT FUNCTION
+ * Updated to handle the nested "data" array in institution.json
+ */
 async function init() {
   try {
-    // Load university data from temp folder
+    // Load university data from the temp folder
     const uniResponse = await loadJSON("data/temp/institution.json");
+    // institution.json is an array of objects; the university data is in the third object's "data" key
     const uniList = uniResponse[2].data; 
     universitiesById = new Map(uniList.map(u => [String(u.PUBUKPRN), u]));
 
     grab_id("search-input").addEventListener("input", search);
 
-    // Subject Filter Setup
-    const subFilters = grab_id("category-filters");
-    if (subFilters) {
-      subFilters.innerHTML = "";
+    const filters = grab_id("category-filters");
+    if (filters) {
+      filters.innerHTML = "";
       Object.keys(SUBJECT_LABELS).forEach(key => {
           const btn = document.createElement("button");
           btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
           btn.textContent = SUBJECT_LABELS[key];
           btn.onclick = () => {
-              document.querySelectorAll('#category-filters .chip').forEach(c => {
+              document.querySelectorAll('.chip').forEach(c => {
                   c.classList.remove('bg-indigo-600', 'text-white');
                   c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
               });
               btn.classList.add('bg-indigo-600', 'text-white');
+              btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
               setSubject(key);
           };
-          subFilters.appendChild(btn);
+          filters.appendChild(btn);
       });
     }
 
-    renderLocationFilters();
     await setSubject("compsci");
     if (window.lucide) window.lucide.createIcons();
     
