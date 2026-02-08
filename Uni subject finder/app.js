@@ -55,13 +55,16 @@ function search() {
   const terms = query.split(/\s+/).filter(t => t.length > 0);
   
   filteredCourses = currentCourses.filter(c => {
+    // Get university data using the PUBUKPRN key from the temp files
     const uniData = universitiesById.get(String(c.PUBUKPRN));
+    
+    // Normalize all fields for comparison
     const courseTitle = normalize(c.TITLE || "");
     const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
     const uniAddress = uniData ? normalize(uniData.PROVADDRESS) : "";
 
-    // Check if EVERY word in the user's search matches at least one field
-    // (Title, University Name, or Address/Location)
+    // For a course to show up, EVERY word in the search query must match 
+    // at least ONE of the fields (Title, Uni Name, or Address/City)
     return terms.every(term => 
       courseTitle.includes(term) || 
       uniName.includes(term) || 
