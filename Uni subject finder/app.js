@@ -50,16 +50,18 @@ function search() {
   const input = grab_id("search-input");
   const query = input ? normalize(input.value) : "";
   
-  // Split query into individual words (e.g., ["bristol", "cyber"])
+  // Split the user input into individual words (terms)
+  // Example: "bristol cyber" becomes ["bristol", "cyber"]
   const terms = query.split(/\s+/).filter(t => t.length > 0);
-
+  
   filteredCourses = currentCourses.filter(c => {
     const uniData = universitiesById.get(String(c.PUBUKPRN));
     const courseTitle = normalize(c.TITLE || "");
     const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
     const uniAddress = uniData ? normalize(uniData.PROVADDRESS) : "";
 
-    // Check if EVERY word in the search query matches SOMETHING in the course info
+    // Check if EVERY word in the user's search matches at least one field
+    // (Title, University Name, or Address/Location)
     return terms.every(term => 
       courseTitle.includes(term) || 
       uniName.includes(term) || 
