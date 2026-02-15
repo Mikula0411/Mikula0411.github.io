@@ -115,7 +115,11 @@ function openModal(course, uni) {
     const modal = grab_id("course-modal");
     const content = grab_id("modal-content");
     const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + course.PUBUKPRN;
-    const foundationText = course.FOUNDATION === "1" ? "Yes" : "No";
+    
+    // Updated Foundation Logic
+    let foundationText = "No";
+    if (course.FOUNDATION === "1") foundationText = "Integrated";
+    else if (course.FOUNDATION === "2") foundationText = "Bridging";
 
     content.innerHTML = `
         <div class="space-y-6">
@@ -128,16 +132,26 @@ function openModal(course, uni) {
                 </h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400 mt-2">${displayUni}</p>
             </div>
+
             <div class="grid grid-cols-2 gap-4">
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
                     <p class="text-xs text-slate-400 font-bold uppercase mb-1">Foundation</p>
                     <p class="text-slate-900 dark:text-white font-medium">${foundationText}</p>
                 </div>
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Study Mode (KISMODE)</p>
+                    <p class="text-slate-900 dark:text-white font-medium">${course.KISMODE || "N/A"}</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
                     <p class="text-xs text-slate-400 font-bold uppercase mb-1">Course ID</p>
                     <p class="text-slate-900 dark:text-white font-medium">${course.KISCOURSEID || "N/A"}</p>
                 </div>
+                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Provider UKPRN</p>
+                    <p class="text-slate-900 dark:text-white font-medium">${course.PUBUKPRN}</p>
+                </div>
             </div>
+
             <div class="pt-4 flex flex-col sm:flex-row gap-3">
                 <button onclick="window.open('${course.ASSURL !== "#" ? course.ASSURL : `https://www.google.com/search?q=${encodeURIComponent(course.TITLE + ' at ' + displayUni)}`}', '_blank')" 
                     class="flex-1 px-6 py-4 rounded-2xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20">
