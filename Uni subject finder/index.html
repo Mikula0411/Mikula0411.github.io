@@ -51,6 +51,19 @@
             <div id="pagination-controls"></div>
         </div>
     </main>
+    <div id="course-modal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+    <div class="flex min-h-full items-center justify-center p-4">
+        <div class="relative transform overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-8 shadow-2xl transition-all w-full max-w-2xl border border-slate-200 dark:border-slate-800">
+            <button onclick="closeModal()" class="absolute right-6 top-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <i data-lucide="x" class="w-6 h-6 text-slate-500"></i>
+            </button>
+
+            <div id="modal-content"></div>
+        </div>
+    </div>
+    </div>
     <!--Add a footer -->
     <footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">

@@ -1,7 +1,5 @@
-// Make a shortcut to get html Element
 const grab_id = (id) => document.getElementById(id);
 
-// Updated File paths for subject data inside the temp folder
 const SUBJECT_FILES = {
   compsci: "data/temp/computing_courses.json",
   engineering: "data/temp/engineering_courses.json",
@@ -10,7 +8,6 @@ const SUBJECT_FILES = {
   other: "data/temp/other_courses.json",
 };
 
-// Updated Subject labels
 const SUBJECT_LABELS = {
   compsci: "Computer Science",
   engineering: "Engineering",
@@ -19,52 +16,34 @@ const SUBJECT_LABELS = {
   other: "Other Courses",
 };
 
-// Global variables
 let universitiesById = new Map(); 
 let currentCourses = [];          
 let filteredCourses = [];         
 let activeSubject = "compsci";    
-
-// Pagination variables
 let currentPage = 1;
 const itemsPerPage = 12;
 
-// Load the data from the JSON files
 async function loadJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return res.json();
 }
 
-// Make the string lowercase and trim the spaces
 function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
-/**
- * IMPROVED SEARCH LOGIC
- * Splits the query into words so "Bristol Cyber" matches 
- * a university in Bristol with a Cyber course.
- */
 function search() {
   const input = grab_id("search-input");
   const query = input ? normalize(input.value) : "";
-  
-  // Split the user input into individual words (terms)
-  // Example: "bristol cyber" becomes ["bristol", "cyber"]
   const terms = query.split(/\s+/).filter(t => t.length > 0);
   
   filteredCourses = currentCourses.filter(c => {
-    // Get university data using the PUBUKPRN key from the temp files
     const uniData = universitiesById.get(String(c.PUBUKPRN));
-    
-    // Normalize all fields for comparison
     const courseTitle = normalize(c.TITLE || "");
     const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
     const uniAddress = uniData ? normalize(uniData.PROVADDRESS) : "";
 
-    // For a course to show up, EVERY word in the search query must match 
-    // at least ONE of the fields (Title, Uni Name, or Address/City)
     return terms.every(term => 
       courseTitle.includes(term) || 
       uniName.includes(term) || 
@@ -72,7 +51,7 @@ function search() {
     );
   });
 
-  currentPage = 1; // Reset to first page on new search
+  currentPage = 1;
   updateDisplay();
 }
 
@@ -120,26 +99,66 @@ function render(results) {
             <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold uppercase">
                 ${SUBJECT_LABELS[activeSubject] || "General"}
             </span>
-            <span class="hidden group-hover:block text-xs font-bold text-indigo-600 underline italic">
-                Visit Link →
+            <span class="text-xs font-bold text-slate-400 italic">
+                View Details
             </span>
         </div>
     `;
 
-    card.onclick = () => {
-      const url = r.ASSURL;
-      if (url && url !== "#") {
-        window.open(url, '_blank');
-      } else {
-        const query = encodeURIComponent(`${displayTitle} at ${displayUni} UK`);
-        window.open(`https://www.google.com/search?q=${query}`, '_blank');
-      }
-    };
-
+    card.onclick = () => openModal(r, uni);
     frag.appendChild(card);
   }
   el.appendChild(frag); 
 }
+
+function openModal(course, uni) {
+    const modal = grab_id("course-modal");
+    const content = grab_id("modal-content");
+    const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + course.PUBUKPRN;
+    const foundationText = course.FOUNDATION === "1" ? "Yes" : "No";
+
+    content.innerHTML = `
+        <div class="space-y-6">
+            <div>
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+                    ${SUBJECT_LABELS[activeSubject]}
+                </span>
+                <h2 id="modal-title" class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2 leading-tight">
+                    ${course.TITLE}
+                </h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400 mt-2">${displayUni}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Foundation</p>
+                    <p class="text-slate-900 dark:text-white font-medium">${foundationText}</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Course ID</p>
+                    <p class="text-slate-900 dark:text-white font-medium">${course.KISCOURSEID || "N/A"}</p>
+                </div>
+            </div>
+            <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                <button onclick="window.open('${course.ASSURL !== "#" ? course.ASSURL : `https://www.google.com/search?q=${encodeURIComponent(course.TITLE + ' at ' + displayUni)}`}', '_blank')" 
+                    class="flex-1 px-6 py-4 rounded-2xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20">
+                    Visit Official Course Website
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    `;
+
+    modal.classList.remove("hidden");
+    document.body.style.overflow = 'hidden';
+    if (window.lucide) window.lucide.createIcons();
+}
+
+function closeModal() {
+    grab_id("course-modal").classList.add("hidden");
+    document.body.style.overflow = 'auto';
+}
+
+window.onkeydown = (e) => { if (e.key === "Escape") closeModal(); };
 
 function renderPaginationControls(totalPages) {
   let container = grab_id("pagination-controls");
@@ -191,9 +210,8 @@ async function setSubject(subjectKey) {
 
 async function init() {
   try {
-    // Load institution data from temp folder
     const uniResponse = await loadJSON("data/temp/institution.json");
-    const uniList = uniResponse[2].data; // Access data from nested structure
+    const uniList = uniResponse[2].data;
     universitiesById = new Map(uniList.map(u => [String(u.PUBUKPRN), u]));
 
     grab_id("search-input").addEventListener("input", search);
