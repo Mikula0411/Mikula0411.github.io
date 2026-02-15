@@ -116,10 +116,14 @@ function openModal(course, uni) {
     const content = grab_id("modal-content");
     const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + course.PUBUKPRN;
     
-    // Updated Foundation Logic
-    let foundationText = "No";
-    if (course.FOUNDATION === "1") foundationText = "Integrated";
-    else if (course.FOUNDATION === "2") foundationText = "Bridging";
+    // Foundation Logic: 1/2 show "Yes", 0 show "No"
+    const foundationText = (course.FOUNDATION === "1" || course.FOUNDATION === "2") ? "Yes" : "No";
+
+    // KISMODE Logic
+    let studyMode = "Unknown";
+    if (course.KISMODE === "1") studyMode = "Full-time";
+    else if (course.KISMODE === "2") studyMode = "Part-time";
+    else if (course.KISMODE === "3") studyMode = "Both";
 
     content.innerHTML = `
         <div class="space-y-6">
@@ -133,21 +137,21 @@ function openModal(course, uni) {
                 <p class="text-lg text-slate-500 dark:text-slate-400 mt-2">${displayUni}</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
-                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Foundation</p>
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Foundation Year</p>
                     <p class="text-slate-900 dark:text-white font-medium">${foundationText}</p>
                 </div>
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
-                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Study Mode (KISMODE)</p>
-                    <p class="text-slate-900 dark:text-white font-medium">${course.KISMODE || "N/A"}</p>
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Study Mode</p>
+                    <p class="text-slate-900 dark:text-white font-medium">${studyMode}</p>
                 </div>
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
                     <p class="text-xs text-slate-400 font-bold uppercase mb-1">Course ID</p>
                     <p class="text-slate-900 dark:text-white font-medium">${course.KISCOURSEID || "N/A"}</p>
                 </div>
                  <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
-                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Provider UKPRN</p>
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Provider Code (UKPRN)</p>
                     <p class="text-slate-900 dark:text-white font-medium">${course.PUBUKPRN}</p>
                 </div>
             </div>
