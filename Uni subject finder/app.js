@@ -121,9 +121,9 @@ function openModal(course, uni) {
 
     // KISMODE Logic
     let studyMode = "Unknown";
-    if (course.KISMODE === "1") studyMode = "Full-time";
-    else if (course.KISMODE === "2") studyMode = "Part-time";
-    else if (course.KISMODE === "3") studyMode = "Both";
+    if (course.KISMODE === "1") studyMode = "Full time";
+    else if (course.KISMODE === "2") studyMode = "Part time";
+    else if (course.KISMODE === "3") studyMode = "Full time or Part time";
 
     content.innerHTML = `
         <div class="space-y-6">
