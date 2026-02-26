@@ -125,30 +125,36 @@ function openModal(course, uni) {
     else if (course.KISMODE === "2") studyMode = "Part-time";
     else if (course.KISMODE === "3") studyMode = "Both";
 
-    // Find Similar Courses: Same provider (PUBUKPRN), different course ID
+    // 1. Logic to Find Similar Courses (Different Uni, Same Course Title)
     const similar = currentCourses
-        .filter(c => c.PUBUKPRN === course.PUBUKPRN && c.KISCOURSEID !== course.KISCOURSEID)
-        .slice(0, 3); // Limit to top 3
+        .filter(c => c.TITLE === course.TITLE && c.PUBUKPRN !== course.PUBUKPRN)
+        .slice(0, 3); // Limit to top 3 results
 
     let similarHtml = "";
     if (similar.length > 0) {
         similarHtml = `
             <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 italic">Similar courses at this university:</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 italic">Available at other universities:</h4>
                 <div class="space-y-3">
-                    ${similar.map((s, index) => `
+                    ${similar.map((s, index) => {
+                        const otherUni = universitiesById.get(String(s.PUBUKPRN));
+                        const otherUniName = otherUni ? otherUni.LEGAL_NAME : "Other University";
+                        
+                        return `
                         <div onclick="event.stopPropagation(); closeModal(); setTimeout(() => openModal(${JSON.stringify(s).replace(/"/g, '&quot;')}, universitiesById.get('${s.PUBUKPRN}')), 100)" 
                              class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 cursor-pointer transition-all border border-transparent hover:border-indigo-200 group">
                             <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">
                                 ${index + 1}
                             </span>
                             <div class="flex-1">
-                                <p class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 transition-colors">${s.TITLE}</p>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase mt-0.5">ID: ${s.KISCOURSEID}</p>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-tight">${s.TITLE}</p>
+                                <p class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 transition-colors mt-0.5">
+                                    ${otherUniName}
+                                </p>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-indigo-500"></i>
-                        </div>
-                    `).join('')}
+                        </div>`;
+                    }).join('')}
                 </div>
             </div>
         `;
@@ -180,7 +186,7 @@ function openModal(course, uni) {
                     <p class="text-slate-900 dark:text-white font-medium">${course.KISCOURSEID || "N/A"}</p>
                 </div>
                  <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 text-center">
-                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Provider UKPRN</p>
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Provider Code (UKPRN)</p>
                     <p class="text-slate-900 dark:text-white font-medium">${course.PUBUKPRN}</p>
                 </div>
             </div>
