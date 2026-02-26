@@ -9,7 +9,7 @@ const SUBJECT_FILES = {
 };
 
 const SUBJECT_LABELS = {
-  compsci: "Computer Science",
+  compsci: "Computing",
   engineering: "Engineering",
   business: "Business",
   law: "Law",
