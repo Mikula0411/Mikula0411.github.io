@@ -111,6 +111,48 @@ function render(results) {
   el.appendChild(frag); 
 }
 
+// Function to find similar courses
+function findSimilarCourses(currentCourse, limit = 4) {
+  const similar = [];
+  const currentTitle = normalize(currentCourse.TITLE || "");
+  const currentUni = currentCourse.PUBUKPRN;
+  
+  // Extract key terms from the course title (remove common words)
+  const commonWords = ['and', 'the', 'of', 'in', 'at', 'for', 'with', 'bachelor', 'master', 'bsc', 'msc', 'ba', 'ma'];
+  const titleWords = currentTitle.split(/\s+/).filter(w => 
+    w.length > 3 && !commonWords.includes(w)
+  );
+  
+  // Score each course by similarity
+  const scored = currentCourses
+    .filter(c => c.KISCOURSEID !== currentCourse.KISCOURSEID) // Exclude current course
+    .map(course => {
+      let score = 0;
+      const courseTitle = normalize(course.TITLE || "");
+      
+      // Same university gets bonus points
+      if (course.PUBUKPRN === currentUni) score += 3;
+      
+      // Check for matching words in title
+      titleWords.forEach(word => {
+        if (courseTitle.includes(word)) score += 2;
+      });
+      
+      // Same study mode
+      if (course.KISMODE === currentCourse.KISMODE) score += 1;
+      
+      // Same foundation year option
+      if (course.FOUNDATION === currentCourse.FOUNDATION) score += 1;
+      
+      return { course, score };
+    })
+    .filter(item => item.score > 0) // Only keep courses with some similarity
+    .sort((a, b) => b.score - a.score) // Sort by score descending
+    .slice(0, limit); // Take top N
+  
+  return scored.map(item => item.course);
+}
+
 function openModal(course, uni) {
     const modal = grab_id("course-modal");
     const content = grab_id("modal-content");
@@ -124,6 +166,47 @@ function openModal(course, uni) {
     if (course.KISMODE === "1") studyMode = "Full time";
     else if (course.KISMODE === "2") studyMode = "Part time";
     else if (course.KISMODE === "3") studyMode = "Full time or Part time";
+
+    // Get similar courses
+    const similarCourses = findSimilarCourses(course, 4);
+    
+    // Build similar courses HTML
+    let similarCoursesHTML = '';
+    if (similarCourses.length > 0) {
+        similarCoursesHTML = `
+            <div class="border-t border-slate-200 dark:border-slate-800 pt-6 mt-6">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-indigo-600"></i>
+                    Similar Subjects You Might Like
+                </h3>
+                <div class="grid grid-cols-1 gap-3">
+                    ${similarCourses.map(simCourse => {
+                        const simUni = universitiesById.get(String(simCourse.PUBUKPRN));
+                        const simDisplayUni = simUni ? simUni.LEGAL_NAME : 'University Code: ' + simCourse.PUBUKPRN;
+                        const isSameUni = simCourse.PUBUKPRN === course.PUBUKPRN;
+                        
+                        return `
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all cursor-pointer group border border-transparent hover:border-indigo-200 dark:hover:border-indigo-800" 
+                                 onclick='openModal(${JSON.stringify(simCourse)}, ${JSON.stringify(simUni)})'>
+                                <div class="flex items-start justify-between gap-3">
+                                    <div class="flex-1 min-w-0">
+                                        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+                                            ${simCourse.TITLE}
+                                        </h4>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                                            ${isSameUni ? '<i data-lucide="building-2" class="w-3 h-3 inline"></i>' : '<i data-lucide="map-pin" class="w-3 h-3 inline"></i>'}
+                                            ${simDisplayUni}
+                                        </p>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex-shrink-0 mt-1"></i>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    }
 
     content.innerHTML = `
         <div class="space-y-6">
@@ -163,6 +246,8 @@ function openModal(course, uni) {
                     <i data-lucide="external-link" class="w-4 h-4"></i>
                 </button>
             </div>
+
+            ${similarCoursesHTML}
         </div>
     `;
 
