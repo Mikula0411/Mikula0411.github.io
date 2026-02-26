@@ -125,10 +125,10 @@ function openModal(course, uni) {
     else if (course.KISMODE === "2") studyMode = "Part-time";
     else if (course.KISMODE === "3") studyMode = "Both";
 
-    // 1. Logic to Find Similar Courses (Different Uni, Same Course Title)
+    // 1. Logic to Find Similar Courses (Different Uni, same Course Title)
     const similar = currentCourses
         .filter(c => c.TITLE === course.TITLE && c.PUBUKPRN !== course.PUBUKPRN)
-        .slice(0, 3); // Limit to top 3 results
+        .slice(0, 3); // Get top 3
 
     let similarHtml = "";
     if (similar.length > 0) {
@@ -137,6 +137,7 @@ function openModal(course, uni) {
                 <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 italic">Available at other universities:</h4>
                 <div class="space-y-3">
                     ${similar.map((s, index) => {
+                        // Look up the legal name for the alternative university
                         const otherUni = universitiesById.get(String(s.PUBUKPRN));
                         const otherUniName = otherUni ? otherUni.LEGAL_NAME : "Other University";
                         
@@ -147,8 +148,7 @@ function openModal(course, uni) {
                                 ${index + 1}
                             </span>
                             <div class="flex-1">
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-tight">${s.TITLE}</p>
-                                <p class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 transition-colors mt-0.5">
+                                <p class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 transition-colors">
                                     ${otherUniName}
                                 </p>
                             </div>
