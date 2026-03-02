@@ -6,26 +6,32 @@
     <title>International Student Uni Finder 2026</title>
     <link rel="stylesheet" href="style.css" />
     <!--Use tailwindcss for easy styling-->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <!--Use lucid for icon-->
     <script src="https://unpkg.com/lucide@latest"></script>
-        <script>
-    // Dark/Light mode toggle
-    function toggleTheme() {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-    
-    // Load saved theme on page load
-    (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            document.documentElement.classList.add('dark');
+    <script>
+        // Dark/Light mode toggle - defined early so button can use it
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            console.log('Theme toggled. Dark mode:', isDark);
         }
-    })();
+        
+        // Load saved theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
     </script>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen pb-12 transition-colors duration-300">
