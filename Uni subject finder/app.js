@@ -280,11 +280,12 @@ async function init() {
           btn.textContent = SUBJECT_LABELS[key];
           btn.onclick = () => {
               document.querySelectorAll('.chip').forEach(c => {
-                  c.classList.remove('bg-indigo-600', 'text-white');
-                  c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+                c.classList.remove('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-500/30');
+                c.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'hover:bg-indigo-500', 'hover:text-white');
               });
-              btn.classList.add('bg-indigo-600', 'text-white');
-              setSubject(key);
+          btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'hover:bg-indigo-500', 'hover:text-white');
+          btn.classList.add('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-500/30');
+          setSubject(key);
           };
           filters.appendChild(btn);
       });
