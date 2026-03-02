@@ -276,7 +276,7 @@ async function init() {
       filters.innerHTML = "";
       Object.keys(SUBJECT_LABELS).forEach(key => {
           const btn = document.createElement("button");
-          btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`;
+          btn.className = `chip whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all ${key === activeSubject ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-500 hover:text-white'}`;
           btn.textContent = SUBJECT_LABELS[key];
           btn.onclick = () => {
               document.querySelectorAll('.chip').forEach(c => {
