@@ -269,18 +269,25 @@ function renderPaginationControls(totalPages) {
     return;
   }
 
-  container.className = "flex justify-center items-center gap-4 mt-12 mb-8";
-  const baseChipClass = "whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all border-none outline-none";
+  const baseChipClass = "whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-all border-none outline-none cursor-pointer";
   const inactiveClass = "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-600 hover:text-white";
-  const disabledClass = "opacity-20 cursor-not-allowed";
+  const disabledClass = "bg-slate-100 dark:bg-slate-800 text-slate-300 dark:text-slate-600 opacity-40 cursor-not-allowed";
 
+  const options = Array.from({ length: totalPages }, (_, i) =>
+    `<option value="${i + 1}" ${i + 1 === currentPage ? 'selected' : ''}>Page ${i + 1}</option>`
+  ).join('');
+
+  container.className = "flex justify-center items-center gap-3 mt-12 mb-8";
   container.innerHTML = `
-    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} 
+    <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}
       class="${baseChipClass} ${currentPage === 1 ? disabledClass : inactiveClass}">
       Previous
     </button>
-    <span class="text-sm font-bold text-slate-500">Page ${currentPage} of ${totalPages}</span>
-    <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} 
+    <select onchange="jumpToPage(this.value)"
+      class="px-3 py-2 rounded-xl text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-none outline-none cursor-pointer hover:bg-indigo-600 hover:text-white transition-all appearance-none text-center">
+      ${options}
+    </select>
+    <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}
       class="${baseChipClass} ${currentPage === totalPages ? disabledClass : inactiveClass}">
       Next
     </button>
@@ -289,6 +296,12 @@ function renderPaginationControls(totalPages) {
 
 window.changePage = (offset) => {
   currentPage += offset;
+  updateDisplay();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+window.jumpToPage = (page) => {
+  currentPage = parseInt(page, 10);
   updateDisplay();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
