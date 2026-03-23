@@ -23,6 +23,9 @@ let activeSubject = "compsci";
 let currentPage = 1;
 const itemsPerPage = 12;
 
+const DEBOUNCE_MS = 200;
+let debounceTimer = null;
+
 async function loadJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
@@ -33,26 +36,67 @@ function normalize(s) {
   return (s || "").toLowerCase().trim();
 }
 
+function editDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 99;
+  const dp = Array.from({ length: a.length + 1 }, (_, i) =>
+    Array.from({ length: b.length + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
+  );
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      dp[i][j] = a[i-1] === b[j-1]
+        ? dp[i-1][j-1]
+        : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+  return dp[a.length][b.length];
+}
+
+function fuzzyIncludes(text, term) {
+  return text.split(/\s+/).some(word => editDistance(word, term) <= 1);
+}
+
+function scoreMatch(course, terms) {
+  if (terms.length === 0) return 1;
+
+  const uni = universitiesById.get(String(course.PUBUKPRN));
+  const title = normalize(course.TITLE || "");
+  const uniName = normalize(uni?.LEGAL_NAME || "");
+  const uniAddr = normalize(uni?.PROVADDRESS || "");
+  const studyMode = course.KISMODE === "1" ? "full-time" : course.KISMODE === "2" ? "part-time" : "";
+
+  let score = 0;
+
+  for (const term of terms) {
+    if (title.includes(term))     { score += 10; continue; }
+    if (uniName.includes(term))   { score += 6;  continue; }
+    if (uniAddr.includes(term))   { score += 4;  continue; }
+    if (studyMode.includes(term)) { score += 3;  continue; }
+
+    if (term.length >= 4) {
+      if (fuzzyIncludes(title, term))   { score += 5; continue; }
+      if (fuzzyIncludes(uniName, term)) { score += 3; continue; }
+    }
+
+    return 0;
+  }
+
+  return score;
+}
+
 function search() {
-  const input = grab_id("search-input");
-  const query = input ? normalize(input.value) : "";
-  const terms = query.split(/\s+/).filter(t => t.length > 0);
-  
-  filteredCourses = currentCourses.filter(c => {
-    const uniData = universitiesById.get(String(c.PUBUKPRN));
-    const courseTitle = normalize(c.TITLE || "");
-    const uniName = uniData ? normalize(uniData.LEGAL_NAME) : "";
-    const uniAddress = uniData ? normalize(uniData.PROVADDRESS) : "";
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    const input = grab_id("search-input");
+    const query = input ? normalize(input.value) : "";
+    const terms = query.split(/\s+/).filter(t => t.length > 0);
 
-    return terms.every(term => 
-      courseTitle.includes(term) || 
-      uniName.includes(term) || 
-      uniAddress.includes(term)
-    );
-  });
+    const scored = currentCourses
+      .map(c => ({ course: c, score: scoreMatch(c, terms) }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score);
 
-  currentPage = 1;
-  updateDisplay();
+    filteredCourses = scored.map(({ course }) => course);
+    currentPage = 1;
+    updateDisplay();
+  }, DEBOUNCE_MS);
 }
 
 function updateDisplay() {
@@ -116,19 +160,16 @@ function openModal(course, uni) {
     const content = grab_id("modal-content");
     const displayUni = uni ? uni.LEGAL_NAME : 'University Code: ' + course.PUBUKPRN;
     
-    // Foundation Logic: 1/2 show "Yes", 0 show "No"
     const foundationText = (course.FOUNDATION === "1" || course.FOUNDATION === "2") ? "Yes" : "No";
 
-    // KISMODE Logic
     let studyMode = "Unknown";
     if (course.KISMODE === "1") studyMode = "Full-time";
     else if (course.KISMODE === "2") studyMode = "Part-time";
     else if (course.KISMODE === "3") studyMode = "Both";
 
-    // 1. Logic to Find Similar Courses (Different Uni, same Course Title)
     const similar = currentCourses
         .filter(c => c.TITLE === course.TITLE && c.PUBUKPRN !== course.PUBUKPRN)
-        .slice(0, 3); // Get top 3
+        .slice(0, 3);
 
     let similarHtml = "";
     if (similar.length > 0) {
@@ -137,7 +178,6 @@ function openModal(course, uni) {
                 <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 italic">Available at other universities:</h4>
                 <div class="space-y-3">
                     ${similar.map((s, index) => {
-                        // Look up the legal name for the alternative university
                         const otherUni = universitiesById.get(String(s.PUBUKPRN));
                         const otherUniName = otherUni ? otherUni.LEGAL_NAME : "Other University";
                         
